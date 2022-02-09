@@ -1,18 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import homeIcon from '../../assets/img/home.png';
+import newsIcon from '../../assets/img/news.png';
+import investIcon from '../../assets/img/invest.png';
+import stakeIcon from '../../assets/img/stake.png';
+import settingsIcon from '../../assets/img/settings.png';
 import './main.css';
 
 function Navbar() {
   return (
     <>
       <div className="navbar">
-        <div>
-          <Link className="button" to="/">Home</Link>
-          <Link className="button" to="/news">News</Link>
-          <Link className="button" to="/invest">Invest</Link>
-          <Link className="button" to="/stake">Stake</Link>
-          <Link className="button" to="/settings">Settings</Link>
-        </div>
+        <Link to="/" className="button">
+          <img src={homeIcon} />
+          Home
+        </Link>
+        <Link to="/news" className="button">
+          <img src={newsIcon} />
+          News
+        </Link>
+        <Link to="/invest" className="button">
+          <img src={investIcon} />
+          Invest
+        </Link>
+        <Link to="/stake" className="button">
+          <img src={stakeIcon} />
+          Stake
+        </Link>
+        <Link to="/settings" className="button">
+          <img src={settingsIcon} />
+          Settings
+        </Link>
       </div>
     </>
   )

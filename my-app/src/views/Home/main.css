@@ -1,0 +1,45 @@
+.home {
+  height: 100%;
+}
+
+.login img {
+  width: 48%;
+  margin-bottom: 12px;
+}
+
+.login .bear {
+  transform: scaleX(-1);
+}
+
+.login .button {
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--main-bg-color);
+  background-color: var(--yellow);
+  border-radius: 20px;
+  filter: drop-shadow(0 0 10px var(--yellow));
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.login .button:hover,
+.login .button:active,
+.login .button:focus {
+  filter: drop-shadow(0 0 0 var(--yellow));
+}
+
+.new-user {
+  color: var(--yellow);
+  transition: all 0.25s;
+}
+
+.new-user:hover,
+.new-user:active,
+.new-user:focus {
+  text-shadow:0 0 20px var(--yellow);
+}
+
+.forgot-password {
+  color: var(--light-gray);
+}
