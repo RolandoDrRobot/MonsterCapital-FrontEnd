@@ -1,0 +1,8 @@
+.login img {
+  width: 48%;
+  margin-bottom: 12px;
+}
+
+.login .bear {
+  transform: scaleX(-1);
+}

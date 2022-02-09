@@ -25,7 +25,8 @@ body {
 
 #content {
   max-width: 320px;
-  height: 450px;
+  height: 420px;
+  margin: 25px 0;
 }
 
 a {
@@ -54,4 +55,50 @@ button {
   font-weight: 500;
   border: 0;
   background-color: var(--main-bg-color);
+}
+
+.main-button {
+  width: 100%;
+  display: block;
+  padding: 15px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--main-bg-color);
+  background-color: var(--yellow);
+  border-radius: 20px;
+  filter: drop-shadow(0 0 10px var(--yellow));
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.main-button:hover,
+.main-button:active,
+.main-button:focus {
+  filter: drop-shadow(0 0 0 var(--yellow));
+}
+
+.text-button.yellow {
+  color: var(--yellow);
+  transition: all 0.25s;
+  margin-right: 8px;
+}
+
+.text-button.yellow:hover,
+.text-button.yellow:active,
+.text-button.yellow:focus {
+  color: var(--yellow);
+  text-shadow:0 0 20px var(--yellow);
+}
+
+.text-button.gray {
+  color: var(--light-gray);
+  transition: all 0.25s;
+}
+
+.text-button.gray:hover,
+.text-button.gray:active,
+.text-button.gray:focus {
+  color: var(--light-gray);
+  text-shadow:0 0 20px var(--light-gray);
 }
