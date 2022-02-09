@@ -6,6 +6,7 @@
 }
 
 .navbar a {
+  color: var(--light-gray);
   font-size: 12px;
   margin: 0 8px;
   transition: 0.5s;
