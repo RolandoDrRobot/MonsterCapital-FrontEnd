@@ -1,5 +1,6 @@
 import React from 'react';
 import exchangeIcon from '../../assets/img/exchange.png';
+import investIcon from '../../assets/img/invest.png';
 import './main.css';
 
 function Invest() {
@@ -7,7 +8,7 @@ function Invest() {
     <>
       <div className="invest d-flex align-items-center justify-content-center">
         <div>
-          {/* <img src={} /> */}
+          <img src={investIcon} className="pet" />
           <div className="invest-box"> 
             <h5>Invest</h5>
             <div className="trade-box">

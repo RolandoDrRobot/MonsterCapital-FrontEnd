@@ -1,6 +1,7 @@
 .login img {
   width: 48%;
   margin-bottom: 12px;
+  filter: drop-shadow(0 0 20px var(--black));
 }
 
 .login .bear {
