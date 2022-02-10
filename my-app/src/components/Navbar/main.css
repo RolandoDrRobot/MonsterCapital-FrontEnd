@@ -8,7 +8,7 @@
 .navbar a {
   color: var(--light-gray);
   font-size: 12px;
-  margin: 0 8px;
+  margin: 0 auto;
   transition: 0.5s;
   font-weight: bold;
 }
@@ -17,7 +17,7 @@
 .navbar a:focus,
 .navbar a:hover {
   color: var(--white);
-  filter: drop-shadow(0 5px 20px var(--light-gray));
+  filter: drop-shadow(0 5px 20px var(--white));
 }
 
 .navbar img {

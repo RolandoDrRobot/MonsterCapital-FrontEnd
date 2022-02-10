@@ -12,14 +12,36 @@ function Invest() {
           <div className="invest-box"> 
             <h5>Invest</h5>
             <div className="trade-box">
-              <div className="d-flex">
-                <input placeholder="" />
-                <input placeholder="" />
+              <div className="d-flex you-pay">
+                <div>
+                  <input placeholder="" />
+                </div>
+                <div>
+                </div>
+                <div>
+                  <input placeholder="" />
+                </div>
               </div>
-              <img src={exchangeIcon} className="exchange-icon" />
-              <div className="d-flex">
-                <input placeholder="" />
-                <input placeholder="" />
+
+              <div className="d-flex justify-content-between exchange-icon">
+                <div>
+                </div>
+                <div className="exchange-icon-img">
+                  <img src={exchangeIcon} />
+                </div>
+                <div>
+                </div>
+              </div>
+
+              <div className="d-flex you-receive">
+                <div>
+                  <input placeholder="" />
+                </div>
+                <div>
+                </div>
+                <div>
+                  <input placeholder="" />
+                </div>
               </div>
               <p className="main-button">Invest Now</p>
             </div>
