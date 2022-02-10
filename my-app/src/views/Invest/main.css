@@ -1,0 +1,29 @@
+.invest {
+  height: 100%;
+}
+
+.invest-box {
+  text-align: center;
+  padding: 30px 15px 15px;
+  border-radius: 25px;
+  background-color: var(--light-black);
+}
+
+.invest-box h5 {
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.invest-box input {
+  margin: 0;
+  border: var(--light-black);
+}
+
+.exchange-icon {
+  width: 35px;
+  transform: rotate(90deg);
+}
+
+.invest-box .main-button {
+  margin-top: 20px;
+}

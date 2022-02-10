@@ -10,6 +10,7 @@
   font-size: 12px;
   margin: 0 8px;
   transition: 0.5s;
+  font-weight: bold;
 }
 
 .navbar a:active,

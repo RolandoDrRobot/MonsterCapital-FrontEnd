@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import exchangeIcon from '../../assets/img/exchange.png';
 import './main.css';
 
 function Invest() {
@@ -7,8 +7,23 @@ function Invest() {
     <>
       <div className="invest d-flex align-items-center justify-content-center">
         <div>
-          <Link className="button mb-3" to="/login">Login</Link>
-          <Link className="button" to="/newuser">Create New User</Link>
+          {/* <img src={} /> */}
+          <div className="invest-box"> 
+            <h5>Invest</h5>
+            <div className="trade-box">
+              <div className="d-flex">
+                <input placeholder="" />
+                <input placeholder="" />
+              </div>
+              <img src={exchangeIcon} className="exchange-icon" />
+              <div className="d-flex">
+                <input placeholder="" />
+                <input placeholder="" />
+              </div>
+              <p className="main-button">Invest Now</p>
+            </div>
+            
+          </div>
         </div>
       </div>
     </>
