@@ -1,6 +1,6 @@
 .news {
   height: 100%;
-  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 .new {

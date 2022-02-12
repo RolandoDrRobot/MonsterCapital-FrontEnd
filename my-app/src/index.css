@@ -24,7 +24,7 @@ body {
 }
 
 #content {
-  max-width: 320px;
+  max-width: 296px;
   height: 420px;
   margin: 28px 0;
 }
@@ -55,6 +55,10 @@ button {
   font-weight: 500;
   border: 0;
   background-color: var(--main-bg-color);
+}
+
+span {
+  font-weight: bold;
 }
 
 .main-button {

@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import homeIcon from '../../assets/img/home.png';
 import newsIcon from '../../assets/img/news.png';
-import investIcon from '../../assets/img/invest.png';
-import stakeIcon from '../../assets/img/stake.svg';
-import settingsIcon from '../../assets/img/settings.png';
+import coraIcon from '../../assets/img/coraIcon.png';
+import stakeIcon from '../../assets/img/stake.png';
+import walletIcon from '../../assets/img/wallet.svg';
 import './main.css';
 
 function Navbar() {
@@ -20,16 +20,16 @@ function Navbar() {
           News
         </Link>
         <Link to="/invest" className="button">
-          <img src={investIcon} />
+          <img src={coraIcon} />
           Invest
         </Link>
         <Link to="/stake" className="button">
           <img src={stakeIcon} />
           Stake
         </Link>
-        <Link to="/settings" className="button">
-          <img src={settingsIcon} />
-          Settings
+        <Link to="/wallet" className="button">
+          <img src={walletIcon} />
+          Wallet
         </Link>
       </div>
     </>

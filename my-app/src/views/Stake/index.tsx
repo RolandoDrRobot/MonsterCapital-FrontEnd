@@ -1,14 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import usdcIcon from '../../assets/img/usdcIcon.png';
+import coraIcon from '../../assets/img/coraIcon.png';
 import './main.css';
 
 function Stake() {
   return (
     <>
       <div className="stake">
-        <div>
-          <Link className="button mb-3" to="/login">Login</Link>
-          <Link className="button" to="/newuser">Create New User</Link>
+        <div className="wallet">
+          <div className="d-flex justify-content-between mb-3">
+            <div>
+              <img className="token-pic" src={coraIcon} />
+              <span>Coras</span>
+            </div>
+            <span>200</span>
+          </div>
+          <div className="d-flex justify-content-between">
+            <div>
+              <img className="token-pic" src={usdcIcon} />
+              <span>USDC</span>
+            </div>
+            <span>$ 200</span>
+          </div>
+          
         </div>
       </div>
     </>

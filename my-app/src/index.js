@@ -6,7 +6,7 @@ import './index.css';
 import Home from './views/Home/index.js';
 import Invest from './views/Invest/index.tsx';
 import News from './views/News/index.tsx';
-import Settings from './views/Settings/index.tsx';
+import Wallet from './views/Wallet/index.tsx';
 import Stake from './views/Stake/index.tsx';
 import Header from './components/Header/index.tsx';
 import Navbar from './components/Navbar/index.tsx';
@@ -24,7 +24,7 @@ ReactDOM.render(
           <Route exact path='/invest' element={<Invest/>}/>
           <Route exact path='/news' element={<News/>}/>
           <Route exact path='/stake' element={<Stake/>}/>
-          <Route exact path='/settings' element={<Settings/>}/>
+          <Route exact path='/wallet' element={<Wallet/>}/>
           <Route exact path='/newuser' element={<NewUser/>}/>
           <Route exact path='/forgotpassword' element={<ForgotPassword/>}/>
           <Route exact path='/article' element={<Article/>}/>
