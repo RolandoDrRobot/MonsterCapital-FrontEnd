@@ -5,7 +5,7 @@
 }
 
 .new-contract-box {
-  margin: 60px 0 30px;
+  margin: 80px 0 30px;
   padding: 80px 15px 15px;
   border-radius: 25px;
   background-color: var(--light-black);
@@ -21,19 +21,19 @@
   filter: drop-shadow(0 0 20px var(--black));
 }
 
-.stake p:nth-child(1) {
+.new-contract-box p:nth-child(1) {
   padding: 0 8px;
   text-align: center;
   margin-bottom: 6px;
 }
 
-.stake p:nth-child(2) {
+.new-contract-box p:nth-child(2) {
   font-size: 12px;
   text-align: center;
   color: var(--light-gray);
 }
 
-.stake .terms {
+.new-contract-box .terms {
   margin-bottom: 20px;
   border-radius: 25px;
   background-color: var(--main-bg-color);
@@ -68,4 +68,39 @@
 .stake-time input {
   margin-right: 4px;
   width: 30px;
+}
+
+.contract {
+  padding: 20px;
+  margin: 0 0 16px 0;
+  border: 3px solid var(--yellow);
+  border-radius: 25px;
+  background-color: var(--light-black);
+  filter: drop-shadow(0 0 20px var(--black));
+}
+
+.contract p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--light-gray);
+}
+
+.contract p:first-of-type {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.contract img {
+  filter: drop-shadow(0 0 10px var(--yellow));
+  width: 70px;
+  height: 70px;
+}
+
+.closed-contracts .contract {
+  border: 0;
+}
+
+.closed-contracts .contract img {
+  filter: drop-shadow(0 0 10px var(--black));
 }
