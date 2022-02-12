@@ -1,4 +1,71 @@
 .stake {
   position: relative;
   height: 100%;
+  overflow-y: scroll;
+}
+
+.new-contract-box {
+  margin: 60px 0 30px;
+  padding: 80px 15px 15px;
+  border-radius: 25px;
+  background-color: var(--light-black);
+  filter: drop-shadow(0 0 20px var(--black));
+}
+
+.stake-icon {
+  position: absolute;
+  width: 35%;
+  z-index: 1;
+  right: 31%;
+  top: 2%;
+  filter: drop-shadow(0 0 20px var(--black));
+}
+
+.stake p:nth-child(1) {
+  padding: 0 8px;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.stake p:nth-child(2) {
+  font-size: 12px;
+  text-align: center;
+  color: var(--light-gray);
+}
+
+.stake .terms {
+  margin-bottom: 20px;
+  border-radius: 25px;
+  background-color: var(--main-bg-color);
+}
+
+.invest-box .you-stake div,
+.invest-box .stake-time div {
+  height: 55px;
+}
+
+.you-stake,
+.stake-time {
+  padding: 0 18px;
+}
+
+.terms .pic {
+  width: 25px;
+  height: 25px;
+  margin: 0 0 0 8px;
+}
+
+.stake input {
+  text-align: right;
+  border: 0;
+  margin: 0;
+}
+
+.you-stake input {
+  width: 70px;
+}
+
+.stake-time input {
+  margin-right: 4px;
+  width: 30px;
 }
