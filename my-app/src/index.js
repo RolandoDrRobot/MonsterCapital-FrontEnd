@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 
-import Home from './views/Home/index.js';
+import Home from './views/Home/index.tsx';
 import Invest from './views/Invest/index.tsx';
 import News from './views/News/index.tsx';
 import Wallet from './views/Wallet/index.tsx';

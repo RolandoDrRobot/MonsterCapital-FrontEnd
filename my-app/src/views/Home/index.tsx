@@ -1,11 +1,12 @@
-import React from 'react';
 import Login from '../../components/Login/index';
 import './main.css';
 
 function Home() {
   return (
     <>
-      <Login/>
+      <div className="home d-flex align-items-center justify-content-center">
+        <Login/>
+      </div>
     </>
   )
 }
