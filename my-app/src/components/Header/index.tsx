@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import metamaskIcon from '../../assets/img/metamask.png';
 import ethIcon from '../../assets/img/ethereum.png';
 import scanQRIcon from '../../assets/img/scanqr.png';

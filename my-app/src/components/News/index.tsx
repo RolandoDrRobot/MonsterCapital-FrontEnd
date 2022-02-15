@@ -1,5 +1,5 @@
-import './main.css';
 import newPic from '../../assets/img/new-pic.jpg';
+import './main.css';
 
 function News() {
   return (
