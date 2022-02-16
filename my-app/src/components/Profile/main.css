@@ -1,0 +1,13 @@
+.profile {
+  width: 296px;
+  position: relative;
+  padding: 30px;
+  border-radius: 25px;
+  background-color: var(--light-black);
+  filter: drop-shadow(0 0 20px var(--black));
+}
+
+.profile img {
+  width: 80px;
+  margin-right: 15px;
+}

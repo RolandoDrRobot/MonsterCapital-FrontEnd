@@ -1,14 +1,15 @@
 
-import { Link } from 'react-router-dom';
+import Profile from '../../components/Profile/index';
+import Logout from '../../components/Logout/index';
 import './main.css';
 
 function Settings() {
   return (
     <>
-      <div className="settings d-flex align-items-center justify-content-center">
+      <div className="settings d-flex justify-content-center">
         <div>
-          <Link className="button mb-3" to="/login">Login</Link>
-          <Link className="button" to="/newuser">Create New User</Link>
+          <Profile />
+          <Logout />
         </div>
       </div>
     </>
