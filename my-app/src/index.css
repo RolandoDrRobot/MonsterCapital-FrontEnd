@@ -10,6 +10,7 @@
   --black: #161623;
   --light-black: rgb(32, 33, 45);
   --black-bold: #000;
+  --warning: #ed6444;
 }
 
 body {
@@ -59,6 +60,13 @@ button {
 
 span {
   font-weight: bold;
+}
+
+.alert-text {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: var(--warning);
 }
 
 .main-button {
