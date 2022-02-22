@@ -10,12 +10,15 @@ function Login() {
   const { 
     loginStatus,
     setLoginStatus,
-    setEmail } = React.useContext(globalContext);
+    setEmail,
+    setName
+   } = React.useContext(globalContext);
 
   const submitLogin = async (email: string, password: string) => {
     await axios.post('http://localhost:443/login', { email: email, password: password }).then((response) => {
       setLoginStatus(response.data.status);
-      setEmail(email);
+      setEmail(response.data.email);
+      setName(response.data.name);
     });
   }
 
@@ -33,7 +36,7 @@ function Login() {
 
   return (
     <>
-      <div className='login'>
+      <div className="login">
         <img src={bullIcon} className="bull" />
         <img src={bearIcon} className="bear" />
         <form onSubmit={onSubmitForm}>

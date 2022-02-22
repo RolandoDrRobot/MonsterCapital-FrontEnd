@@ -8,15 +8,18 @@ function NewUser() {
   const navigate = useNavigate();
   const { 
     setLoginStatus,
-    setEmail } = React.useContext(globalContext);
+    setEmail,
+    setName
+  } = React.useContext(globalContext);
   let [createUserStatus, setCreateUserStatus] = React.useState<string>('When you create an account, you agree to complain with our TOS');
 
   const CreateUser = async (email: string, password: string, name: string) => {
     await axios.post('http://localhost:443/createUser', { email: email, password: password, name: name }).then((response) => {
       setCreateUserStatus(response.data.status);
       if (response.data.status === 'created') {
-        setLoginStatus('granted');
-        setEmail(email);
+        setLoginStatus(response.data.status);
+        setEmail(response.data.email);
+        setName(response.data.name);
         navigate('/', { replace: true });
       }
     });

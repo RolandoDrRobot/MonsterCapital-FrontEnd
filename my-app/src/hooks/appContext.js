@@ -1,12 +1,13 @@
 import * as React from 'react';
+import { useLocalStorage } from './useLocalStorage';
 
 const globalContext = React.createContext();
 
 // Provider in your app
 function GlobalContextProvider(props) {
-  const [loginStatus, setLoginStatus] = React.useState('Welcome to Coravida!');
-  const [email, setEmail] = React.useState('anyemail@gmail.com');
-  const [name, setName] = React.useState('John Doe');
+  const [loginStatus, setLoginStatus] = useLocalStorage('loginStatus', 'Welcome to Coravida!');
+  const [email, setEmail] = useLocalStorage('email', 'anyemail@gmail.com');
+  const [name, setName] = useLocalStorage('name', 'John Doe');
 
   return (
     <globalContext.Provider value={{
