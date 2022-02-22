@@ -1,4 +1,4 @@
-import newPic from '../../assets/img/new-pic.jpg';
+import newPic from '../../assets/img/post-team.jpg';
 import './main.css';
 
 function Article() {
