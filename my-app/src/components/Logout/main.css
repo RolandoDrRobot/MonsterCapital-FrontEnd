@@ -1,0 +1,25 @@
+.logout {
+  width: 100%;
+}
+
+.logout button {
+  margin-top: 24px;
+}
+
+.logout img {
+  width: 60px;
+  transition: all 0.5s;
+}
+
+.logout span {
+  display: block;
+  margin-top: 8px;
+  color: var(--white);
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+.logout button img:hover,
+.logout button span:hover {
+  filter: drop-shadow(0 0 5px var(--yellow));
+}

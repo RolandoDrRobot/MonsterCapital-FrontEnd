@@ -1,11 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 import { globalContext } from '../../hooks/appContext';
+import Loading from '../../components/Loading/index';
 import { Link, useNavigate } from 'react-router-dom';
 import './main.css';
 
 function NewUser() {
   const navigate = useNavigate();
+  let [isLoading, setIsLoading] = React.useState<boolean>(false);
+
   const { 
     setLoginStatus,
     setEmail,
@@ -14,12 +17,14 @@ function NewUser() {
   let [createUserStatus, setCreateUserStatus] = React.useState<string>('When you create an account, you agree to complain with our TOS');
 
   const CreateUser = async (email: string, password: string, name: string) => {
+    setIsLoading(true);
     await axios.post('http://localhost:443/createUser', { email: email, password: password, name: name }).then((response) => {
       setCreateUserStatus(response.data.status);
       if (response.data.status === 'created') {
-        setLoginStatus(response.data.status);
+        setLoginStatus('granted');
         setEmail(response.data.email);
         setName(response.data.name);
+        setIsLoading(false);
         navigate('/', { replace: true });
       }
     });
@@ -48,8 +53,9 @@ function NewUser() {
             <input placeholder="New Password" name="password" type="password" />
             <input placeholder="What's your name?" name="name" type="text" />
             <button type="submit" className="main-button">Create User</button>
-            <Link to="/" className="text-button gray text-center d-block mb-4">Go back</Link>
+            <Link to="/" className="text-button gray text-center d-block mb-3">Go back</Link>
             <span className="alert-text">{createUserStatus}</span>
+            { isLoading === true ? <Loading /> : <></> }
           </form>
         </div>
       </div>
