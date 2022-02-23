@@ -23,6 +23,7 @@ function Login() {
       setLoginStatus(response.data.status);
       setEmail(response.data.email);
       setName(response.data.name);
+    }).then(() => {
       setIsLoading(false);
     });
   }

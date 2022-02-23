@@ -24,9 +24,10 @@ function NewUser() {
         setLoginStatus('granted');
         setEmail(response.data.email);
         setName(response.data.name);
-        setIsLoading(false);
         navigate('/', { replace: true });
       }
+    }).then(() => {
+      setIsLoading(false);
     });
   }
 

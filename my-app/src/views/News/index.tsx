@@ -5,7 +5,7 @@ import './main.css';
 function News() {
   return (
     <>
-      <div className="news">
+      <div className="news d-flex align-items-center justify-content-center">
         <NewsComponent />
       </div>
     </>
