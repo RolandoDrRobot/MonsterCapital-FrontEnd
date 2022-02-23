@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { globalContext } from '../../hooks/appContext';
-import profileIcon from '../../assets/img/profile.png';
+import profileIcon from '../../assets/img/monkey.png';
 import './main.css';
 
 function Profile() {
@@ -12,11 +12,11 @@ function Profile() {
 
   return (
     <>
-      <div className="profile d-flex justify-content-around align-items-center">
-        <img src={profileIcon} />
+      <div className="profile text-center">
+        <img src={profileIcon} className="mb-3" />
         <div>
-          <span>{name}</span>
-          <span>{email}</span>
+          <h3>{name}</h3>
+          <p className="mb-0">{email}</p>
         </div>
       </div>
     </>

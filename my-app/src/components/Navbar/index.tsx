@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import homeIcon from '../../assets/img/home.png';
 import newsIcon from '../../assets/img/news.png';
-import coraIcon from '../../assets/img/coraIcon.png';
+import lionIcon from '../../assets/img/lion.png';
 import stakeIcon from '../../assets/img/stake.png';
 import walletIcon from '../../assets/img/wallet.svg';
 import './main.css';
@@ -19,7 +19,7 @@ function Navbar() {
           News
         </Link>
         <Link to="/invest" className="button">
-          <img src={coraIcon} />
+          <img src={lionIcon} />
           Invest
         </Link>
         <Link to="/stake" className="button">

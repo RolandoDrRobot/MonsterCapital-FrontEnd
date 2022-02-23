@@ -21,7 +21,6 @@ function Article() {
     subtitle,
     title
   } = article;
-  console.log(pic)
 
   return (
     <>

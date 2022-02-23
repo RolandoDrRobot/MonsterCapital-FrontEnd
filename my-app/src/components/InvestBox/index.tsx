@@ -1,6 +1,6 @@
 import exchangeIcon from '../../assets/img/exchange.png';
 import usdcIcon from '../../assets/img/usdcIcon.png';
-import coraIcon from '../../assets/img/coraIcon.png';
+import lionIcon from '../../assets/img/lion.png';
 import gasFeeIcon from '../../assets/img/gasIcon.png';
 import './main.css';
 
@@ -8,7 +8,7 @@ function InvestBox() {
   return (
     <>
       <div>
-        <img src={coraIcon} className="pet" />
+        <img src={lionIcon} className="pet" />
         <div className="invest-box">
           <div className="trade-box">
             <div className="d-flex you-pay">
@@ -37,7 +37,7 @@ function InvestBox() {
 
             <div className="d-flex you-receive">
               <div className="position-relative d-flex align-items-center justify-content-center">
-                <img className="token-pic" src={coraIcon} />
+                <img className="token-pic" src={lionIcon} />
                 <span>Coras</span>
                 <span className="title-input">You receive</span>
               </div>
