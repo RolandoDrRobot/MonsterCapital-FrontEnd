@@ -55,10 +55,9 @@ function News() {
                     title: item._fieldsProto.title.stringValue
                   }
                 }>
-                  <img src={articlePic} />
+                  <img src={articlePic} alt="" />
                   <h5>{item._fieldsProto.title.stringValue}</h5>
                 </Link>
-                {console.log(item)}
               </div>
             )
           }) : <></> 

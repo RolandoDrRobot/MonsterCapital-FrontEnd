@@ -13,7 +13,7 @@ function Profile() {
   return (
     <>
       <div className="profile text-center">
-        <img src={profileIcon} className="mb-3" />
+        <img src={profileIcon} className="mb-3" alt="" />
         <div>
           <h3>{name}</h3>
           <p className="mb-0">{email}</p>

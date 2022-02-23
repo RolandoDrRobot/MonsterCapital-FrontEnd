@@ -6,7 +6,7 @@ function Loading() {
   return (
     <>
       <div className="loading d-flex justify-content-center">
-        <img src={loadingIcon} className="loading-icon" />
+        <img src={loadingIcon} className="loading-icon" alt="" />
       </div>
     </>
   )

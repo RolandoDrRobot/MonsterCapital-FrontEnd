@@ -13,7 +13,7 @@ function ClosedContracts() {
               <p className="">Close date: 9-02-2023</p>
             </div>
             <div className="">
-              <img className="" src={closedContractIcon} />
+              <img className="" src={closedContractIcon} alt="" />
             </div>
           </div>
           <div className="contract d-flex justify-content-between align-items-center">
@@ -23,7 +23,7 @@ function ClosedContracts() {
               <p className="">Close date: 9-02-2023</p>
             </div>
             <div className="">
-              <img className="" src={closedContractIcon} />
+              <img className="" src={closedContractIcon} alt="" />
             </div>
           </div>
         </div>

@@ -12,7 +12,7 @@ function RecentTransactions() {
         <div className="transaction d-flex justify-content-between align-items-center">
           <div className="d-flex justify-content-between align-items-center">
             <div>
-              <img className="send-receive-pic" src={loadingIcon} />
+              <img className="send-receive-pic" src={loadingIcon} alt="" />
             </div>
             <div>
               <span>Sending</span><br />
@@ -27,7 +27,7 @@ function RecentTransactions() {
         <div className="transaction d-flex justify-content-between align-items-center">
           <div className="d-flex justify-content-between align-items-center">
             <div>
-              <img className="send-receive-pic" src={receiveIcon} />
+              <img className="send-receive-pic" src={receiveIcon} alt="" />
             </div>
             <div>
               <span>Received</span><br />
@@ -42,7 +42,7 @@ function RecentTransactions() {
         <div className="transaction d-flex justify-content-between align-items-center">
           <div className="d-flex justify-content-between align-items-center">
             <div>
-              <img className="send-receive-pic" src={sendIcon} />
+              <img className="send-receive-pic" src={sendIcon} alt="" />
             </div>
             <div>
               <span>Sent</span><br />
@@ -55,7 +55,7 @@ function RecentTransactions() {
         </div><div className="transaction d-flex justify-content-between align-items-center">
           <div className="d-flex justify-content-between align-items-center">
             <div>
-              <img className="send-receive-pic" src={receiveIcon} />
+              <img className="send-receive-pic" src={receiveIcon} alt="" />
             </div>
             <div>
               <span>Received</span><br />
@@ -70,7 +70,7 @@ function RecentTransactions() {
         <div className="transaction d-flex justify-content-between align-items-center">
           <div className="d-flex justify-content-between align-items-center">
             <div>
-              <img className="send-receive-pic" src={sendIcon} />
+              <img className="send-receive-pic" src={sendIcon} alt="" />
             </div>
             <div>
               <span>Sent</span><br />

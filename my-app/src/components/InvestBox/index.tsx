@@ -8,12 +8,12 @@ function InvestBox() {
   return (
     <>
       <div>
-        <img src={lionIcon} className="pet" />
+        <img src={lionIcon} className="pet" alt="" />
         <div className="invest-box">
           <div className="trade-box">
             <div className="d-flex you-pay">
               <div className="position-relative d-flex align-items-center justify-content-center">
-                <img className="token-pic" src={usdcIcon} />
+                <img className="token-pic" src={usdcIcon} alt="" />
                 <span>USDC</span>
                 <span className="title-input">You pay</span>
               </div>
@@ -29,7 +29,7 @@ function InvestBox() {
               <div>
               </div>
               <div className="exchange-icon-img">
-                <img src={exchangeIcon} />
+                <img src={exchangeIcon} alt="" />
               </div>
               <div>
               </div>
@@ -37,7 +37,7 @@ function InvestBox() {
 
             <div className="d-flex you-receive">
               <div className="position-relative d-flex align-items-center justify-content-center">
-                <img className="token-pic" src={lionIcon} />
+                <img className="token-pic" src={lionIcon} alt="" />
                 <span>Coras</span>
                 <span className="title-input">You receive</span>
               </div>
@@ -55,7 +55,7 @@ function InvestBox() {
                 <span className="cost"><span>≈ $</span> 200.005</span>
               </div>
               <div className="gas-container d-flex align-items-center justify-content-center">
-                <img className="gas-pic" src={gasFeeIcon} />
+                <img className="gas-pic" src={gasFeeIcon} alt="" />
                 <span>0.005</span>
               </div>
             </div>

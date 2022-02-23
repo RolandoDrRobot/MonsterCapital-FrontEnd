@@ -7,7 +7,7 @@ function StakeBox() {
   return (
     <>
       <div className="new-contract">
-        <img className="stake-icon" src={stakeIcon} />
+        <img className="stake-icon" src={stakeIcon} alt="" />
         <div className="new-contract-box">
           <p>Stake your Coras and earn APY%.
             You create contracts to earn APY% on your Coras.
@@ -22,7 +22,7 @@ function StakeBox() {
               </div>
               <div className="d-flex align-items-center">
                 <input placeholder="0.00" type="number" />
-                <img className="pic" src={coraIcon} />
+                <img className="pic" src={coraIcon} alt="" />
               </div>
             </div>
             <div className="d-flex justify-content-between stake-time">
@@ -32,7 +32,7 @@ function StakeBox() {
               <div className="d-flex align-items-center">
                 <input placeholder="6" type="number" />
                 <span>Months</span>
-                <img className="pic" src={timeIcon} />
+                <img className="pic" src={timeIcon} alt="" />
               </div>
             </div>
           </div>

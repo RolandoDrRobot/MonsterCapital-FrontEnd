@@ -6,7 +6,7 @@ function CoraWallet() {
     <>
       <div className="cora-wallet mb-4">
         <div className='d-flex justify-content-center align-items-center mb-4'>
-          <img className="token-pic" src={walletIcon} />
+          <img className="token-pic" src={walletIcon} alt="" />
           <span>200 Coras</span>
         </div>
         <div className="d-flex justify-content-center">

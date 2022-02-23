@@ -17,7 +17,6 @@ function Article() {
   const { 
     category,
     content,
-    pic,
     subtitle,
     title
   } = article;
@@ -25,7 +24,7 @@ function Article() {
   return (
     <>
       <div className="article">
-        <img src={articlePic} />
+        <img src={articlePic} alt="" />
         <h1>{title}</h1>
         <h2>{subtitle}</h2>
         <p>{content}</p>

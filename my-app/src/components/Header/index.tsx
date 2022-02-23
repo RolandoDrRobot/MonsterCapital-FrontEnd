@@ -11,10 +11,10 @@ function Header() {
         <div className="wallet-info d-flex">
           <div className="wallet-connection d-flex justify-content-center align-items-center">
             <span className="status connected"></span>
-            <img src={metamaskIcon} />
+            <img src={metamaskIcon} alt="" />
           </div>
           <div className="wallet-balance d-flex align-items-center">
-            <img src={ethIcon} />
+            <img src={ethIcon} alt="" />
             <p className='m-0'>11.44 ETH</p>
           </div>
           <div className="wallet-address d-flex align-items-center">
@@ -22,8 +22,8 @@ function Header() {
           </div>
         </div>
         <div className='side-options d-flex align-items-center justify-content-end'>
-          <img src={scanQRIcon} />
-          <img src={notificationsIcon} />
+          <img src={scanQRIcon} alt="" />
+          <img src={notificationsIcon} alt="" />
         </div>
       </div>
     </>

@@ -43,8 +43,8 @@ function Login() {
   return (
     <>
       <div className="login">
-        <img src={bullIcon} className="bull" />
-        <img src={bearIcon} className="bear" />
+        <img src={bullIcon} className="bull" alt="" />
+        <img src={bearIcon} className="bear" alt="" />
         <form onSubmit={onSubmitForm}>
           <input name="email" placeholder="Email Address" type="email" required />
           <input name="password" placeholder="Password" type="password" required />

@@ -23,7 +23,7 @@ function Logout() {
     <>
       <div className="logout d-flex justify-content-center">
         <button onClick={logout}>
-          <img src={logoutPic} />
+          <img src={logoutPic} alt="" />
           <span>Logout</span>
         </button>
       </div>

@@ -11,23 +11,23 @@ function Navbar() {
     <>
       <div className="navbar">
         <Link to="/" className="button">
-          <img src={homeIcon} />
+          <img src={homeIcon} alt="" />
           Home
         </Link>
         <Link to="/news" className="button">
-          <img src={newsIcon} />
+          <img src={newsIcon} alt="" />
           News
         </Link>
         <Link to="/invest" className="button">
-          <img src={lionIcon} />
+          <img src={lionIcon} alt="" />
           Invest
         </Link>
         <Link to="/stake" className="button">
-          <img src={stakeIcon} />
+          <img src={stakeIcon} alt="" />
           Stake
         </Link>
         <Link to="/wallet" className="button">
-          <img src={walletIcon} />
+          <img src={walletIcon} alt="" />
           Wallet
         </Link>
       </div>
