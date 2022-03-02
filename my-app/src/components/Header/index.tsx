@@ -2,9 +2,25 @@ import React from 'react';
 import metamaskIcon from '../../assets/img/metamask.png';
 import ethIcon from '../../assets/img/ethereum.png';
 import notificationsIcon from '../../assets/img/notifications.png';
+import warningIcon from '../../assets/img/warning.png';
+
+import { useWeb3React } from '@web3-react/core';
+import { injected } from '../../config/connector';
+import web3 from 'web3';
+
 import './main.css';
 
 function Header() {
+
+  const { active, account, library, activate, deactivate } = useWeb3React();
+
+  async function connect() {
+    try {
+      await activate(injected);
+    } catch (e) {
+      console.log(e)
+    }
+  }
 
   return (
     <>
@@ -12,7 +28,10 @@ function Header() {
         <div className="wallet-info d-flex">
           <div className="wallet-connection d-flex justify-content-center align-items-center">
             <span className="status connected"></span>
-            <img src={metamaskIcon} alt="" />
+            {(active) 
+              ? <img src={metamaskIcon} alt="" /> 
+              : <img src={warningIcon} alt="" onClick={connect} />
+            }
           </div>
           <div className="wallet-balance d-flex align-items-center">
             <img src={ethIcon} alt="" />
