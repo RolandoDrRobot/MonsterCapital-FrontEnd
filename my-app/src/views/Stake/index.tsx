@@ -1,3 +1,4 @@
+import React from 'react';
 import StakeBox from '../../components/StakeBox/index';
 import OpenContracts from '../../components/OpenContracts/index';
 import ClosedContracts from '../../components/ClosedContracts/index';

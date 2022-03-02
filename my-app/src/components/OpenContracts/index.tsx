@@ -1,3 +1,4 @@
+import React from 'react';
 import openContractIcon from '../../assets/img/open-contract.png';
 
 function OpenContracts() {

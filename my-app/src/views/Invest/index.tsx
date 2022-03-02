@@ -1,3 +1,4 @@
+import React from 'react';
 import InvestBox from '../../components/InvestBox/index';
 import './main.css';
 

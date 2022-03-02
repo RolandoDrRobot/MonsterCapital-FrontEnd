@@ -1,4 +1,4 @@
-
+import React from 'react';
 import Profile from '../../components/Profile/index';
 import Logout from '../../components/Logout/index';
 import './main.css';

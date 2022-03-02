@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import homeIcon from '../../assets/img/home.png';
 import newsIcon from '../../assets/img/news.png';

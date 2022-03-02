@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { globalContext } from '../../hooks/appContext';
 import profileIcon from '../../assets/img/monkey.png';

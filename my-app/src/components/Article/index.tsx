@@ -1,3 +1,4 @@
+import React from 'react';
 import articlePic from '../../assets/img/post-team.jpg';
 import { useLocation } from 'react-router-dom';
 import './main.css';

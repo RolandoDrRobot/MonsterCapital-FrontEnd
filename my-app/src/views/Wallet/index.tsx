@@ -1,3 +1,4 @@
+import React from 'react';
 import CoraWallet from '../../components/CoraWallet/index';
 import RecentTransactions from '../../components/RecentTransactions/index';
 import './main.css';

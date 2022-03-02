@@ -1,3 +1,4 @@
+import React from 'react';
 import walletIcon from '../../assets/img/wallet.svg';
 import './main.css';
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import exchangeIcon from '../../assets/img/exchange.png';
 import usdcIcon from '../../assets/img/usdcIcon.png';
 import lionIcon from '../../assets/img/lion.png';

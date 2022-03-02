@@ -1,3 +1,4 @@
+import React from 'react';
 import sendIcon from '../../assets/img/send.png';
 import receiveIcon from '../../assets/img/receive.png';
 import loadingIcon from '../../assets/img/loading.png';

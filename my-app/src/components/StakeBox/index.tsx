@@ -1,3 +1,4 @@
+import React from 'react';
 import stakeIcon from '../../assets/img/stake.png';
 import coraIcon from '../../assets/img/coraIcon.png';
 import timeIcon from '../../assets/img/time.png';

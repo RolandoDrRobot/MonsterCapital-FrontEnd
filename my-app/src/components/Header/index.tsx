@@ -1,10 +1,11 @@
+import React from 'react';
 import metamaskIcon from '../../assets/img/metamask.png';
 import ethIcon from '../../assets/img/ethereum.png';
-import scanQRIcon from '../../assets/img/scanqr.png';
 import notificationsIcon from '../../assets/img/notifications.png';
 import './main.css';
 
 function Header() {
+
   return (
     <>
       <div className="header d-flex">
@@ -22,7 +23,6 @@ function Header() {
           </div>
         </div>
         <div className='side-options d-flex align-items-center justify-content-end'>
-          <img src={scanQRIcon} alt="" />
           <img src={notificationsIcon} alt="" />
         </div>
       </div>

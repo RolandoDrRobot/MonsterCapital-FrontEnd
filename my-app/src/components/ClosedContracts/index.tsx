@@ -1,3 +1,4 @@
+import React from 'react';
 import closedContractIcon from '../../assets/img/closed-contract.png';
 
 function ClosedContracts() {
