@@ -10,6 +10,7 @@
   border-radius: 15px;
   margin-bottom: 16px;
   object-fit: cover;
+  border: 5px solid var(--light-green);
   filter: drop-shadow(0 0 10px var(--black));
 }
 

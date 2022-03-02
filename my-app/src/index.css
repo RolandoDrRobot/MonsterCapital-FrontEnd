@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Quicksand:wght@300;400;500;600&display=swap');
 
 :root {
-  --main-bg-color: #18181d;
+  --main-bg-color: #001c1d;
   --yellow: #fdc215;
   --white: #fff;
-  --gray: #2c2c36;
-  --light-gray: #9d9da9;
-  --dark-gray: #3e3c46;
+  --light-green: #033319;
+  --light-gray: #879c84;
   --black: #161623;
-  --light-black: rgb(32, 33, 45);
   --black-bold: #000;
   --warning: #ed6444;
 }
@@ -43,7 +41,7 @@ input {
   text-align: center;
   border-radius: 12px;
   color: var(--white);
-  border: 3px solid var(--gray);
+  border: 3px solid var(--light-green);
   background-color: var(--main-bg-color);
 }
 
@@ -60,6 +58,10 @@ button {
 
 span {
   font-weight: bold;
+}
+
+.flip-pic {
+  transform: scaleX(-1);
 }
 
 .alert-text {
@@ -80,7 +82,7 @@ span {
   color: var(--main-bg-color);
   background-color: var(--yellow);
   border-radius: 20px;
-  filter: drop-shadow(0 0 10px var(--yellow));
+  filter: drop-shadow(0 0 0 var(--yellow));
   cursor: pointer;
   transition: 0.25s;
 }
@@ -88,7 +90,7 @@ span {
 .main-button:hover,
 .main-button:active,
 .main-button:focus {
-  filter: drop-shadow(0 0 0 var(--yellow));
+  filter: drop-shadow(0 0 10px var(--yellow));
 }
 
 .text-button.yellow {

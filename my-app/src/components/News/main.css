@@ -7,15 +7,16 @@
 .new {
   cursor: pointer;
   border-radius: 25px;
-  border: 5px solid var(--gray);
+  border: 5px solid var(--light-green);
   margin-bottom: 40px;
   transition: all 0.25s;
+  color: var(--main-bg-color);
   background-color: var(--main-bg-color);
 }
 
 .new:hover {
   border-color: var(--yellow);
-  color: var(--main-bg-color);
+  color: var(--white);
   background-color: var(--yellow);
 }
 
@@ -29,4 +30,8 @@
 .new h5 {
   padding: 16px 10px 10px;
   text-align: center;
+}
+
+.new a:hover {
+  color: var(--main-bg-color);
 }

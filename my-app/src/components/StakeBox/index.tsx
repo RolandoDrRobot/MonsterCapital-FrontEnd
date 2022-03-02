@@ -1,13 +1,16 @@
 import React from 'react';
 import stakeIcon from '../../assets/img/stake.png';
-import coraIcon from '../../assets/img/coraIcon.png';
+import coinIcon from '../../assets/img/coin.png';
 import timeIcon from '../../assets/img/time.png';
+import Palmer from '../../components/Palmer/index';
 import './main.css';
 
 function StakeBox() {
   return (
     <>
+      
       <div className="new-contract">
+      <Palmer />
         <img className="stake-icon" src={stakeIcon} alt="" />
         <div className="new-contract-box">
           <p>Stake your Coras and earn APY%.
@@ -23,7 +26,7 @@ function StakeBox() {
               </div>
               <div className="d-flex align-items-center">
                 <input placeholder="0.00" type="number" />
-                <img className="pic" src={coraIcon} alt="" />
+                <img className="pic" src={coinIcon} alt="" />
               </div>
             </div>
             <div className="d-flex justify-content-between stake-time">

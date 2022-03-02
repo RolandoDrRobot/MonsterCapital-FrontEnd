@@ -3,16 +3,16 @@
   width: 31%;
   z-index: 1;
   right: 34%;
-  top: -1%;
+  top: 4%;
   filter: drop-shadow(0 0 20px var(--black));
 }
 
 .invest-box {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 78px;
   padding: 80px 15px 15px;
   border-radius: 25px;
-  background-color: var(--light-black);
+  background-color: var(--light-green);
   filter: drop-shadow(0 0 20px var(--black));
 }
 
@@ -30,13 +30,13 @@
 
 .invest-box input {
   margin: 0;
-  border: var(--light-black);
+  border: var(--light-green);
   border-radius: 25px;
 }
 
 .invest-box .exchange-icon div:first-of-type,
 .invest-box .exchange-icon div:last-of-type {
-  background-color: var(--light-black);
+  background-color: var(--light-green);
   width: 10%;
   z-index: 1;
 }

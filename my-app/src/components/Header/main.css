@@ -1,7 +1,27 @@
+.connect-btn {
+  font-weight: bold;
+  width: 100%;
+  padding: 10px 0;
+  color: var(--white);
+  border: 3px solid var(--light-green);
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.connect-btn:hover {
+  color: var(--main-bg-color);
+  background-color: var(--yellow);
+}
+
+.connect-btn img {
+  width: 18px;
+  margin-right: 6px;
+}
+
 .header .wallet-info {
   width: 85%;
   font-size: 12px;
-  border: 3px solid var(--gray);
+  border: 3px solid var(--light-green);
   border-radius: 20px;
 }
 
@@ -10,18 +30,17 @@
 }
 
 .header .wallet-info div {
-  padding: 8px 0px 8px 10px;
+  padding: 12px 0px 10px 10px;
   border-radius: 20px;
 }
 
 .header .wallet-info .wallet-connection {
   width: 20%;
-  padding: 12px;
 }
 
 .header .wallet-info .wallet-balance {
   width: 52%;
-  background-color: var(--gray);
+  background-color: var(--light-green);
 }
 
 .header .wallet-info .wallet-address {
@@ -30,7 +49,7 @@
 }
 
 .header .wallet-info img {
-  width: 15px;
+  width: 22px;
   border-radius: 20px;
 }
 

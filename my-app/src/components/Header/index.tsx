@@ -1,8 +1,7 @@
 import React from 'react';
 import metamaskIcon from '../../assets/img/metamask.png';
-import ethIcon from '../../assets/img/ethereum.png';
+import coinIcon from '../../assets/img/coin.png';
 import notificationsIcon from '../../assets/img/notifications.png';
-import warningIcon from '../../assets/img/warning.png';
 
 import { useTruncatedAddress } from '../../hooks/useTruncatedAddress';
 import { useWeb3React } from '@web3-react/core';
@@ -38,28 +37,33 @@ function Header() {
   }, [account]);
 
   return (
-    <>
-      <div className="header d-flex">
-        <div className="wallet-info d-flex">
-          <div className="wallet-connection d-flex justify-content-center align-items-center">
-            <span className="status connected"></span>
-            {(active) 
-              ? <img src={metamaskIcon} alt="" /> 
-              : <img src={warningIcon} alt="" onClick={connect} />
-            }
+    <>{(active) 
+        ? <div className="header d-flex">
+            <div className="wallet-info d-flex">
+              <div className="wallet-connection d-flex justify-content-center align-items-center">
+                <span className="status connected"></span>
+                <img src={metamaskIcon} alt="" />
+              </div>
+              <div className="wallet-balance d-flex align-items-center">
+                <span className="d-flex align-items-center">
+                  <img src={coinIcon} alt="" />
+                  <p className='m-0'>{ethBalance.toFixed(3)} COR</p>
+                </span>
+              </div>
+              <div className="wallet-address d-flex align-items-center">
+                <p className='m-0'>{truncatedAddress}</p>
+              </div>
+            </div>
+            <div className='side-options d-flex align-items-center justify-content-end'>
+              <img src={notificationsIcon} alt="" />
+            </div>
           </div>
-          <div className="wallet-balance d-flex align-items-center">
-            <img src={ethIcon} alt="" />
-            <p className='m-0'>{ethBalance.toFixed(3)} ETH</p>
-          </div>
-          <div className="wallet-address d-flex align-items-center">
-            <p className='m-0'>{truncatedAddress}</p>
-          </div>
-        </div>
-        <div className='side-options d-flex align-items-center justify-content-end'>
-          <img src={notificationsIcon} alt="" />
-        </div>
-      </div>
+        : <button className="connect-btn d-flex align-items-center justify-content-center m-0" onClick={connect}>
+            <img src={metamaskIcon} alt="" />
+            Connect your wallet
+          </button>
+      }
+      
     </>
   )
 }
