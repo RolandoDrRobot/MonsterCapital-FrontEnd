@@ -1,5 +1,5 @@
 .header .wallet-info {
-  width: 70%;
+  width: 85%;
   font-size: 12px;
   border: 3px solid var(--gray);
   border-radius: 20px;
@@ -31,7 +31,7 @@
 }
 
 .header .side-options {
-  width: 29%;
+  width: 15%;
 }
 
 .header .side-options img {
