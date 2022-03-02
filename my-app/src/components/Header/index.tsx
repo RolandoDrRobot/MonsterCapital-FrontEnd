@@ -4,6 +4,7 @@ import ethIcon from '../../assets/img/ethereum.png';
 import notificationsIcon from '../../assets/img/notifications.png';
 import warningIcon from '../../assets/img/warning.png';
 
+import { useTruncatedAddress } from '../../hooks/useTruncatedAddress';
 import { useWeb3React } from '@web3-react/core';
 import { injected } from '../../config/connector';
 import web3 from 'web3';
@@ -22,6 +23,9 @@ function Header() {
     }
   }
 
+  // Thanks to this the address is shorter in the navbar
+  const truncatedAddress = useTruncatedAddress(account);
+
   return (
     <>
       <div className="header d-flex">
@@ -38,7 +42,7 @@ function Header() {
             <p className='m-0'>11.44 ETH</p>
           </div>
           <div className="wallet-address d-flex align-items-center">
-            <p className='m-0'>0x45E...CDS</p>
+            <p className='m-0'>{truncatedAddress}</p>
           </div>
         </div>
         <div className='side-options d-flex align-items-center justify-content-end'>
