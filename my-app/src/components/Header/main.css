@@ -5,6 +5,10 @@
   border-radius: 20px;
 }
 
+.header .wallet-info p {
+  font-weight: bold;
+}
+
 .header .wallet-info div {
   padding: 8px 0px 8px 10px;
   border-radius: 20px;

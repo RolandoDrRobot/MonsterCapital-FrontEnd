@@ -13,6 +13,7 @@ import './main.css';
 
 function Header() {
 
+  let [ethBalance, setEthBalance] = React.useState<number>(0);
   const { active, account, library, activate, deactivate } = useWeb3React();
 
   async function connect() {
@@ -25,6 +26,16 @@ function Header() {
 
   // Thanks to this the address is shorter in the navbar
   const truncatedAddress = useTruncatedAddress(account);
+
+  React.useEffect(() => {
+    (async function() {
+      if (library) {
+        const decimalsConversion = 1000000000000000000;
+        const balance = await library.eth.getBalance(account);
+        setEthBalance(balance / decimalsConversion);
+      }
+    })();
+  }, [account]);
 
   return (
     <>
@@ -39,7 +50,7 @@ function Header() {
           </div>
           <div className="wallet-balance d-flex align-items-center">
             <img src={ethIcon} alt="" />
-            <p className='m-0'>11.44 ETH</p>
+            <p className='m-0'>{ethBalance.toFixed(3)} ETH</p>
           </div>
           <div className="wallet-address d-flex align-items-center">
             <p className='m-0'>{truncatedAddress}</p>
