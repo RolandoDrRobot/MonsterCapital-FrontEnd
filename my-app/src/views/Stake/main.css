@@ -7,7 +7,7 @@
 .contract {
   padding: 20px;
   margin: 0 0 16px 0;
-  border: 3px solid var(--yellow);
+  border: 3px solid var(--light-green);
   border-radius: 25px;
   background-color: var(--light-green);
   filter: drop-shadow(0 0 20px var(--black));

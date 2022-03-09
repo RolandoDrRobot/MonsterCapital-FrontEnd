@@ -2,7 +2,6 @@ import React from 'react';
 import metamaskIcon from '../../assets/img/metamask.png';
 import coinIcon from '../../assets/img/coin.png';
 import notificationsIcon from '../../assets/img/notifications.png';
-
 import { useTruncatedAddress } from '../../hooks/useTruncatedAddress';
 import { useWeb3React } from '@web3-react/core';
 import { injected } from '../../config/connector';
@@ -47,7 +46,7 @@ function Header() {
               <div className="wallet-balance d-flex align-items-center">
                 <span className="d-flex align-items-center">
                   <img src={coinIcon} alt="" />
-                  <p className='m-0'>{ethBalance.toFixed(3)} COR</p>
+                  <p className='m-0'>{ethBalance.toFixed(2)} COR</p>
                 </span>
               </div>
               <div className="wallet-address d-flex align-items-center">
