@@ -36,5 +36,5 @@
 }
 
 .closed-contracts .contract img {
-  filter: drop-shadow(0 0 10px var(--black));
+  filter: drop-shadow(0 0 10px var(--yellow));
 }

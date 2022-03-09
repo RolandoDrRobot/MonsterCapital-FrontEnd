@@ -3,12 +3,22 @@
   padding: 40px 20px 35px;
   border-radius: 25px;
   background-color: var(--light-green);
+  border: 3px solid var(--yellow);
+}
+
+.cora-wallet p {
+  margin: 0;
+}
+
+.cora-wallet p:last-of-type {
+  color: var(--light-gray);
 }
 
 .cora-wallet .token-pic {
   width: 75px;
   height: 75px;
-  margin-right: 10px;
+  margin-right: 20px;
+  filter: drop-shadow(0 0 8px var(--black));
 }
 
 .cora-wallet .send,
@@ -30,6 +40,5 @@
 .cora-wallet .send:hover,
 .cora-wallet .receive:hover {
   color: var(--main-bg-color);
-  filter: drop-shadow(0 0 10px var(--yellow));
   background-color: var(--yellow);
 }

@@ -4,7 +4,7 @@ import homeIcon from '../../assets/img/home.png';
 import newsIcon from '../../assets/img/news.png';
 import coinIcon from '../../assets/img/coin.png';
 import stakeIcon from '../../assets/img/stake.png';
-import walletIcon from '../../assets/img/wallet.svg';
+import walletIcon from '../../assets/img/wallet.png';
 import './main.css';
 import Monkey from '../Monkey';
 

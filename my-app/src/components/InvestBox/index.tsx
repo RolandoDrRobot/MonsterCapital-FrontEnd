@@ -14,6 +14,11 @@ function InvestBox() {
         <img src={coinIcon} className="pet" alt="" />
         <div className="invest-box">
           <div className="trade-box">
+            <p>Stake your Coras and earn APY%.
+              You create contracts to earn APY% on your Coras.
+              Stake your Coras and earn APY%
+            </p>
+            <p>Stake your Coras and earn APY%</p>
             <div className="d-flex you-pay">
               <div className="position-relative d-flex align-items-center justify-content-center">
                 <img className="token-pic" src={usdcIcon} alt="" />

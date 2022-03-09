@@ -9,11 +9,25 @@
 
 .invest-box {
   text-align: center;
-  margin-top: 78px;
+  margin-top: 230px;
   padding: 80px 15px 15px;
   border-radius: 25px;
   background-color: var(--light-green);
   filter: drop-shadow(0 0 20px var(--black));
+  border: 3px solid var(--yellow);
+}
+
+.invest-box p:nth-child(1) {
+  padding: 0 8px;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.invest-box p:nth-child(2) {
+  font-size: 12px;
+  text-align: center;
+  color: var(--light-gray);
+  margin-bottom: 25px;
 }
 
 .invest-box .you-pay,
