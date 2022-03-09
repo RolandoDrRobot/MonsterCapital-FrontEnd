@@ -4,15 +4,19 @@ import usdcIcon from '../../assets/img/usdcIcon.png';
 import coinIcon from '../../assets/img/coin.png';
 import gasFeeIcon from '../../assets/img/gasIcon.png';
 import Palmer from '../../components/Palmer/index';
+import { useWeb3React } from '@web3-react/core';
 import './main.css';
 
 function InvestBox() {
+
+  const { account } = useWeb3React();
+
   return (
     <>
       <div>
         <Palmer />
         <img src={coinIcon} className="pet" alt="" />
-        <div className="invest-box">
+        <div className={ 'invest-box' + (account ? ' yellow-border' : '') }>
           <div className="trade-box">
             <p>Stake your Coras and earn APY%.
               You create contracts to earn APY% on your Coras.

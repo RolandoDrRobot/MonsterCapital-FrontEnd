@@ -27,7 +27,7 @@ function CoraWallet() {
   }, [account]);
 
   function copyAddressToClipboard() {
-    navigator.clipboard.writeText('<empty clipbossard>').then(function() {
+    navigator.clipboard.writeText(account ? account : '').then(function() {
       alert('Copied the address ' + account);
     }, () => { alert('No copied to the clipboard') });    
   }
@@ -38,8 +38,10 @@ function CoraWallet() {
         { !showSendWindow 
           ? <div>
               <div className='d-flex justify-content-center align-items-center mb-4'>
-                <img className="token-pic" src={walletIcon} alt="" />
-                <div>
+                <div className="token-pic d-flex justify-content-center">
+                  <img src={walletIcon} alt="" />
+                </div>
+                <div className="token-balance">
                   <p className={ account ? '' : 'gray' }>{ethBalance.toFixed(2)}</p>
                   <p className={ account ? '' : 'gray' }>Coras</p>
                   <p className="cora-wallet-address">{truncatedAddress ? truncatedAddress : 'Connect wallet'}</p>
@@ -47,13 +49,13 @@ function CoraWallet() {
               </div>
               <div className="d-flex justify-content-center">
                 <button 
-                  className="receive" 
+                  className={ 'receive' + (account ? ' yellow-border' : '') } 
                   onClick={() => copyAddressToClipboard()} 
                   disabled={ account ? false : true}
                 >Receive
                 </button>
                 <button 
-                  className="send"
+                  className={ 'send' + (account ? ' yellow-border' : '') } 
                   onClick={() => setShowSendWindow(true)}
                   disabled={ account ? false : true}
                 >Send</button>
@@ -82,7 +84,7 @@ function CoraWallet() {
                   <img className="pic" src={metamaskIcon} alt="" />
                 </div>
               </div>
-              <button>Send Coras</button>
+              <button className={ account ? ' yellow-border' : '' }>Send Coras</button>
             </div>
         }        
       </div>

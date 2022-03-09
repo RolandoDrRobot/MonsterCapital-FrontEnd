@@ -15,10 +15,13 @@
   color: var(--light-gray);
 }
 
-.cora-wallet .token-pic {
+.cora-wallet .token-pic,
+.cora-wallet .token-balance {
+  width: 50%;
+}
+
+.cora-wallet .token-pic img {
   width: 75px;
-  height: 75px;
-  margin-right: 20px;
   filter: drop-shadow(0 0 20px var(--black));
 }
 
