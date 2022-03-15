@@ -19,33 +19,48 @@
 }
 
 .header .wallet-info {
-  width: 85%;
+  width: 83%;
   font-size: 12px;
   border: 3px solid var(--light-green);
   border-radius: 20px;
 }
 
 .header .wallet-info p {
+  font-size: 13px;
   font-weight: bold;
+  margin: 0 0 0 8px;
 }
 
 .header .wallet-info div {
-  padding: 12px 0px 10px 10px;
+  padding: 10px 12px 8px;
   border-radius: 20px;
+}
+
+.header .wallet-info .wallet-logout {
+  width: 20%;
+  border-radius: 15px 0 0 15px;
+  margin-left: -2px;
+  background-color: var(--light-green);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.header .wallet-info .wallet-logout:hover {
+  background-color: var(--yellow);
 }
 
 .header .wallet-info .wallet-connection {
   width: 20%;
+  padding: 10px 0 8px 8px;
+  background-color: var(--main-bg-color);
+  border-radius: 20px 0 0 20px;
 }
 
 .header .wallet-info .wallet-balance {
-  width: 52%;
-  background-color: var(--light-green);
-}
-
-.header .wallet-info .wallet-address {
-  margin-left: -30px;
+  width: 60%;
+  padding: 10px 3px 8px;
   background-color: var(--main-bg-color);
+  border-radius: 0 20px 20px 0;
 }
 
 .header .wallet-info img {
@@ -58,7 +73,6 @@
 }
 
 .header .side-options img {
-  width: 30px;
-  height: 30px;
-  margin-left: 10px;
+  width: 40px;
+  height: 40px;
 }
