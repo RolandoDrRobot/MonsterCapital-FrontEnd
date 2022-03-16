@@ -4,6 +4,7 @@ import coinIcon from '../../assets/img/coin.png';
 import nftIcon from '../../assets/img/nft-1.png';
 import logoutWalletIcon from '../../assets/img/logoutwallet.png';
 import Loading from '../../components/Loading/index';
+import { Link } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
 import { injected } from '../../config/connector';
 import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
@@ -62,7 +63,9 @@ function Header() {
               </div> 
             </div>
             <div className="side-options d-flex align-items-center justify-content-end">
-              <img src={nftIcon} alt="" />
+              <Link to="/nftroom" className="button">
+                <img src={nftIcon} alt="" />
+              </Link>
             </div>
           </div>
         : isLoading === true 

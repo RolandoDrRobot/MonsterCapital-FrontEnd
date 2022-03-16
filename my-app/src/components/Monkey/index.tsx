@@ -1,4 +1,3 @@
-
 import React from 'react';
 import monkeyPic from '../../assets/img/monkey.png';
 import './main.css';
