@@ -32,7 +32,7 @@
 }
 
 .header .wallet-info div {
-  padding: 10px 12px 8px;
+  padding: 12px 12px 10px;
   border-radius: 20px;
 }
 
@@ -51,14 +51,14 @@
 
 .header .wallet-info .wallet-connection {
   width: 20%;
-  padding: 10px 0 8px 8px;
+  padding: 12px 0 10px 8px;
   background-color: var(--main-bg-color);
   border-radius: 20px 0 0 20px;
 }
 
 .header .wallet-info .wallet-balance {
   width: 60%;
-  padding: 10px 3px 8px;
+  padding: 12px 3px 10px;
   background-color: var(--main-bg-color);
   border-radius: 0 20px 20px 0;
 }

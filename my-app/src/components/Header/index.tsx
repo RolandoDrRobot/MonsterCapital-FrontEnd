@@ -8,7 +8,6 @@ import { useWeb3React } from '@web3-react/core';
 import { injected } from '../../config/connector';
 import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
 import useBalance from '../../hooks/useBalance';
-import web3 from 'web3';
 
 import './main.css';
 
