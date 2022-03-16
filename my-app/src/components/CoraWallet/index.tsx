@@ -4,8 +4,8 @@ import { useWeb3React } from '@web3-react/core';
 import { useTruncatedAddress } from '../../hooks/useTruncatedAddress';
 import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
 import useBalance from '../../hooks/useBalance';
-import SendCora from '../../components/sendCora/index';
-import BigNumber from 'bignumber.js';
+import SendCoras from '../SendCoras/index';
+import ReceiveCoras from '../ReceiveCoras/index';
 import './main.css';
 
 function CoraWallet() {
@@ -21,12 +21,6 @@ function CoraWallet() {
 
   // Thanks to this the address is shorter in the navbar
   const truncatedAddress = useTruncatedAddress(account);
-
-  function copyAddressToClipboard() {
-    navigator.clipboard.writeText(account ? account : '').then(function() {
-      alert('Copied the address ' + account);
-    }, () => { alert('No copied to the clipboard') });    
-  }
 
   return (
     <>
@@ -46,8 +40,13 @@ function CoraWallet() {
               <div className="d-flex justify-content-center">
                 <button 
                   className={ 'receive' + (account ? ' yellow-border' : '') } 
-                  onClick={() => copyAddressToClipboard()} 
                   disabled={ account ? false : true}
+                  type="button"
+                  data-toggle="collapse" 
+                  data-target="#receive-box" 
+                  aria-controls="receive-box" 
+                  aria-expanded="false" 
+                  aria-label="Toggle navigation"
                 >Receive
                 </button>
                 <button 
@@ -56,8 +55,10 @@ function CoraWallet() {
                   disabled={ account ? false : true}
                 >Send</button>
               </div>
+
+              <ReceiveCoras />
             </div> 
-          : <SendCora />
+          : <SendCoras />
         }        
       </div>
     </>

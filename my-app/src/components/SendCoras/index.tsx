@@ -8,7 +8,7 @@ import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
 import useBalance from '../../hooks/useBalance';
 import './main.css';
 
-function SendCora() {
+function SendCoras() {
 
   const [selectedToken, setSelectedToken] = React.useState(TokenListRinkeby[0]);
   const { account } = useWeb3React();
@@ -49,4 +49,4 @@ function SendCora() {
   )
 }
 
-export default SendCora;
+export default SendCoras;
