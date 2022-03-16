@@ -69,5 +69,21 @@ export default function useBalance(
     }
   }, [tokenAddress, library, decimals, account]);
 
-  return [balance];
+  const fmt = {
+    prefix: '',
+    decimalSeparator: '.',
+    groupSeparator: ',',
+    groupSize: 3,
+    secondaryGroupSize: 0,
+    fractionGroupSeparator: ' ',
+    fractionGroupSize: 0,
+    suffix: ''
+  }
+  
+  const x = new BigNumber(balance);
+  
+  // Set the global formatting options
+  BigNumber.config({ FORMAT: fmt });
+
+  return [x.toFormat(3)];
 }

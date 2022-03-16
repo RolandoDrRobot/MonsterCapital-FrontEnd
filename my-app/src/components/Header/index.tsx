@@ -1,7 +1,7 @@
 import React from 'react';
 import metamaskIcon from '../../assets/img/metamask.png';
 import coinIcon from '../../assets/img/coin.png';
-import nftIcon from '../../assets/img/nft-1.png';
+import nftIcon from '../../assets/img/nft-7.png';
 import logoutWalletIcon from '../../assets/img/logoutwallet.png';
 import Loading from '../../components/Loading/index';
 import { Link } from 'react-router-dom';
@@ -58,7 +58,7 @@ function Header() {
               <div className="wallet-balance d-flex align-items-center">
                 <span className="d-flex align-items-center">
                   <img src={coinIcon} alt="" />
-                  <p>{balance} CORA</p>
+                  <p>{balance}</p>
                 </span>
               </div> 
             </div>
