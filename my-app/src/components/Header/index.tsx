@@ -16,14 +16,15 @@ function Header() {
 
   const [selectedToken, setSelectedToken] = React.useState(TokenListRinkeby[0]);
   let [isLoading, setIsLoading] = React.useState<boolean>(false);
-  const { active, account, library, activate, deactivate } = useWeb3React();
+  const { active, activate, deactivate } = useWeb3React();
 
   async function connect() {
     setIsLoading(true);
     try {
       await activate(injected);
+      localStorage.setItem('isWalletConnected', 'true');
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
     setIsLoading(false);
   }
@@ -32,11 +33,25 @@ function Header() {
     setIsLoading(true);
     try {
       await deactivate();
+      localStorage.setItem('isWalletConnected', 'false');
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
     setIsLoading(false);
   }
+
+  React.useEffect(() => {
+    const connectWalletOnPageLoad = async () => {
+      if (localStorage && localStorage.getItem('isWalletConnected') === 'true') {
+        try {
+          await activate(injected);
+        } catch (e) {
+          console.log(e);
+        }
+      }
+    }
+    connectWalletOnPageLoad()
+  }, [])
 
   const [balance] = useBalance(
     selectedToken.address,
