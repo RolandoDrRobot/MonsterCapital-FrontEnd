@@ -1,7 +1,7 @@
 import React from 'react';
 import metamaskIcon from '../../assets/img/metamask.png';
 import coinIcon from '../../assets/img/coin.png';
-import nftIcon from '../../assets/img/nft-7.png';
+import nftIcon from '../../assets/img/nft.png';
 import logoutWalletIcon from '../../assets/img/logoutwallet.png';
 import Loading from '../../components/Loading/index';
 import { Link } from 'react-router-dom';

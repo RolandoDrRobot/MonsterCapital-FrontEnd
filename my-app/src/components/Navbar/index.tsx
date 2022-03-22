@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import homeIcon from '../../assets/img/home.png';
 import newsIcon from '../../assets/img/news.png';
-import coinIcon from '../../assets/img/coin.png';
+import investIcon from '../../assets/img/invest.png';
 import stakeIcon from '../../assets/img/stake.png';
-import walletIcon from '../../assets/img/wallet.png';
+import walletIcon from '../../assets/img/coin.png';
 import './main.css';
 import Monkey from '../Monkey';
 
@@ -22,7 +22,7 @@ function Navbar() {
           News
         </Link>
         <Link to="/invest" className="button">
-          <img src={coinIcon} alt="" />
+          <img src={investIcon} alt="" />
           Invest
         </Link>
         <Link to="/stake" className="button">

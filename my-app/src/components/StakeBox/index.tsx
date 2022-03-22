@@ -12,9 +12,8 @@ function StakeBox() {
 
   return (
     <>
-      
       <div className="new-contract">
-      <Palmer />
+        <Palmer />
         <img className="stake-icon" src={stakeIcon} alt="" />
         <div className={ 'new-contract-box' + (account ? ' yellow-border' : '') }>
           <p>Stake your Coras and earn APY%.

@@ -5,7 +5,7 @@ import './main.css';
 function Invest() {
   return (
     <>
-      <div className="invest d-flex align-items-center justify-content-center">
+      <div className="invest">
         <InvestBox />
       </div>
     </>

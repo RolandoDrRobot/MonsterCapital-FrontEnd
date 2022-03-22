@@ -1,5 +1,5 @@
 import React from 'react';
-import loadingIcon from '../../assets/img/loading-c.png';
+import loadingIcon from '../../assets/img/loading.png';
 import './main.css';
 
 function Loading() {

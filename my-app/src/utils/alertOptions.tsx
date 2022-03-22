@@ -9,7 +9,7 @@ const styles = {
 const alertOptions = {
   position: positions.BOTTOM_CENTER,
   timeout: 50000,
-  offset: '15px',
+  offset: '30px',
   transition: transitions.FADE,
   type: types.SUCCESS,
   containerStyle: styles
