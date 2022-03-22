@@ -28,7 +28,7 @@ body {
 
 #content {
   max-width: 296px;
-  height: 420px;
+  height: 63vh;
   margin: 28px 0;
 }
 
@@ -124,4 +124,22 @@ span {
 .gray:focus {
   color: var(--light-gray);
   text-shadow:0 0 20px var(--light-gray);
+}
+
+#__react-alert__ div div div {
+  color: var(--white) !important;
+  background-color: var(--main-bg-color) !important;
+  border-radius: 20px !important;
+  font-family: 'Quicksand', sans-serif !important;
+  text-transform: initial !important;
+  font-weight: bold !important;
+  border: 3px solid var(--yellow) !important;
+}
+
+#__react-alert__ div div div svg {
+  stroke: var(--yellow) !important;
+}
+
+#__react-alert__ div div div svg:hover {
+  stroke: var(--light-gray) !important;
 }

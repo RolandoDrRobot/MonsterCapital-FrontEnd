@@ -1,15 +1,16 @@
 import React from 'react';
+import { useAlert } from 'react-alert';
 import walletIcon from '../../assets/img/coin.png';
 import { useWeb3React } from '@web3-react/core';
 import { useTruncatedAddress } from '../../hooks/useTruncatedAddress';
 import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
 import useBalance from '../../hooks/useBalance';
 import SendCoras from '../SendCoras/index';
-import ReceiveCoras from '../ReceiveCoras/index';
 import './main.css';
 
 function CoraWallet() {
 
+  const alert = useAlert();
   const [selectedToken, setSelectedToken] = React.useState(TokenListRinkeby[0]);
   let [showSendWindow, setShowSendWindow] = React.useState<boolean>(false);
   const { account } = useWeb3React();
@@ -21,6 +22,12 @@ function CoraWallet() {
 
   // Thanks to this the address is shorter in the navbar
   const truncatedAddress = useTruncatedAddress(account);
+
+  function copyAddressToClipboard() {
+    navigator.clipboard.writeText(account ? account : '').then(function() {
+      alert.show('The address ' + truncatedAddress + ' is copied to the clipboard');
+    }, () => { alert.show('No copied to the clipboard') });    
+  }
 
   return (
     <>
@@ -39,24 +46,20 @@ function CoraWallet() {
               </div>
               <div className="d-flex justify-content-center">
                 <button 
-                  className={ 'receive' + (account ? ' yellow-border' : '') } 
+                  className={ 'receive' + (account ? ' yellow-border' : '') }
+                  onClick={ copyAddressToClipboard }
                   disabled={ account ? false : true}
                   type="button"
-                  data-toggle="collapse" 
-                  data-target="#receive-box" 
-                  aria-controls="receive-box" 
-                  aria-expanded="false" 
-                  aria-label="Toggle navigation"
                 >Receive
                 </button>
                 <button 
                   className={ 'send' + (account ? ' yellow-border' : '') } 
                   onClick={() => setShowSendWindow(true)}
                   disabled={ account ? false : true}
-                >Send</button>
+                  type="button"
+                >Send
+                </button>
               </div>
-
-              <ReceiveCoras />
             </div> 
           : <SendCoras />
         }        

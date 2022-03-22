@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider as AlertProvider } from 'react-alert';
+import alertOptions from './utils/alertOptions';
+import AlertTemplate from 'react-alert-template-basic';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { GlobalContextProvider } from './hooks/appContext';
 import { Web3ReactProvider } from '@web3-react/core';
@@ -24,27 +27,29 @@ function getLibrary(provider) {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Web3ReactProvider getLibrary={getLibrary}>
-      <GlobalContextProvider>
-        <Router>
-          <Header/>
-          <div id="content">
-            <Routes>
-              <Route path='/' element={<Home/>}/>
-              <Route path='/invest' element={<Invest/>}/>
-              <Route path='/news' element={<News/>}/>
-              <Route path='/stake' element={<Stake/>}/>
-              <Route path='/wallet' element={<Wallet/>}/>
-              <Route path='/newuser' element={<NewUser/>}/>
-              <Route path='/forgotpassword' element={<ForgotPassword/>}/>
-              <Route path='/article' element={<Article/>}/>
-              <Route path='/nftroom' element={<NftRoom/>}/>
-            </Routes>
-          </div>
-          <Navbar/>
-        </Router>
-      </GlobalContextProvider>
-    </Web3ReactProvider>
+    <AlertProvider template={AlertTemplate} {...alertOptions}>
+      <Web3ReactProvider getLibrary={getLibrary}>
+        <GlobalContextProvider>
+          <Router>
+            <Header/>
+            <div id="content">
+              <Routes>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/invest' element={<Invest/>}/>
+                <Route path='/news' element={<News/>}/>
+                <Route path='/stake' element={<Stake/>}/>
+                <Route path='/wallet' element={<Wallet/>}/>
+                <Route path='/newuser' element={<NewUser/>}/>
+                <Route path='/forgotpassword' element={<ForgotPassword/>}/>
+                <Route path='/article' element={<Article/>}/>
+                <Route path='/nftroom' element={<NftRoom/>}/>
+              </Routes>
+            </div>
+            <Navbar/>
+          </Router>
+        </GlobalContextProvider>
+      </Web3ReactProvider>
+    </AlertProvider>  
   </React.StrictMode>,
   document.getElementById('root')
 );

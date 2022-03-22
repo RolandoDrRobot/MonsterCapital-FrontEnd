@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ZERO_ADDRESS, web3BNToFloatString } from '../utils';
+import { ZERO_ADDRESS, web3BNToFloatString } from '../utils/bigNumber';
 import { getERC20Contract } from '../config/tokens/contractStore';
 import BigNumber from 'bignumber.js';
 import BN from 'bn.js';
