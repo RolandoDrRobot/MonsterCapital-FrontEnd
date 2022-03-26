@@ -34,7 +34,11 @@ function InvestBox() {
             </div>
             <div className="d-flex align-items-center">
               <span className={ account ? '' : 'gray' }>$</span>
-              <input placeholder="0.00" type="number" />
+              <input 
+                placeholder="0.00"
+                type="number"
+                disabled={ account ? false : true} 
+              />
             </div>
           </div>
 
@@ -57,7 +61,12 @@ function InvestBox() {
             <div>
             </div>
             <div className="d-flex align-items-center justify-content-center">
-              <span className={ account ? '' : 'gray' }>200</span>
+              <input
+                placeholder="200"
+                type="number"
+                className={ account ? '' : 'gray' }
+                disabled={ account ? false : true}
+              />
             </div>
           </div>
           <button 
