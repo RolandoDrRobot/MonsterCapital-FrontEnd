@@ -6,7 +6,6 @@ import sendIcon from '../../assets/img/send.png';
 import { useWeb3React } from '@web3-react/core';
 import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
 import { getERC20Contract } from '../../config/tokens/contractStore';
-import useBalance from '../../hooks/useBalance';
 import { useAlert } from 'react-alert';
 import './main.css';
 
@@ -20,11 +19,6 @@ function SendCoras(props:SendCorasProps) {
   const [selectedToken, setSelectedToken] = React.useState(TokenListRinkeby[0]);
   const { account, library } = useWeb3React();
 
-  const [balance] = useBalance(
-    selectedToken.address,
-    selectedToken.decimals
-  )
-
   const sendCoras = function(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
@@ -36,7 +30,6 @@ function SendCoras(props:SendCorasProps) {
     const amount = target.amount.value * decimals;
     const recipient = target.recipient.value;
     const coraTokenContract = getERC20Contract(selectedToken.address, library);
-    
 
     if(coraTokenContract) {
       coraTokenContract.methods.transfer(recipient, amount)
@@ -51,10 +44,11 @@ function SendCoras(props:SendCorasProps) {
       })
       .on('receipt', () => {
         alert.show('Transaction confirmed');
+        target.amount.value = 0;
+        target.recipient.value = '';
       });
     }
   }
-
 
   const [closeSendCorasWindow, setCloseSendCorasWindow] = React.useState(false);
   React.useEffect(() => {

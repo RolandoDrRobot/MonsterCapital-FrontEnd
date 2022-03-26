@@ -28,7 +28,6 @@ export default function useBalance(
             library.eth
               .getBalance(account)
               .then((value:any) => {
-                console.log(value);
                 resolve(new BN(value));
               })
               .catch((error:any) => {
