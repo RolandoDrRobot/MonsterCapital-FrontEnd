@@ -61,7 +61,7 @@ function CoraWallet() {
                 </button>
               </div>
             </div> 
-          : <SendCoras />
+          : <SendCoras setShowSendWindow={setShowSendWindow} />
         }        
       </div>
     </>

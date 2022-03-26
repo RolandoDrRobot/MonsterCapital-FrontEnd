@@ -35,7 +35,7 @@ export default function useBalance(
                 resolve(new BN('0'));
               })
           } else {
-            const contract = getERC20Contract(tokenAddress, library)
+            const contract = getERC20Contract(tokenAddress, library);
             if(contract) {
               contract.methods
               .balanceOf(account)

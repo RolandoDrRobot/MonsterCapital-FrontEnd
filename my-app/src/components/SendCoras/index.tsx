@@ -5,23 +5,66 @@ import metamaskIcon from '../../assets/img/metamask.png';
 import sendIcon from '../../assets/img/send.png';
 import { useWeb3React } from '@web3-react/core';
 import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
+import { getERC20Contract } from '../../config/tokens/contractStore';
 import useBalance from '../../hooks/useBalance';
+import { useAlert } from 'react-alert';
 import './main.css';
 
-function SendCoras() {
+interface SendCorasProps {
+  setShowSendWindow: Function
+}
 
+function SendCoras(props:SendCorasProps) {
+
+  const alert = useAlert();
   const [selectedToken, setSelectedToken] = React.useState(TokenListRinkeby[0]);
-  const { account } = useWeb3React();
+  const { account, library } = useWeb3React();
 
   const [balance] = useBalance(
     selectedToken.address,
     selectedToken.decimals
   )
 
+  const sendCoras = function(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    const target = e.target as typeof e.target & {
+      amount: { value: number };
+      recipient: { value: string };
+    };
+    const decimals = 100000000;
+    const amount = target.amount.value * decimals;
+    const recipient = target.recipient.value;
+    const coraTokenContract = getERC20Contract(selectedToken.address, library);
+    
+
+    if(coraTokenContract) {
+      coraTokenContract.methods.transfer(recipient, amount)
+      .send({
+        from: account,
+      })
+      .on('error', (error:any) => {
+        alert.show('There was an error ' + error.message);
+      })
+      .on('transactionHash', (txHash:any) => {
+        alert.show('Transaction sent ' + txHash);
+      })
+      .on('receipt', () => {
+        alert.show('Transaction confirmed');
+      });
+    }
+  }
+
+
+  const [closeSendCorasWindow, setCloseSendCorasWindow] = React.useState(false);
+  React.useEffect(() => {
+    if (closeSendCorasWindow === true) props.setShowSendWindow(false);
+  }, [closeSendCorasWindow])
+
   return (
     <>
-      <div className="send-box">
-        <img src={closetIcon} className="close-window" alt="" />
+      <form className="send-box" onSubmit={sendCoras}>
+        <img src={closetIcon} className="close-window" onClick={() => setCloseSendCorasWindow(true)} alt="" />
         <div className="d-flex justify-content-center align-items-center mb-3">
           <img src={sendIcon} className="mr-2" alt="" />
           <p><strong>Send your Coras</strong></p>
@@ -32,19 +75,19 @@ function SendCoras() {
               <span>I want to send</span>
             </div>
             <div className="d-flex align-items-center">
-              <input placeholder="0.00" type="number" />
+              <input name="amount" placeholder="0.00" type="number" min="1" required />
               <img className="pic" src={walletIcon} alt="" />
             </div>
           </div>
           <div className="d-flex justify-content-end align-items-center you-send-address">
             <div className="d-flex align-items-center">
-              <input placeholder="Receiver address?" type="text" />
+              <input name="recipient" placeholder="Recipient address?" type="text" required />
             </div>
             <img className="pic" src={metamaskIcon} alt="" />
           </div>
         </div>
         <button className={ account ? ' yellow-border' : '' }>Send Coras</button>
-      </div>
+      </form>
     </>
   )
 }
