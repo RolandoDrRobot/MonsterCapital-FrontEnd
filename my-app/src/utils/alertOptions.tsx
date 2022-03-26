@@ -8,7 +8,7 @@ const styles = {
 // optional configuration for alerts
 const alertOptions = {
   position: positions.BOTTOM_CENTER,
-  timeout: 50000,
+  timeout: 5000,
   offset: '30px',
   transition: transitions.FADE,
   type: types.SUCCESS,
