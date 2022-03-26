@@ -97,6 +97,12 @@ span {
   filter: drop-shadow(0 0 10px var(--yellow));
 }
 
+.main-button:disabled {
+  color: var(--light-gray);
+  border: 3px solid var(--light-green);
+  background-color: var(--main-bg-color);
+}
+
 .yellow {
   color: var(--yellow);
   transition: all 0.25s;

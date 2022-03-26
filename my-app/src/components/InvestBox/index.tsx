@@ -18,7 +18,8 @@ function InvestBox() {
       <img src={investIcon} className="pet" alt="" />
       <div className={ 'invest-box' + (account ? ' yellow-border' : '') }>
         <div className="trade-box">
-          <p>Stake your Coras and earn APY%.
+          <p className={ account ? '' : 'gray' }>
+            Stake your Coras and earn APY%.
             You create contracts to earn APY% on your Coras.
             Stake your Coras and earn APY%
           </p>
@@ -26,13 +27,13 @@ function InvestBox() {
           <div className="d-flex you-pay">
             <div className="position-relative d-flex align-items-center justify-content-center">
               <img className="token-pic" src={usdcIcon} alt="" />
-              <span>USDC</span>
+              <span className={ account ? '' : 'gray' }>USDC</span>
               <span className="title-input">You pay</span>
             </div>
             <div>
             </div>
             <div className="d-flex align-items-center">
-              <span>$</span>
+              <span className={ account ? '' : 'gray' }>$</span>
               <input placeholder="0.00" type="number" />
             </div>
           </div>
@@ -50,25 +51,30 @@ function InvestBox() {
           <div className="d-flex you-receive">
             <div className="position-relative d-flex align-items-center justify-content-center">
               <img className="token-pic" src={coinIcon} alt="" />
-              <span>Coras</span>
+              <span className={ account ? '' : 'gray' }>Coras</span>
               <span className="title-input">You receive</span>
             </div>
             <div>
             </div>
             <div className="d-flex align-items-center justify-content-center">
-              <span>200</span>
+              <span className={ account ? '' : 'gray' }>200</span>
             </div>
           </div>
-          <p className="main-button">Invest Now</p>
+          <button 
+            className="main-button" 
+            disabled={ account ? false : true}
+          >Invest Now</button>
 
           <div className="mt-4 d-flex justify-content-between">
             <div>
               <span className="transaction-cost-title">transaction cost</span>
-              <span className="cost"><span>≈ $</span> 200.005</span>
+              <span className={ account ? 'cost' : 'cost gray' }>
+                <span>≈ $</span> 200.005
+              </span>
             </div>
             <div className="gas-container d-flex align-items-center justify-content-center">
               <img className="gas-pic" src={gasFeeIcon} alt="" />
-              <span>0.005</span>
+              <span className={ account ? '' : 'gray' }>0.005</span>
             </div>
           </div>
         </div>
