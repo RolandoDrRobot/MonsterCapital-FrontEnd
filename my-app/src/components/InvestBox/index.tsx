@@ -36,8 +36,9 @@ function InvestBox() {
               <span className={ account ? '' : 'gray' }>$</span>
               <input 
                 placeholder="0.00"
+                min={1}
                 type="number"
-                disabled={ account ? false : true} 
+                disabled={ account ? false : true}
               />
             </div>
           </div>
@@ -65,23 +66,23 @@ function InvestBox() {
                 placeholder="200"
                 type="number"
                 className={ account ? '' : 'gray' }
-                disabled={ account ? false : true}
+                disabled={ account ? false : true }
               />
             </div>
           </div>
           <button 
             className="main-button" 
-            disabled={ account ? false : true}
+            disabled={ account ? false : true }
           >Invest Now</button>
 
-          <div className="mt-4 d-flex justify-content-between">
+          <div className="mt-4 d-flex justify-content-between align-items-center">
             <div>
               <span className="transaction-cost-title">transaction cost</span>
               <span className={ account ? 'cost' : 'cost gray' }>
                 <span>≈ $</span> 200.005
               </span>
             </div>
-            <div className="gas-container d-flex align-items-center justify-content-center">
+            <div className="gas-container d-flex align-items-center justify-content-between">
               <img className="gas-pic" src={gasFeeIcon} alt="" />
               <span className={ account ? '' : 'gray' }>0.005</span>
             </div>

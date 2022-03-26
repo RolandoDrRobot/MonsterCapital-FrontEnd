@@ -91,16 +91,16 @@ span {
   transition: 0.25s;
 }
 
-.main-button:hover,
-.main-button:active,
-.main-button:focus {
-  filter: drop-shadow(0 0 10px var(--yellow));
-}
-
 .main-button:disabled {
   color: var(--light-gray);
   border: 3px solid var(--light-green);
   background-color: var(--main-bg-color);
+}
+
+.main-button:hover,
+.main-button:active,
+.main-button:focus {
+  filter: drop-shadow(0 0 10px var(--yellow));
 }
 
 .yellow {

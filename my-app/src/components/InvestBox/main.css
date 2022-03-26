@@ -44,6 +44,9 @@
 
 .invest-box input {
   margin: 0;
+  text-align: right;
+  padding-right: 12px;
+  height: 50px;
   border: var(--light-green);
   border-radius: 25px;
 }
@@ -97,9 +100,14 @@
 }
 
 .invest-box .gas-container {
-  padding: 10px 20px;
+  width: 50%;
+  padding: 14px 20px;
   border-radius: 20px;
   background-color: var(--main-bg-color);
+}
+
+.invest-box .gas-container input {
+  padding: 0;
 }
 
 .invest-box .gas-pic {

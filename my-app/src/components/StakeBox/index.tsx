@@ -28,7 +28,7 @@ function StakeBox() {
                 <span className={ account ? '' : 'gray' }>I want to stake</span>
               </div>
               <div className="d-flex align-items-center">
-                <input placeholder="0.00" type="number" />
+                <input placeholder="0.00" type="number" disabled={ account ? false : true} />
                 <img className="pic" src={coinIcon} alt="" />
               </div>
             </div>
@@ -37,7 +37,7 @@ function StakeBox() {
                 <span className={ account ? '' : 'gray' }>During</span>
               </div>
               <div className="d-flex align-items-center">
-                <input placeholder="6" type="number" />
+                <input placeholder="6" type="number" disabled={ account ? false : true} />
                 <span className={ account ? '' : 'gray' }>Months</span>
                 <img className="pic" src={timeIcon} alt="" />
               </div>
