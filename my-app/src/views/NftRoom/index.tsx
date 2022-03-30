@@ -1,5 +1,6 @@
 import React from 'react';
 import MyNfts from '../../components/MyNfts/index';
+import Minting from '../../components/Minting/index';
 import './main.css';
 
 
@@ -8,6 +9,7 @@ function NftRoom() {
     <>
       <div className="nft-room d-flex align-items-center justify-content-center">
         <MyNfts />
+        <Minting />
       </div>
     </>
   )

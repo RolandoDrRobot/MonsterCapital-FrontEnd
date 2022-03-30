@@ -4,8 +4,6 @@ import { globalContext } from '../../hooks/appContext';
 import logoutPic from '../../assets/img/logout.png';
 import './main.css';
 
-import './main.css';
-
 function Logout() {
   const {
     setLoginStatus,

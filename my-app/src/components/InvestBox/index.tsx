@@ -8,6 +8,9 @@ import Palmer from '../../components/Palmer/index';
 import { useWeb3React } from '@web3-react/core';
 import './main.css';
 
+// Here is the logic to apply
+
+
 function InvestBox() {
 
   const { account } = useWeb3React();
