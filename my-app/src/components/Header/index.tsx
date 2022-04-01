@@ -51,7 +51,7 @@ function Header() {
       }
     }
     connectWalletOnPageLoad()
-  }, [])
+  }, []);
 
   const [balance] = useBalance(
     selectedToken.address,
