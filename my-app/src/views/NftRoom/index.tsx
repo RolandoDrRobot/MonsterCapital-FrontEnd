@@ -8,8 +8,10 @@ function NftRoom() {
   return (
     <>
       <div className="nft-room d-flex align-items-center justify-content-center">
-        <MyNfts />
-        <Minting />
+        <div>
+          <MyNfts />
+          <Minting />
+        </div>
       </div>
     </>
   )
