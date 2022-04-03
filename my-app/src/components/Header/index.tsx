@@ -40,19 +40,6 @@ function Header() {
     setIsLoading(false);
   }
 
-  React.useEffect(() => {
-    const connectWalletOnPageLoad = async () => {
-      if (localStorage && localStorage.getItem('isWalletConnected') === 'true') {
-        try {
-          await activate(injected);
-        } catch (e) {
-          console.log(e);
-        }
-      }
-    }
-    connectWalletOnPageLoad()
-  }, []);
-
   const [balance] = useBalance(
     selectedToken.address,
     selectedToken.decimals

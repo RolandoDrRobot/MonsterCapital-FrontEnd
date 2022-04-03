@@ -9,6 +9,7 @@ import { Web3ReactProvider } from '@web3-react/core';
 import Web3 from 'web3';
 import './index.css';
 
+import ConnectOnPageLoad from './components/ConnectOnPageLoad/index';
 import Home from './views/Home/index';
 import Invest from './views/Invest/index';
 import News from './views/News/index';
@@ -31,6 +32,7 @@ ReactDOM.render(
       <Web3ReactProvider getLibrary={getLibrary}>
         <GlobalContextProvider>
           <Router>
+            <ConnectOnPageLoad />
             <Header/>
             <div id="content">
               <Routes>
