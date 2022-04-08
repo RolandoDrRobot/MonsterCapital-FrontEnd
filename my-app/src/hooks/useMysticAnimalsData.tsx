@@ -72,29 +72,25 @@ const useMysticsAnimalsData = ({ owner = null } = {}) => {
 };
 
 // Singular
-// const useMysticAnimalData = (tokenId = null) => {
-//   const [punk, setPunk] = useState({});
-//   const [loading, setLoading] = useState(true);
-//   const mysticAnimals = useMysticAnimals();
+const useMysticAnimalData = (tokenId = null) => {
+  const [animal, setAnimal] = useState({});
+  const mysticAnimals = useMysticAnimals();
 
-//   const update = useCallback(async () => {
-//     if (mysticAnimals && tokenId != null) {
-//       setLoading(true);
+  const update = useCallback(async () => {
+    if (mysticAnimals && tokenId != null) {
+      const toSet = await getAnimalData({ tokenId, mysticAnimals });
+      setAnimal(toSet);
+    }
+  }, [mysticAnimals, tokenId]);
 
-//       const toSet = await getAnimalData({ tokenId, mysticAnimals });
-//       setPunk(toSet);
-//     }
-//   }, [mysticAnimals, tokenId]);
+  useEffect(() => {
+    update();
+  }, [update]);
 
-//   useEffect(() => {
-//     update();
-//   }, [update]);
+  return {
+    animal,
+    update,
+  };
+};
 
-//   return {
-//     loading,
-//     punk,
-//     update,
-//   };
-// };
-
-export { useMysticsAnimalsData };
+export { useMysticsAnimalsData, useMysticAnimalData };

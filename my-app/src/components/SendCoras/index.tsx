@@ -39,7 +39,7 @@ function SendCoras(props:SendCorasProps) {
       .on('error', (error:any) => {
         alert.show('There was an error ' + error.message);
       })
-      .on('transactionHash', (txHash:any) => {
+      .on('transactionHash', (txHash:string) => {
         alert.show('Transaction sent ' + txHash);
       })
       .on('receipt', () => {
