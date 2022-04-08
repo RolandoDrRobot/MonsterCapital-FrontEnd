@@ -1,16 +1,19 @@
 import React from 'react';
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
 import useMysticAnimals from '../../hooks/useMysticAnimals';
 import { useMysticAnimalData } from '../../hooks/useMysticAnimalsData';
+import { useTruncatedAddress } from '../../hooks/useTruncatedAddress';
 import { useAlert } from 'react-alert';
+import goBackButton from '../../assets/img/close.png';
 import './main.css';
 
 function NftDetails() {
   const { active, account, library } = useWeb3React();
   const { tokenId }:any = useParams();
   const { animal, update }:any = useMysticAnimalData(tokenId);
+  console.log(animal);
   const mysticAnimals = useMysticAnimals();
   const alert = useAlert();
   const [transfering, setTransfering] = useState(false);
@@ -51,11 +54,24 @@ function NftDetails() {
   return (
     <>
       {!active ? <div></div> :
-        <div className='nftDetails'>
+        <div className='nft-details'>
           <div className='nft'>
-            {animal.owner}
+            <div className="text-center">
+              <img src={animal.image} className="nft-image" alt=""/>
+            </div>
+            <h1 className="nft-name yellow">{animal.name}</h1>
+            <p>Owner: 
+              <span className="yellow m-0"> {useTruncatedAddress(animal.owner)}</span>
+            </p>
+            <p className="">{animal.description}</p>
+            <p>Token ID: 
+              <span className="yellow m-0"> {animal.tokenId}</span>
+            </p>
+            <Link to="/nftroom">
+              <img src={goBackButton} className="nft-close" alt=""/>
+            </Link>
           </div>
-        </div>
+        </div> 
       }
     </>
   )

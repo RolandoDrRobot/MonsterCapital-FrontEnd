@@ -1,0 +1,53 @@
+.nft-details {
+  position: relative;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.nft {
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.nft .yellow {
+  font-weight: bold;
+  margin: 0 auto 8px;
+  transition: all 0.2;
+}
+
+.nft .yellow:hover {
+  text-shadow: 0 0 0 var(--yellow);
+}
+
+.nft p {
+  margin-bottom: 8px;
+}
+
+.nft-image {
+  width: 80%;
+  margin: 0 auto 30px;
+  animation: aura 7s ease 0s infinite normal none;
+}
+
+@keyframes aura {
+  0%,
+  50%,
+  100% {
+    transform: translate(0, 0);
+    filter: drop-shadow(0 0 4px var(--yellow));
+  }
+  25%,
+  75% {
+    transform: translate(0, 6px);
+    filter: drop-shadow(0 0 8px var(--yellow));
+  }
+}
+
+
+.nft-close {
+  width: 35px;
+  height: 35px;
+  margin-top: 20px;
+  transform: rotate(180deg);
+}

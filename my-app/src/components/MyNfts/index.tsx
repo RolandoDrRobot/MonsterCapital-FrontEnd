@@ -20,7 +20,7 @@ function MyNfts() {
         <div className="MyNfts">
           <div className="collection row">
             {animals.map(({ name, image, tokenId }:nftMetaData) => (
-              <Link key={tokenId} to={`/nftroom/${tokenId}`} className="col-4">
+              <Link key={tokenId} to={`/nftroom/${tokenId}`} className="col-4 yellow">
                 <div className="nft-card">
                   <img src={image} alt=""/>
                   <p>{name}</p>
