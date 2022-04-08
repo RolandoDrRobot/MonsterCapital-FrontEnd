@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
 import useMysticAnimals from '../../hooks/useMysticAnimals';
 import { useMysticAnimalData } from '../../hooks/useMysticAnimalsData';
@@ -8,7 +9,8 @@ import './main.css';
 
 function NftDetails() {
   const { active, account, library } = useWeb3React();
-  const { animal, update }:any = useMysticAnimalData();
+  const { tokenId }:any = useParams();
+  const { animal, update }:any = useMysticAnimalData(tokenId);
   const mysticAnimals = useMysticAnimals();
   const alert = useAlert();
   const [transfering, setTransfering] = useState(false);

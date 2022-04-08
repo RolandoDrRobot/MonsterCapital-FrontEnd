@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { useWeb3React } from '@web3-react/core';
 import { useMysticsAnimalsData } from "../../hooks/useMysticAnimalsData";
 import './main.css';
@@ -19,10 +20,12 @@ function MyNfts() {
         <div className="MyNfts">
           <div className="collection row">
             {animals.map(({ name, image, tokenId }:nftMetaData) => (
-              <div className="nft-card col-4" key={tokenId}>
-                <img src={image} alt=""/>
-                <p>{name}</p>
-              </div>
+              <Link key={tokenId} to={`/nftroom/${tokenId}`} className="col-4">
+                <div className="nft-card">
+                  <img src={image} alt=""/>
+                  <p>{name}</p>
+                </div>
+              </Link>
             ))}
           </div>
         </div> 
