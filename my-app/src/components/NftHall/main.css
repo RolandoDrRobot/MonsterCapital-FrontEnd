@@ -1,0 +1,30 @@
+.NftHall .yellow {
+  color: var(--light-gray);
+  margin: 0;
+}
+
+.NftHall .yellow:hover {
+  color: var(--yellow);
+  filter: drop-shadow(0 0 4px var(--yellow));
+  text-shadow: 0 0 0 var(--yellow);
+}
+
+.collection {
+  width: 100%;
+}
+
+.nft-card {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.nft-card img {
+  width: 85%;
+  object-fit: cover;
+  margin: 0 auto 6px;
+}
+
+.nft-card p {
+  font-weight: bold;
+  font-size: 13px;
+}

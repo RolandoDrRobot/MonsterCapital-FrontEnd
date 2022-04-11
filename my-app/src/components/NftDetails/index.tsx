@@ -13,7 +13,6 @@ function NftDetails() {
   const { active, account, library } = useWeb3React();
   const { tokenId }:any = useParams();
   const { animal, update }:any = useMysticAnimalData(tokenId);
-  console.log(animal);
   const mysticAnimals = useMysticAnimals();
   const alert = useAlert();
   const [transfering, setTransfering] = useState(false);
@@ -67,6 +66,14 @@ function NftDetails() {
             <p>Token ID: 
               <span className="yellow m-0"> {animal.tokenId}</span>
             </p>
+            {
+              animal.owner === account 
+              ? <button 
+                  className="main-button mt-3" 
+                  onClick={transfer}
+                >Tranfer NFT</button>
+              : <></>
+            }
             <Link to="/nftroom">
               <img src={goBackButton} className="nft-close" alt=""/>
             </Link>

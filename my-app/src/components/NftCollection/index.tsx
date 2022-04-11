@@ -10,14 +10,14 @@ interface nftMetaData {
   tokenId: any
 }
 
-function MyNfts() {
+function NftHall() {
   const { active } = useWeb3React();
   const { animals } = useMysticsAnimalsData();
 
   return (
     <>
       {!active ? <div></div> :
-        <div className="MyNfts">
+        <div className="NftHall">
           <div className="collection row">
             {animals.map(({ name, image, tokenId }:nftMetaData) => (
               <Link key={tokenId} to={`/nftroom/${tokenId}`} className="col-4 yellow">
@@ -34,4 +34,4 @@ function MyNfts() {
   )
 }
 
-export default MyNfts;
+export default NftHall;

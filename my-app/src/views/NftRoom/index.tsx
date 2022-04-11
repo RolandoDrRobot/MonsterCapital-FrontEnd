@@ -1,5 +1,5 @@
 import React from 'react';
-import MyNfts from '../../components/MyNfts/index';
+import NftHall from '../../components/NftHall/index';
 import Minting from '../../components/Minting/index';
 import './main.css';
 
@@ -8,7 +8,7 @@ function NftRoom() {
   return (
     <>
       <div className="nft-room">
-        <MyNfts />
+        <NftHall />
         <Minting />
       </div>
     </>
