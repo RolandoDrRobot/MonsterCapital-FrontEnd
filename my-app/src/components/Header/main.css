@@ -73,6 +73,8 @@
 }
 
 .header .side-options img {
-  width: 40px;
-  height: 40px;
+  width: 47px;
+  height: 47px;
+  position: relative; 
+  left: 12px;
 }

@@ -1,9 +1,9 @@
-.NftHall .yellow {
+.nft-hall .yellow {
   color: var(--light-gray);
   margin: 0;
 }
 
-.NftHall .yellow:hover {
+.nft-hall .yellow:hover {
   color: var(--yellow);
   filter: drop-shadow(0 0 4px var(--yellow));
   text-shadow: 0 0 0 var(--yellow);

@@ -58,9 +58,13 @@ function NftDetails() {
             <div className="text-center">
               <img src={animal.image} className="nft-image" alt=""/>
             </div>
-            <h1 className="nft-name yellow">{animal.name}</h1>
+            <Link to="/nftcollection">
+              <h1 className="nft-name yellow">{animal.name}</h1>
+            </Link>
             <p>Owner: 
-              <span className="yellow m-0"> {useTruncatedAddress(animal.owner)}</span>
+              <Link to={`/nftowner/${animal.owner}`}>
+                <span className="yellow m-0"> {useTruncatedAddress(animal.owner)}</span>
+              </Link>
             </p>
             <p className="">{animal.description}</p>
             <p>Token ID: 

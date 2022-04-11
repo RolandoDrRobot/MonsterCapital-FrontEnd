@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { useWeb3React } from '@web3-react/core';
 import { useMysticsAnimalsData } from "../../hooks/useMysticAnimalsData";
+import Minting from '../../components/Minting/index';
 import './main.css';
 
 interface nftMetaData {
@@ -10,14 +11,15 @@ interface nftMetaData {
   tokenId: any
 }
 
-function NftHall() {
+function NftCollection() {
   const { active } = useWeb3React();
   const { animals } = useMysticsAnimalsData();
 
   return (
     <>
       {!active ? <div></div> :
-        <div className="NftHall">
+      <div className='nft-room'>
+        <div className="nft-hall">
           <div className="collection row">
             {animals.map(({ name, image, tokenId }:nftMetaData) => (
               <Link key={tokenId} to={`/nftroom/${tokenId}`} className="col-4 yellow">
@@ -28,10 +30,12 @@ function NftHall() {
               </Link>
             ))}
           </div>
-        </div> 
+        </div>
+        <Minting />
+      </div> 
       }
     </>
   )
 }
 
-export default NftHall;
+export default NftCollection;

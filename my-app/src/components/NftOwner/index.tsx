@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useWeb3React } from '@web3-react/core';
 import { useMysticsAnimalsData } from '../../hooks/useMysticAnimalsData';
 import './main.css';
@@ -11,18 +11,20 @@ interface nftMetaData {
   owner: any,
 }
 
-function NftHall() {
-  const { account, active } = useWeb3React();
+function NftOwner() {
+  const { active } = useWeb3React();
   const { animals } = useMysticsAnimalsData();
+  const { ownerAddress }:any = useParams();
 
   return (
     <>
       {!active ? <div></div> :
+      <div className='nft-room'>
         <div className="nft-hall">
           <div className="collection row">
             { 
               animals.map(({ name, image, tokenId, owner }:nftMetaData) => {
-                if (owner === account) {
+                if (owner === ownerAddress) {
                   return <Link key={tokenId} to={`/nftroom/${tokenId}`} className="col-4 yellow">
                            <div className="nft-card">
                              <img src={image} alt=""/>
@@ -33,10 +35,11 @@ function NftHall() {
               })
             }
           </div>
-        </div> 
+        </div>
+      </div>
       }
     </>
   )
 }
 
-export default NftHall;
+export default NftOwner;
