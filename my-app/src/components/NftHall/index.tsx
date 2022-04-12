@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { useWeb3React } from '@web3-react/core';
 import { useMysticsAnimalsData } from '../../hooks/useMysticAnimalsData';
-import './main.css';
 
 interface nftMetaData {
   name: any,
@@ -19,6 +18,7 @@ function NftHall() {
     <>
       {!active ? <div></div> :
         <div className="nft-hall">
+          <h1 className="collection-title">NFT Hall</h1>
           <div className="collection row">
             { 
               animals.map(({ name, image, tokenId, owner }:nftMetaData) => {

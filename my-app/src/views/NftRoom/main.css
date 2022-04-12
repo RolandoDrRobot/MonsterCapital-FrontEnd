@@ -2,3 +2,57 @@
   height: 100%;
   overflow-y: scroll;
 }
+
+.collection-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--yellow);
+  padding: 24px 0;
+  animation: title-aura 5s ease 5s infinite normal none;
+}
+
+.nft-hall .yellow {
+  color: var(--light-gray);
+  margin: 0;
+}
+
+.nft-hall .yellow:hover {
+  color: var(--yellow);
+  filter: drop-shadow(0 0 4px var(--yellow));
+  text-shadow: 0 0 0 var(--yellow);
+}
+
+.collection {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 24px;
+}
+
+.nft-card {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.nft-card img {
+  width: 85%;
+  object-fit: cover;
+  margin: 0 auto 6px;
+}
+
+.nft-card p {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+@keyframes title-aura {
+  0%,
+  50%,
+  100% {
+    filter: drop-shadow(0 0 2px var(--yellow));
+  }
+  25%,
+  75% {
+    filter: drop-shadow(0 0 8px var(--yellow));
+  }
+}

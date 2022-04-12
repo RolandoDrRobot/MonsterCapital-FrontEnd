@@ -10,7 +10,7 @@ const useMysticAnimals = () => {
   // Use memo will make this to happen only when active, chainId... are available
   const platziPunks = useMemo(() => {
     if (active) return new library.eth.Contract(abi, address);
-  }, [active, chainId, library.eth.Contract]);
+  }, [active, chainId]);
 
   return platziPunks;
 };

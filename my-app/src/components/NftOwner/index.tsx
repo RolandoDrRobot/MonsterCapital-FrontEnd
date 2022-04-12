@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, useParams } from "react-router-dom";
 import { useWeb3React } from '@web3-react/core';
 import { useMysticsAnimalsData } from '../../hooks/useMysticAnimalsData';
-import './main.css';
 
 interface nftMetaData {
   name: any,

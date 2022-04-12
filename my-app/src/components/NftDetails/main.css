@@ -16,10 +16,6 @@
   transition: all 0.2;
 }
 
-.nft .yellow:hover {
-  text-shadow: 0 0 0 var(--yellow);
-}
-
 .nft p {
   margin-bottom: 8px;
 }

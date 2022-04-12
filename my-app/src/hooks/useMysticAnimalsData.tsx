@@ -27,28 +27,30 @@ const getAnimalData = async ({ mysticAnimals, tokenId }:AnimalParams) => {
 // Plural
 const useMysticsAnimalsData = ({ owner = null } = {}) => {
   const [animals, setAnimals] = useState<any>([]);
-  const { library } = useWeb3React();
+  const { library, account } = useWeb3React();
   const mysticAnimals = useMysticAnimals();
 
   const update = useCallback(async () => {
     if (mysticAnimals) {
 
       let tokenIds:any;
-      if (!library.utils.isAddress(owner)) {
-        const totalSupply = await mysticAnimals.methods.totalSupply().call();
-        tokenIds = new Array(Number(totalSupply))
-          .fill(undefined)
-          .map((_, index) => index);
-      } else {
-        const balanceOf = await mysticAnimals.methods.balanceOf(owner).call();
-
-        const tokenIdsOfOwner = new Array(Number(balanceOf))
-          .fill(undefined)
-          .map((_, index) =>
-            mysticAnimals.methods.tokenOfOwnerByIndex(owner, index).call()
-          );
-
-        tokenIds = await Promise.all(tokenIdsOfOwner);
+      if(account) {
+        if (!library.utils.isAddress(owner)) {
+          const totalSupply = await mysticAnimals.methods.totalSupply().call();
+          tokenIds = new Array(Number(totalSupply))
+            .fill(undefined)
+            .map((_, index) => index);
+        } else {
+          const balanceOf = await mysticAnimals.methods.balanceOf(owner).call();
+  
+          const tokenIdsOfOwner = new Array(Number(balanceOf))
+            .fill(undefined)
+            .map((_, index) =>
+              mysticAnimals.methods.tokenOfOwnerByIndex(owner, index).call()
+            );
+  
+          tokenIds = await Promise.all(tokenIdsOfOwner);
+        }
       }
 
       const animalsMap = tokenIds.map((tokenId:any) =>
@@ -59,7 +61,7 @@ const useMysticsAnimalsData = ({ owner = null } = {}) => {
 
       setAnimals(animalsPromise);
     }
-  }, [mysticAnimals, owner, library.utils]);
+  }, [mysticAnimals, owner]);
 
   useEffect(() => {
     update();

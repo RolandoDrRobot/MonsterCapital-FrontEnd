@@ -3,6 +3,7 @@
   padding: 20px;
   background-color: var(--light-green);
   border-radius: 35px;
+  margin: auto;
 }
 
 .navbar a {
