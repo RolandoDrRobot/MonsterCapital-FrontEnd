@@ -27,7 +27,8 @@ body {
 }
 
 #content {
-  max-width: 350px;
+  width: 100%;
+  max-width: 340px;
   height: 63vh;
   margin: 28px 0;
 }

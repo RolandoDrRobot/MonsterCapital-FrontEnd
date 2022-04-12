@@ -7,8 +7,10 @@ function Wallet() {
   return (
     <>
       <div className="wallet">
-        <CoraWallet />
-        <RecentTransactions />
+        <div>
+          <CoraWallet />
+          <RecentTransactions />
+        </div>
       </div>
     </>
   )

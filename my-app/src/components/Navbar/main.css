@@ -1,5 +1,6 @@
 .navbar {
-  width: 296px;
+  width: 100%;
+  max-width: 340px;
   padding: 20px;
   background-color: var(--light-green);
   border-radius: 35px;
