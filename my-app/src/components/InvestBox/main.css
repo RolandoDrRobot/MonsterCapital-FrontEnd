@@ -1,8 +1,8 @@
 .pet {
   position: absolute;
-  width: 36%;
+  width: 34%;
   z-index: 1;
-  right: 31%;
+  right: 33%;
   top: 2%;
   filter: drop-shadow(0 0 20px var(--black));
 }

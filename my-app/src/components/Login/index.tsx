@@ -3,8 +3,6 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { globalContext } from '../../hooks/appContext';
 import Loading from '../../components/Loading/index';
-import bullIcon from '../../assets/img/bull-market.svg';
-import bearIcon from '../../assets/img/bear-market.svg';
 import './main.css';
 
 function Login() {
@@ -43,10 +41,6 @@ function Login() {
   return (
     <>
       <div className="login">
-        <div className="d-flex justify-content-center">
-          <img src={bullIcon} className="bull" alt="" />
-          <img src={bearIcon} className="bear" alt="" />
-        </div>
         <form onSubmit={onSubmitForm}>
           <input name="email" placeholder="Email Address" type="email" required />
           <input name="password" placeholder="Password" type="password" required />

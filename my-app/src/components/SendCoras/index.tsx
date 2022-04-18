@@ -40,7 +40,7 @@ function SendCoras(props:SendCorasProps) {
         alert.show('There was an error ' + error.message);
       })
       .on('transactionHash', (txHash:string) => {
-        alert.show('Transaction sent ' + txHash);
+        alert.show('Transaction sent');
       })
       .on('receipt', () => {
         alert.show('Transaction confirmed');
@@ -74,6 +74,7 @@ function SendCoras(props:SendCorasProps) {
                 placeholder="0.00" 
                 type="number" 
                 min="1"
+                max="1000000000"
                 disabled={ account ? false : true}
                 required />
               <img className="pic" src={walletIcon} alt="" />

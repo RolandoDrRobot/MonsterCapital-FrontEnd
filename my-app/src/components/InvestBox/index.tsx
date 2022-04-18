@@ -39,7 +39,8 @@ function InvestBox() {
               <span className={ account ? '' : 'gray' }>$</span>
               <input 
                 placeholder="0.00"
-                min={1}
+                min="1"
+                max="1000000000"
                 type="number"
                 disabled={ account ? false : true}
               />

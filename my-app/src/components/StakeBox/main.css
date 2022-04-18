@@ -1,9 +1,9 @@
 .new-contract .stake-icon {
   position: absolute;
-  width: 35%;
+  width: 40%;
   z-index: 1;
-  right: 31%;
-  top: 2%;
+  right: 28%;
+  top: -1%;
   filter: drop-shadow(0 0 20px var(--black));
 }
 

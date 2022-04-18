@@ -37,7 +37,7 @@ function Minting() {
       })
       .on('transactionHash', (txHash:any) => {
         setIsMinting(false);
-        alert.show('Transaction sent ' + txHash);
+        alert.show('Transaction sent');
       })
       .on('receipt', () => {
         setIsMinting(false);

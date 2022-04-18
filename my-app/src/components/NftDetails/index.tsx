@@ -40,11 +40,11 @@ function NftDetails() {
           setTransfering(false);
         })
         .on('transactionHash', (txHash:string) => {
-          alert.show('Transacción enviada' + txHash);
+          alert.show('Transaction sent');
         })
         .on('receipt', () => {
           setTransfering(false);
-          alert.show(`El punk ahora pertenece a ${address}`);
+          alert.show(`${address} owns the punk now`);
           update();
         });
     }
