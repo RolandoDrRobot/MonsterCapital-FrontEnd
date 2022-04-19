@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { useWeb3React } from '@web3-react/core';
 import { useMysticsAnimalsData } from "../../hooks/useMysticAnimalsData";
-import Minting from '../../components/Minting/index';
 
 interface nftMetaData {
   name: any,
@@ -30,7 +29,6 @@ function NftCollection() {
             ))}
           </div>
         </div>
-        <Minting />
       </div> 
       }
     </>

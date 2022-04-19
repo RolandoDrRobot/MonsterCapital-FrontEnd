@@ -1,5 +1,3 @@
-
-
 const useMysticAnimalsABI = 
   {
     address: "0xF435Bdf172fb807969f691caa013fe1bb33b1407",
@@ -429,4 +427,3 @@ const useMysticAnimalsABI =
   };
 
   export  { useMysticAnimalsABI };
-

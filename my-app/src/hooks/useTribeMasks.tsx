@@ -1,18 +1,18 @@
 import { useMemo } from 'react';
 import { useWeb3React } from '@web3-react/core';
-import { useMysticAnimalsABI } from '../config/tokens/MysticAnimals';
+import { useTribeMasksABI } from '../config/tokens/TribeMasks';
 
-const { address, abi } = useMysticAnimalsABI;
+const { address, abi } = useTribeMasksABI;
 
-const useMysticAnimals = () => {
+const useTribeMasks = () => {
   const { active, library, chainId } = useWeb3React();
 
   // Use memo will make this to happen only when active, chainId... are available
-  const mysticAnimals = useMemo(() => {
+  const TribeMasks = useMemo(() => {
     if (active) return new library.eth.Contract(abi, address);
   }, [active, chainId]);
 
-  return mysticAnimals;
+  return TribeMasks;
 };
 
-export default useMysticAnimals;
+export default useTribeMasks;
