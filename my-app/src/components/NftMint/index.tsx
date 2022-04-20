@@ -2,7 +2,7 @@ import React from 'react';
 import { useWeb3React } from '@web3-react/core';
 import { useParams } from 'react-router-dom';
 import useMysticAnimals from '../../hooks/useMysticAnimals';
-import useTribeMasks from '../../hooks/useMysticAnimals';
+import useTribeMasks from '../../hooks/useTribeMasks';
 import Loading from '../Loading/index';
 import { useCallback, useEffect, useState } from 'react';
 import { useAlert } from 'react-alert';
@@ -33,7 +33,7 @@ function NftMint() {
       .mint()
       .send({
         from: account,
-        value: library.utils.toWei('0.02', 'ether')
+        value: library.utils.toWei('0.001', 'ether')
       })
       .on('error', (error:any) => {
         setIsMinting(false);
