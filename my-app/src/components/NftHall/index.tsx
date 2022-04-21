@@ -50,16 +50,12 @@ function NftHall() {
             }
           </div>
 
-          <Link 
-            to={`/nftmint/mysticAnimals`} 
-            className="main-button">
-              Mint Mystic Animal
+          <Link to={`/nftmint/mysticAnimals`} className="main-button">
+            Mint Mystic Animal
           </Link>
 
-          <Link 
-            to={`/nftmint/tribeMasks`} 
-            className="main-button">
-              Mint Tribe Masks
+          <Link to={`/nftmint/tribeMasks`} className="main-button">
+            Mint Tribe Masks
           </Link>
           
         </div>

@@ -3,7 +3,6 @@ import { Link, useParams } from "react-router-dom";
 import { useWeb3React } from '@web3-react/core';
 import { useMysticsAnimalsData } from "../../hooks/useMysticAnimalsData";
 import { useTribesMasksData } from '../../hooks/useTribeMasksData';
-import { useState } from 'react';
 
 interface nftMetaData {
   name: any,
@@ -20,9 +19,11 @@ function NftCollection() {
 
   return (
     <>
-      {!active ? <div></div> :
+      {
+      !active ? <div></div> :
       <div className='nft-room'>
         <div className="nft-hall">
+          <h1 className="collection-title">{collectionName}</h1>
           <div className="collection row">
             {collection.map(({ name, image, tokenId }:nftMetaData) => (
               <Link key={tokenId} to={`/nftroom/${collectionName}/${tokenId}`} className="col-4 yellow">

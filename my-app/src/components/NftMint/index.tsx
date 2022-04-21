@@ -10,12 +10,14 @@ import { useAlert } from 'react-alert';
 function NftMint() {
 
   const alert = useAlert();
-  const tribeMasks = useTribeMasks();
-  const mysticAnimals = useMysticAnimals();
   const { account, library } = useWeb3React();
   const { collectionName }:any = useParams();
-  let [collection, setCollection] = useState<any>(collectionName === 'mysticAnimals' ? mysticAnimals : tribeMasks);
   const [isMinting, setIsMinting] = useState(false);
+
+  const tribeMasks = useTribeMasks();
+  const mysticAnimals = useMysticAnimals();
+  let [collection, setCollection] = useState<any>(collectionName === 'mysticAnimals' ? mysticAnimals : tribeMasks);
+  
 
   const getCollectionData = useCallback(async () => {
     if (collection) {
