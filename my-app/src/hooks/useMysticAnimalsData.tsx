@@ -30,7 +30,7 @@ const useMysticsAnimalsData = ({ owner = null } = {}) => {
   const { library, account } = useWeb3React();
   const mysticAnimals = useMysticAnimals();
 
-  const update = useCallback(async () => {
+  const updateAnimals = useCallback(async () => {
     if (mysticAnimals) {
 
       let tokenIds:any;
@@ -64,12 +64,12 @@ const useMysticsAnimalsData = ({ owner = null } = {}) => {
   }, [mysticAnimals, owner]);
 
   useEffect(() => {
-    update();
-  }, [update]);
+    updateAnimals();
+  }, [updateAnimals]);
 
   return {
     animals,
-    update,
+    updateAnimals,
   };
 };
 
@@ -78,7 +78,7 @@ const useMysticAnimalData = (tokenId = null) => {
   const [animal, setAnimal] = useState({});
   const mysticAnimals = useMysticAnimals();
 
-  const update = useCallback(async () => {
+  const updateAnimal = useCallback(async () => {
     if (mysticAnimals && tokenId != null) {
       const toSet = await getAnimalData({ tokenId, mysticAnimals });
       setAnimal(toSet);
@@ -86,12 +86,12 @@ const useMysticAnimalData = (tokenId = null) => {
   }, [mysticAnimals, tokenId]);
 
   useEffect(() => {
-    update();
-  }, [update]);
+    updateAnimal();
+  }, [updateAnimal]);
 
   return {
     animal,
-    update,
+    updateAnimal,
   };
 };
 

@@ -1,25 +1,33 @@
 import React from 'react';
-import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
-import useMysticAnimals from '../../hooks/useMysticAnimals';
-import { useMysticAnimalData } from '../../hooks/useMysticAnimalsData';
 import { useTruncatedAddress } from '../../hooks/useTruncatedAddress';
 import { useAlert } from 'react-alert';
 import goBackButton from '../../assets/img/close.png';
+
+import useMysticAnimals from '../../hooks/useMysticAnimals';
+import { useMysticAnimalData } from '../../hooks/useMysticAnimalsData';
+import useTribeMasks from '../../hooks/useTribeMasks';
+import { useTribeMaskData } from '../../hooks/useTribeMasksData';
+
 import './main.css';
 
 function NftDetails() {
   const { active, account, library } = useWeb3React();
-  const { tokenId }:any = useParams();
-  const { animal, update }:any = useMysticAnimalData(tokenId);
-  const mysticAnimals = useMysticAnimals();
+  const { collectionName, tokenId }:any = useParams();
   const alert = useAlert();
-  const [transfering, setTransfering] = useState(false);
+
+  const { animal, updateAnimal }:any = useMysticAnimalData(tokenId);
+  const animals = useMysticAnimals();
+
+  const { mask, updateMask }:any = useTribeMaskData(tokenId);
+  const masks = useTribeMasks();
+
+  let collection = collectionName === 'mysticAnimals' ? animals : masks;
+  let nft = collectionName === 'mysticAnimals' ? animal : mask;
+  let nftUpdateMethod = collectionName === 'mysticAnimals' ? updateAnimal : updateMask;
 
   const transfer = () => {
-    setTransfering(true);
-
     const address = prompt('Receiver address: ');
     const isAddress = library.utils.isAddress(address);
 
@@ -29,23 +37,20 @@ function NftDetails() {
         description: 'La dirección no es una dirección de Ethereum',
         status: 'error',
       });
-      setTransfering(false);
     } else {
-      mysticAnimals.methods
-        .safeTransferFrom(animal.owner, address, animal.tokenId)
+      collection.methods
+        .safeTransferFrom(nft.owner, address, nft.tokenId)
         .send({
           from: account,
         })
         .on('error', () => {
-          setTransfering(false);
         })
         .on('transactionHash', (txHash:string) => {
           alert.show('Transaction sent');
         })
         .on('receipt', () => {
-          setTransfering(false);
           alert.show(`${address} owns the punk now`);
-          update();
+          nftUpdateMethod();
         });
     }
   };
@@ -56,22 +61,22 @@ function NftDetails() {
         <div className='nft-details'>
           <div className='nft'>
             <div className="text-center">
-              <img src={animal.image} className="nft-image" alt=""/>
+              <img src={nft.image} className="nft-image" alt=""/>
             </div>
-            <Link to="/nftcollection">
-              <h1 className="nft-name yellow">{animal.name}</h1>
+            <Link to={`/nftcollection/${collectionName}`}>
+              <h1 className="nft-name yellow">{nft.name}</h1>
             </Link>
             <p>Owner: 
-              <Link to={`/nftowner/${animal.owner}`}>
-                <span className="yellow m-0"> {useTruncatedAddress(animal.owner)}</span>
+              <Link to={`/nftowner/${nft.owner}`}>
+                <span className="yellow m-0"> {useTruncatedAddress(nft.owner)}</span>
               </Link>
             </p>
-            <p className="">{animal.description}</p>
+            <p className="">{nft.description}</p>
             <p>Token ID: 
-              <span className="yellow m-0"> {animal.tokenId}</span>
+              <span className="yellow m-0"> {nft.tokenId}</span>
             </p>
             {
-              animal.owner === account 
+              nft.owner === account 
               ? <button 
                   className="main-button mt-3" 
                   onClick={transfer}

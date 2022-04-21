@@ -101,6 +101,7 @@ span {
 .main-button:hover,
 .main-button:active,
 .main-button:focus {
+  color: var(--main-bg-color);
   filter: drop-shadow(0 0 10px var(--yellow));
 }
 

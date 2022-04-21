@@ -30,7 +30,7 @@ const useTribesMasksData = ({ owner = null } = {}) => {
   const { library, account } = useWeb3React();
   const tribeMasks = useTribeMasks();
 
-  const update = useCallback(async () => {
+  const updateMasks = useCallback(async () => {
     if (tribeMasks) {
 
       let tokenIds:any;
@@ -64,12 +64,12 @@ const useTribesMasksData = ({ owner = null } = {}) => {
   }, [tribeMasks, owner]);
 
   useEffect(() => {
-    update();
-  }, [update]);
+    updateMasks();
+  }, [updateMasks]);
 
   return {
     masks,
-    update,
+    updateMasks,
   };
 };
 
@@ -78,7 +78,7 @@ const useTribeMaskData = (tokenId = null) => {
   const [mask, setMask] = useState({});
   const tribeMasks = useTribeMasks();
 
-  const update = useCallback(async () => {
+  const updateMask = useCallback(async () => {
     if (tribeMasks && tokenId != null) {
       const toSet = await getTribeMaskData({ tokenId, tribeMasks });
       setMask(toSet);
@@ -86,12 +86,12 @@ const useTribeMaskData = (tokenId = null) => {
   }, [tribeMasks, tokenId]);
 
   useEffect(() => {
-    update();
-  }, [update]);
+    updateMask();
+  }, [updateMask]);
 
   return {
     mask,
-    update,
+    updateMask,
   };
 };
 

@@ -49,8 +49,8 @@ ReactDOM.render(
                 <Route path='/forgotpassword' element={<ForgotPassword/>}/>
                 <Route path='/article' element={<Article/>}/>
                 <Route path='/nftroom' element={<NftRoom/>}/>
-                <Route path='/nftcollection' element={<NftCollection/>}/>
-                <Route path='/nftroom/:tokenId' element={<NftDetails/>}/>
+                <Route path='/nftcollection/:collectionName' element={<NftCollection/>}/>
+                <Route path='/nftroom/:collectionName/:tokenId' element={<NftDetails/>}/>
                 <Route path='/nftmint/:collectionName' element={<NftMint/>}/>
                 <Route path='/nftowner/:ownerAddress' element={<NftOwner/>}/>  
               </Routes>
