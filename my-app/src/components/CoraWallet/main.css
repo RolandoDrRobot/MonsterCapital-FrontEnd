@@ -91,6 +91,7 @@
   text-align: right;
   width: 100px;
   margin-right: 10px;
+  background-color: var(--main-bg-color);
 }
 
 .send-box button {

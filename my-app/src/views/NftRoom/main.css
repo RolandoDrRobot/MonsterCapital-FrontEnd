@@ -2,6 +2,7 @@
   height: 100%;
   width: 340px;
   overflow-y: scroll;
+  position: relative;
 }
 
 .collection-title {
@@ -9,8 +10,15 @@
   font-size: 32px;
   font-weight: bold;
   color: var(--yellow);
-  padding: 24px 0;
-  animation: title-aura 5s ease 5s infinite normal none;
+  padding: 0 0 10px;
+  animation: only-aura 7s ease 0s infinite normal none;
+}
+
+.collection-description {
+  font-size: 14px !important;
+  color: #fff !important;
+  padding: 0 8px;
+  margin-bottom: 28px;
 }
 
 .nft-hall .yellow {
@@ -39,6 +47,7 @@
   width: 85%;
   object-fit: cover;
   margin: 0 auto 6px;
+  animation: only-aura 10s ease 0s infinite normal none;
 }
 
 .nft-card p {
@@ -46,14 +55,34 @@
   font-size: 13px;
 }
 
-@keyframes title-aura {
+@keyframes aura {
   0%,
   50%,
   100% {
+    transform: translate(0, -2px);
     filter: drop-shadow(0 0 2px var(--yellow));
   }
   25%,
   75% {
+    transform: translate(0, 2px);
     filter: drop-shadow(0 0 8px var(--yellow));
   }
+}
+
+@keyframes only-aura {
+  0%,
+  50%,
+  100% {
+    filter: drop-shadow(0 0 0px var(--yellow));
+  }
+  25%,
+  75% {
+    filter: drop-shadow(0 0 5px var(--yellow));
+  }
+}
+
+.nft-owner.section-tab,
+.nft-collection.section-tab {
+  margin-top: 20px;
+  padding: 40px 15px 15px;
 }

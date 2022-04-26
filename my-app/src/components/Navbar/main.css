@@ -11,8 +11,9 @@
   color: var(--light-gray);
   font-size: 12px;
   margin: 0 auto;
-  transition: 0.5s;
+  transition: all 0.5s;
   font-weight: bold;
+  text-align: center;
 }
 
 .navbar a:active,

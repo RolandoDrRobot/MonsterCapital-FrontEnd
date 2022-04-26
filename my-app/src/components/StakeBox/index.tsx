@@ -12,8 +12,8 @@ function StakeBox() {
   return (
     <>
       <div className="new-contract">
-        <img className="stake-icon" src={stakeIcon} alt="" />
-        <div className={ 'new-contract-box' + (account ? ' yellow-border' : '') }>
+        <img className="section-tab-pet" src={stakeIcon} alt="" />
+        <div className={ 'new-contract-box section-tab' + (account ? ' yellow-border' : '') }>
           <p className={ account ? '' : 'gray' }>Stake your Coras and earn APY%.
             You create contracts to earn APY% on your Coras.
             Stake your Coras and earn APY%</p>

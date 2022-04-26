@@ -13,7 +13,7 @@ interface nftMetaData {
 }
 
 function NftOwner() {
-  const { active } = useWeb3React();
+  const { account } = useWeb3React();
   const { animals } = useMysticsAnimalsData();
   const { masks } = useTribesMasksData();
   const { ownerAddress }:any = useParams();
@@ -21,20 +21,20 @@ function NftOwner() {
 
   return (
     <>
-      {!active ? <div></div> :
+      {
       <div className='nft-room'>
-        <div className="nft-hall">
-          <h1 className="collection-title">{truncatedAddress}</h1>
+        <div className={ 'nft-owner section-tab' + (account ? ' yellow-border' : '') }>
+          <h1 className="collection-title mb-4">{truncatedAddress}</h1>
           <div className="collection row">
             { 
               animals.map(({ name, image, tokenId, owner }:nftMetaData) => {
                 if (owner === ownerAddress) {
                   return <Link key={tokenId} to={`/nftroom/mysticAnimals/${tokenId}`} className="col-4 yellow">
-                           <div className="nft-card">
-                             <img src={image} alt=""/>
-                             <p>{name}</p>
-                           </div>
-                         </Link>
+                            <div className="nft-card">
+                              <img src={image} alt=""/>
+                              <p>{name}</p>
+                            </div>
+                          </Link>
                 }
               })
             }
@@ -44,11 +44,11 @@ function NftOwner() {
               masks.map(({ name, image, tokenId, owner }:nftMetaData) => {
                 if (owner === ownerAddress) {
                   return <Link key={tokenId} to={`/nftroom/tribeMasks/${tokenId}`} className="col-4 yellow">
-                           <div className="nft-card">
-                             <img src={image} alt=""/>
-                             <p>{name}</p>
-                           </div>
-                         </Link>
+                            <div className="nft-card">
+                              <img src={image} alt=""/>
+                              <p>{name}</p>
+                            </div>
+                          </Link>
                 }
               })
             }

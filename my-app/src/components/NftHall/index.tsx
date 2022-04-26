@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { useWeb3React } from '@web3-react/core';
+import nftIcon from '../../assets/img/nft.png';
 import { useMysticsAnimalsData } from '../../hooks/useMysticAnimalsData';
 import { useTribesMasksData } from '../../hooks/useTribeMasksData';
+import './main.css';
 
 interface nftMetaData {
   name: any,
@@ -18,47 +20,59 @@ function NftHall() {
 
   return (
     <>
-      {!active ? <div></div> :
-        <div className="nft-hall">
-          <h1 className="collection-title">NFT Hall</h1>
-          <div className="collection row">
-            { 
-              animals.map(({ name, image, tokenId, owner }:nftMetaData) => {
-                if (owner === account) {
-                  return <Link key={tokenId} to={`/nftroom/mysticAnimals/${tokenId}`} className="col-4 yellow">
-                          <div className="nft-card">
-                            <img src={image} alt=""/>
-                            <p>{name}</p>
-                          </div>
-                        </Link>
-                }
-              })
-            }
-          </div>
-          <div className="collection row">
-            { 
-              masks.map(({ name, image, tokenId, owner }:nftMetaData) => {
-                if (owner === account) {
-                  return <Link key={tokenId} to={`/nftroom/tribeMasks/${tokenId}`} className="col-4 yellow">
-                          <div className="nft-card">
-                            <img src={image} alt=""/>
-                            <p>{name}</p>
-                          </div>
-                        </Link>
-                }
-              })
-            }
+      { <>
+          <img src={nftIcon} className="section-tab-pet" alt="" />
+          <div className={ 'nft-box section-tab' + (account ? ' yellow-border' : '') }>
+            <p className={ account ? '' : 'gray' }>
+              Stake your Coras and earn APY%.
+              You create contracts to earn APY% on your Coras.
+              Stake your Coras and earn APY%
+            </p>
+            <p className="mb-4">Stake your Coras and earn APY%</p>
+            <div className="collection row">
+              { 
+                animals.map(({ name, image, tokenId, owner }:nftMetaData) => {
+                  if (owner === account) {
+                    return <Link key={tokenId} to={`/nftroom/mysticAnimals/${tokenId}`} className="col-4 yellow">
+                            <div className="nft-card">
+                              <img src={image} alt=""/>
+                              <p>{name}</p>
+                            </div>
+                          </Link>
+                  }
+                })
+              }
+            </div>
+            <div className="collection row">
+              { 
+                masks.map(({ name, image, tokenId, owner }:nftMetaData) => {
+                  if (owner === account) {
+                    return <Link key={tokenId} to={`/nftroom/tribeMasks/${tokenId}`} className="col-4 yellow">
+                            <div className="nft-card">
+                              <img src={image} alt=""/>
+                              <p>{name}</p>
+                            </div>
+                          </Link>
+                  }
+                })
+              }
+            </div>
           </div>
 
-          <Link to={`/nftmint/mysticAnimals`} className="main-button">
-            Mint Mystic Animal
+          <Link to={`/nftmint/mysticAnimals`}>
+            <button 
+              className={ 'secondary-button ' + (account ? '' : 'gray') }
+              disabled={ account ? false : true }
+            >Mint Mystic Animal</button>
           </Link>
 
-          <Link to={`/nftmint/tribeMasks`} className="main-button">
-            Mint Tribe Masks
+          <Link to={`/nftmint/tribeMasks`}>
+            <button 
+              className={ 'secondary-button ' + (account ? '' : 'gray') }
+              disabled={ account ? false : true }
+            >Mint Tribe Masks</button>
           </Link>
-          
-        </div>
+        </>
       }
     </>
   )

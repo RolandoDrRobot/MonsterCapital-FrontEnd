@@ -1,33 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import nftIcon from '../../assets/img/nft.png';
 import homeIcon from '../../assets/img/home.png';
-import newsIcon from '../../assets/img/news.png';
 import investIcon from '../../assets/img/invest.png';
 import stakeIcon from '../../assets/img/stake.svg';
 import walletIcon from '../../assets/img/wallet.png';
 import './main.css';
-import Monkey from '../Monkey';
 
 function Navbar() {
   return (
     <>
       <div className="navbar">
-        <Monkey />
-        <Link to="/" className="button">
+       <Link to="/" className="button">
           <img src={homeIcon} alt="" />
           Home
         </Link>
-        <Link to="/news" className="button">
-          <img src={newsIcon} alt="" />
-          News
+        <Link to="/stake" className="button">
+          <img src={stakeIcon} alt="" />
+          Stake
         </Link>
         <Link to="/invest" className="button">
           <img src={investIcon} alt="" />
           Invest
         </Link>
-        <Link to="/stake" className="button">
-          <img src={stakeIcon} alt="" />
-          Stake
+        <Link to="/nftroom" className="button">
+          <img src={nftIcon} alt="" />
+          NFTs
         </Link>
         <Link to="/wallet" className="button">
           <img src={walletIcon} alt="" />

@@ -11,7 +11,7 @@ interface nftMetaData {
 }
 
 function NftCollection() {
-  const { active } = useWeb3React();
+  const { account } = useWeb3React();
   const { collectionName }:any = useParams();
   const { animals }:any = useMysticsAnimalsData();
   const { masks }:any = useTribesMasksData();
@@ -20,22 +20,26 @@ function NftCollection() {
   return (
     <>
       {
-      !active ? <div></div> :
-      <div className='nft-room'>
-        <div className="nft-hall">
-          <h1 className="collection-title">{collectionName}</h1>
-          <div className="collection row">
-            {collection.map(({ name, image, tokenId }:nftMetaData) => (
-              <Link key={tokenId} to={`/nftroom/${collectionName}/${tokenId}`} className="col-4 yellow">
-                <div className="nft-card">
-                  <img src={image} alt=""/>
-                  <p>{name}</p>
-                </div>
-              </Link>
-            ))}
+        <div className='nft-room'>
+          <div className={ 'nft-collection section-tab' + (account ? ' yellow-border' : '') }>
+            <h1 className="collection-title">{collectionName}</h1>
+            <p className="collection-description">
+              Stake your Coras and earn APY%.
+              You create contracts to earn APY% on your Coras.
+              Stake your Coras and earn APY%
+            </p>
+            <div className="collection row">
+              {collection.map(({ name, image, tokenId }:nftMetaData) => (
+                <Link key={tokenId} to={`/nftroom/${collectionName}/${tokenId}`} className="col-4 yellow">
+                  <div className="nft-card">
+                    <img src={image} alt=""/>
+                    <p>{name}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
-      </div> 
       }
     </>
   )

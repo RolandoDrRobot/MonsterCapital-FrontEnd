@@ -1,7 +1,6 @@
 import React from 'react';
 import StakeBox from '../../components/StakeBox/index';
-import OpenContracts from '../../components/OpenContracts/index';
-import ClosedContracts from '../../components/ClosedContracts/index';
+import ClaimRewards from '../../components/ClaimRewards/index';
 import './main.css';
 
 function Stake() {
@@ -9,8 +8,7 @@ function Stake() {
     <>
       <div className="stake">
         <StakeBox />
-        <OpenContracts />
-        <ClosedContracts />
+        <ClaimRewards />
       </div>
     </>
   )

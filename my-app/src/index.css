@@ -47,7 +47,7 @@ input {
   border-radius: 12px;
   color: var(--white);
   border: 3px solid var(--light-green);
-  background-color: var(--main-bg-color);
+  background-color: var(--light-green);
 }
 
 input::placeholder {
@@ -83,13 +83,12 @@ span {
   padding: 12px;
   margin-bottom: 12px;
   text-align: center;
-  font-weight: 600;
+  font-weight: bold;
   color: var(--main-bg-color);
   background-color: var(--yellow);
   border-radius: 20px;
-  filter: drop-shadow(0 0 0 var(--yellow));
   cursor: pointer;
-  transition: 0.25s;
+  transition: all 0.25s;
 }
 
 .main-button:disabled {
@@ -98,24 +97,47 @@ span {
   background-color: var(--main-bg-color);
 }
 
-.main-button:hover,
-.main-button:active,
-.main-button:focus {
+.main-button:hover {
   color: var(--main-bg-color);
-  filter: drop-shadow(0 0 10px var(--yellow));
+  animation: only-aura 3s ease 0s infinite normal none;
+}
+
+.secondary-button {
+  width: 97%;
+  display: block;
+  height: 50px;
+  padding: 12px;
+  margin: 0 auto 12px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--white);
+  background-color: var(--light-green);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.secondary-button:disabled {
+  color: var(--light-gray);
+  border: 3px solid var(--light-green);
+  background-color: var(--main-bg-color);
+}
+
+.secondary-button:hover {
+  color: var(--white);
+  animation: only-aura 4s ease 0s infinite normal none;
 }
 
 .yellow {
   color: var(--yellow);
   transition: all 0.25s;
-  margin-right: 8px;
 }
 
 .yellow:hover,
 .yellow:active,
 .yellow:focus {
   color: var(--yellow);
-  text-shadow:0 0 20px var(--yellow);
+  text-shadow:0 0 15px var(--yellow);
 }
 
 .yellow-border {
@@ -150,4 +172,38 @@ span {
 
 #__react-alert__ div div div svg:hover {
   stroke: var(--light-gray) !important;
+}
+
+/* Section tabs */
+
+.section-tab {
+  text-align: center;
+  margin: 60px 0 30px;
+  padding: 80px 15px 15px;
+  border-radius: 25px;
+  background-color: var(--main-bg-color);
+  filter: drop-shadow(0 0 20px var(--black));
+  border: 3px solid var(--light-green);
+}
+
+.section-tab-pet {
+  position: absolute;
+  width: 34%;
+  z-index: 1;
+  right: 33%;
+  top: 1%;
+  filter: drop-shadow(0 0 20px var(--black));
+  animation: aura 7s ease 0s infinite normal none;
+}
+
+.section-tab p:nth-child(1) {
+  padding: 0 8px;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.section-tab p:nth-child(2) {
+  font-size: 12px;
+  text-align: center;
+  color: var(--light-gray);
 }

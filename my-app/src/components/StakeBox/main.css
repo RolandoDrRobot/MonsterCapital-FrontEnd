@@ -1,37 +1,7 @@
-.new-contract .stake-icon {
-  position: absolute;
-  width: 40%;
-  z-index: 1;
-  right: 28%;
-  top: -1%;
-  filter: drop-shadow(0 0 20px var(--black));
-}
-
-.new-contract-box {
-  margin: 60px 0 30px;
-  padding: 80px 15px 15px;
-  border-radius: 25px;
-  background-color: var(--light-green);
-  filter: drop-shadow(0 0 20px var(--black));
-  border: 3px solid var(--light-green);
-}
-
-.new-contract p:nth-child(1) {
-  padding: 0 8px;
-  text-align: center;
-  margin-bottom: 6px;
-}
-
-.new-contract p:nth-child(2) {
-  font-size: 12px;
-  text-align: center;
-  color: var(--light-gray);
-}
-
 .new-contract .terms {
   margin-bottom: 20px;
   border-radius: 25px;
-  background-color: var(--main-bg-color);
+  background-color: var(--light-green);
 }
 
 .new-contract .terms .pic {
@@ -62,5 +32,5 @@
 
 .new-contract .stake-time input {
   margin-right: 4px;
-  width: 30px;
+  width: 40px;
 }

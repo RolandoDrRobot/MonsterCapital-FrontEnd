@@ -4,7 +4,6 @@ import usdcIcon from '../../assets/img/usdcIcon.png';
 import investIcon from '../../assets/img/invest.png';
 import coinIcon from '../../assets/img/coin.png';
 import gasFeeIcon from '../../assets/img/gasIcon.png';
-import Palmer from '../../components/Palmer/index';
 import { useWeb3React } from '@web3-react/core';
 import './main.css';
 
@@ -17,9 +16,8 @@ function InvestBox() {
 
   return (
     <>
-      <Palmer />
-      <img src={investIcon} className="pet" alt="" />
-      <div className={ 'invest-box' + (account ? ' yellow-border' : '') }>
+      <img src={investIcon} className="section-tab-pet" alt="" />
+      <div className={ 'invest-box section-tab' + (account ? ' yellow-border' : '') }>
         <div className="trade-box">
           <p className={ account ? '' : 'gray' }>
             Stake your Coras and earn APY%.

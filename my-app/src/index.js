@@ -16,6 +16,7 @@ import News from './views/News/index';
 import Wallet from './views/Wallet/index';
 import Stake from './views/Stake/index';
 import NftRoom from './views/NftRoom/index';
+import RewardsRoom from './views/RewardsRoom/index';
 import NftCollection from './components/NftCollection/index';
 import NftOwner from './components/NftOwner/index';
 import NftDetails from './components/NftDetails/index';
@@ -44,6 +45,7 @@ ReactDOM.render(
                 <Route path='/invest' element={<Invest/>}/>
                 <Route path='/news' element={<News/>}/>
                 <Route path='/stake' element={<Stake/>}/>
+                <Route path='/rewards' element={<RewardsRoom/>}/>
                 <Route path='/wallet' element={<Wallet/>}/>
                 <Route path='/newuser' element={<NewUser/>}/>
                 <Route path='/forgotpassword' element={<ForgotPassword/>}/>
