@@ -22,13 +22,15 @@ function NftHall() {
     <>
       { <>
           <img src={nftIcon} className="section-tab-pet" alt="" />
-          <div className={ 'nft-box section-tab' + (account ? ' yellow-border' : '') }>
-            <p className={ account ? '' : 'gray' }>
+          <div className={ 'nft-box section-tab ' + (account ? ' yellow-border' : '') }>
+            <p className={ 'title ' + (account ? '' : 'gray') }>
               Stake your Coras and earn APY%.
               You create contracts to earn APY% on your Coras.
               Stake your Coras and earn APY%
             </p>
-            <p className="mb-4">Stake your Coras and earn APY%</p>
+            <p className={ 'subtitle mb-4 ' + (account ? '' : 'gray') }>
+              Stake your Coras and earn APY%
+            </p>
             <div className="collection row">
               { 
                 animals.map(({ name, image, tokenId, owner }:nftMetaData) => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import StakeBox from '../../components/StakeBox/index';
-import ClaimRewards from '../../components/ClaimRewards/index';
+import ManageRewards from '../../components/ManageRewards/index';
 import './main.css';
 
 function Stake() {
@@ -8,7 +8,7 @@ function Stake() {
     <>
       <div className="stake">
         <StakeBox />
-        <ClaimRewards />
+        <ManageRewards />
       </div>
     </>
   )

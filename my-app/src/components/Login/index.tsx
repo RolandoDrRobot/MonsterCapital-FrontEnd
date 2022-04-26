@@ -42,8 +42,8 @@ function Login() {
     <>
       <div className="login">
         <form onSubmit={onSubmitForm}>
-          <input name="email" placeholder="Email Address" type="email" required />
-          <input name="password" placeholder="Password" type="password" required />
+          <input className="mb-3" name="email" placeholder="Email Address" type="email" required />
+          <input className="mb-3" name="password" placeholder="Password" type="password" required />
           <button type="submit" className="main-button">Login</button>
           <div className="d-flex justify-content-center mt-3">
             <Link to="/newuser" className="text-button yellow">New user?</Link>

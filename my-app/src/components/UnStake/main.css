@@ -1,0 +1,36 @@
+.unstake-box {
+  margin: 30px auto 0;
+  padding: 30px 15px 15px;
+}
+
+.unstake .pic {
+  width: 25px;
+  height: 25px;
+  margin: -5px 5px 0 0;
+}
+
+.unstake .unlock-pic {
+  width: 70%;
+  margin: 0 auto;
+  animation: only-aura 5s ease 0s infinite normal none;
+}
+
+.unstake .you-unstake {
+  padding: 0 15px;
+  margin-bottom: 6px;
+}
+
+.unstake .you-unstake div {
+  height: 55px;
+}
+
+.unstake input {
+  text-align: right;
+  border: 0;
+  margin: 0 4px 0 0;
+}
+
+.unstake .you-unstake input {
+  width: 70px;
+  background-color: var(--main-bg-color);
+}

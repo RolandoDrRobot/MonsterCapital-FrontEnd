@@ -17,14 +17,16 @@ function InvestBox() {
   return (
     <>
       <img src={investIcon} className="section-tab-pet" alt="" />
-      <div className={ 'invest-box section-tab' + (account ? ' yellow-border' : '') }>
+      <div className={ 'invest-box section-tab ' + (account ? ' yellow-border' : '') }>
         <div className="trade-box">
-          <p className={ account ? '' : 'gray' }>
+          <p className={ 'title ' + (account ? '' : 'gray') }>
             Stake your Coras and earn APY%.
             You create contracts to earn APY% on your Coras.
             Stake your Coras and earn APY%
           </p>
-          <p>Stake your Coras and earn APY%</p>
+          <p className={ 'subtitle ' + (account ? '' : 'gray') }>
+            Invest your Coras and earn APY%
+          </p>
           <div className="d-flex you-pay">
             <div className="position-relative d-flex align-items-center justify-content-center">
               <img className="token-pic" src={usdcIcon} alt="" />

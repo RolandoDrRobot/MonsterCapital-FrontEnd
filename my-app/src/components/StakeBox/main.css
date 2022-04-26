@@ -10,13 +10,11 @@
   margin: 0 0 0 8px;
 }
 
-.new-contract .you-stake,
-.new-contract .stake-time {
+.new-contract .you-stake {
   padding: 0 18px;
 }
 
-.new-contract .you-stake div,
-.new-contract .stake-time div {
+.new-contract .you-stake div {
   height: 55px;
 }
 
@@ -28,9 +26,4 @@
 
 .new-contract .you-stake input {
   width: 70px;
-}
-
-.new-contract .stake-time input {
-  margin-right: 4px;
-  width: 40px;
 }

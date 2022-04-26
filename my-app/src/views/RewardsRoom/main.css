@@ -2,4 +2,5 @@
   height: 100%;
   width: 340px;
   overflow-y: scroll;
+  position: relative;
 }
