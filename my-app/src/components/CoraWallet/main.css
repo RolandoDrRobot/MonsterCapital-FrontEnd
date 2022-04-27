@@ -24,6 +24,7 @@
 .cora-wallet .token-pic img {
   width: 75px;
   filter: drop-shadow(0 0 20px var(--black));
+  animation: aura 6s ease 0s infinite normal none;
 }
 
 .cora-wallet .send,
@@ -77,12 +78,14 @@
   width: 30px;
   height: 30px;
   margin: 0 8px 0 0;
+  filter: drop-shadow(0 0 4px var(--yellow));
 }
 
 .send-box-input {
   border-radius: 20px;
   background-color: var(--light-green);
   margin-bottom: 24px;
+  padding: 10px 0;
 }
 
 .send-box input {

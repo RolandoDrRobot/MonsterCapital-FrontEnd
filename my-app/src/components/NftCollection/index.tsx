@@ -21,7 +21,7 @@ function NftCollection() {
     <>
       {
         <div className='nft-room'>
-          <div className={ 'nft-collection section-tab ' + (account ? ' yellow-border' : '') }>
+          <div className={ 'nft-collection section-tab ' + (account ? '' : '') }>
             <h1 className="collection-title">{collectionName}</h1>
             <p className={ 'title mb-4 ' + (account ? '' : 'gray') }>
               Stake your Coras and earn APY%.

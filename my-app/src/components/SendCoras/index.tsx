@@ -1,12 +1,14 @@
 import React from 'react';
+import { useWeb3React } from '@web3-react/core';
+import Loading from '../../components/Loading/index';
+import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
+import { getERC20Contract } from '../../config/tokens/contractStore';
+import { useAlert } from 'react-alert';
+
 import walletIcon from '../../assets/img/coin.png';
 import closetIcon from '../../assets/img/close.png';
 import metamaskIcon from '../../assets/img/metamask.png';
 import sendIcon from '../../assets/img/send.png';
-import { useWeb3React } from '@web3-react/core';
-import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
-import { getERC20Contract } from '../../config/tokens/contractStore';
-import { useAlert } from 'react-alert';
 import './main.css';
 
 interface SendCorasProps {
@@ -17,10 +19,12 @@ function SendCoras(props:SendCorasProps) {
 
   const alert = useAlert();
   const [selectedToken, setSelectedToken] = React.useState(TokenListRinkeby[0]);
+  let [isLoading, setIsLoading] = React.useState<boolean>(false);
   const { account, library } = useWeb3React();
 
   const sendCoras = function(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setIsLoading(true);
 
     const target = e.target as typeof e.target & {
       amount: { value: number };
@@ -38,6 +42,7 @@ function SendCoras(props:SendCorasProps) {
       })
       .on('error', (error:any) => {
         alert.show('There was an error ' + error.message);
+        setIsLoading(false);
       })
       .on('transactionHash', (txHash:string) => {
         alert.show('Transaction sent');
@@ -46,6 +51,7 @@ function SendCoras(props:SendCorasProps) {
         alert.show('Transaction confirmed');
         target.amount.value = 0.00;
         target.recipient.value = '';
+        setIsLoading(false);
       });
     }
   }
@@ -92,10 +98,17 @@ function SendCoras(props:SendCorasProps) {
             <img className="pic" src={metamaskIcon} alt="" />
           </div>
         </div>
-        <button 
-          className={ account ? ' yellow-border' : '' }
-          disabled={ account ? false : true}
-        >Send Coras</button>
+        {
+          isLoading === true 
+          ? <Loading /> 
+          : <button 
+              className={ account ? ' yellow-border' : '' }
+              disabled={ account ? false : true}
+            >Send Coras</button>
+        }
+        <p className={ 'subtitle mt-3 ' + (account ? '' : 'gray') }>
+          Stake your Coras and earn APY%
+        </p>
       </form>
     </>
   )

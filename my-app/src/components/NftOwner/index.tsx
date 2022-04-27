@@ -23,7 +23,7 @@ function NftOwner() {
     <>
       {
       <div className='nft-room'>
-        <div className={ 'nft-owner section-tab' + (account ? ' yellow-border' : '') }>
+        <div className={ 'nft-owner section-tab ' + (account ? '' : '') }>
           <h1 className="collection-title mb-4">{truncatedAddress}</h1>
           <div className="collection row">
             { 

@@ -79,7 +79,7 @@ function InvestBox() {
             disabled={ account ? false : true }
           >Invest Now</button>
 
-          <div className="mt-4 d-flex justify-content-between align-items-center">
+          {/* <div className="mt-4 d-flex justify-content-between align-items-center">
             <div>
               <span className="transaction-cost-title">transaction cost</span>
               <span className={ account ? 'cost' : 'cost gray' }>
@@ -90,9 +90,12 @@ function InvestBox() {
               <img className="gas-pic" src={gasFeeIcon} alt="" />
               <span className={ account ? '' : 'gray' }>0.005</span>
             </div>
-          </div>
-        </div>
+          </div> */}
 
+          <p className={ 'subtitle mt-3 ' + (account ? '' : 'gray') }>
+            Stake your Coras and earn APY%, Stake your Coras and earn APY%, Stake your Coras.
+          </p>
+        </div>
       </div>
     </>
   )

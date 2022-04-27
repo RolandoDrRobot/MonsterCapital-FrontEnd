@@ -1,18 +1,11 @@
-img.loading-icon {
-  margin-top: 14px;
+#content img.loading-icon {
+  margin: 14px 0 0 0;
   width: 35px;
   height: 35px;
-  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+  filter: drop-shadow(0 0 0px var(--black));
 }
 
-@-moz-keyframes spin {
-  from { -moz-transform: rotate(0deg); }
-  to { -moz-transform: rotate(360deg); }
-}
-@-webkit-keyframes spin {
-  from { -webkit-transform: rotate(0deg); }
-  to { -webkit-transform: rotate(360deg); }
-}
 @keyframes spin {
   from {transform:rotate(0deg);}
   to {transform:rotate(360deg);}

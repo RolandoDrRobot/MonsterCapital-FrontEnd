@@ -10,9 +10,9 @@ import { useAlert } from 'react-alert';
 function NftMint() {
 
   const alert = useAlert();
-  const { account, library } = useWeb3React();
+  const { account, library, active } = useWeb3React();
   const { collectionName }:any = useParams();
-  const [isMinting, setIsMinting] = useState(false);
+  let [isLoading, setIsLoading] = React.useState<boolean>(false);
 
   const tribeMasks = useTribeMasks();
   const mysticAnimals = useMysticAnimals();
@@ -30,40 +30,44 @@ function NftMint() {
   }, [getCollectionData]);
 
   const mint = () => {
-    setIsMinting(true);
-    collection.methods
-      .mint()
+    if (active) {
+      setIsLoading(true);
+      collection.methods.mint()
       .send({
         from: account,
         value: library.utils.toWei('0.001', 'ether')
       })
       .on('error', (error:any) => {
-        setIsMinting(false);
         alert.show('There was an error ' + error.message);
-        console.log(error.message);
+        setIsLoading(false);
       })
       .on('transactionHash', (txHash:any) => {
-        setIsMinting(false);
         alert.show('Transaction sent');
       })
       .on('receipt', () => {
-        setIsMinting(false);
         alert.show('Transaction confirmed');
+        setIsLoading(false);
       });
+    }
+    
   };
 
   return (
     <>{
-      isMinting === true ? <Loading /> :
       <div className="nft-room">
         <div className="nft-hall">
           <h1 className="collection-title">NFT Mint</h1>
           <div className="collection row">
             <div className="minting d-flex justify-content-center">
-            <button 
-              type="submit"
-              className="main-button"
-              onClick={mint}>Mint {collectionName}</button>
+            {
+              isLoading === true 
+              ? <Loading /> 
+              : <button 
+                  type="submit"
+                  className="main-button"
+                  onClick={mint}
+                >Mint {collectionName}</button>
+            }
             </div>
           </div>
         </div>

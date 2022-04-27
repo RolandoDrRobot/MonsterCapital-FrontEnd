@@ -15,23 +15,23 @@ function MintRewards() {
   function distributeRewards() {
     const coraTokenContract =  getERC20Contract(selectedToken.address, library);
     if (active) {
-        setIsLoading(true);
-        coraTokenContract.methods.distributeRewards()
-        .send({
-          from: account,
-        })
-        .on('error', (error:any) => {
-          alert.show('There was an error ' + error.message);
-          setIsLoading(false);
-        })
-        .on('transactionHash', (txHash:any) => {
-          alert.show('Transaction sent');
-        })
-        .on('receipt', () => {
-          alert.show('Transaction confirmed');
-          setIsLoading(false);
-        });
-      }  
+      setIsLoading(true);
+      coraTokenContract.methods.distributeRewards()
+      .send({
+        from: account,
+      })
+      .on('error', (error:any) => {
+        alert.show('There was an error ' + error.message);
+        setIsLoading(false);
+      })
+      .on('transactionHash', (txHash:any) => {
+        alert.show('Transaction sent');
+      })
+      .on('receipt', () => {
+        alert.show('Transaction confirmed');
+        setIsLoading(false);
+      });
+    }  
   };
 
   return (

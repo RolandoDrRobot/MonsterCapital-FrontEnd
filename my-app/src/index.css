@@ -29,8 +29,8 @@ body {
 #content {
   width: 100%;
   max-width: 340px;
-  height: 63vh;
-  margin: 28px 0;
+  height: 66vh;
+  margin: 15px 0;
 }
 
 a {
@@ -132,9 +132,7 @@ span {
   transition: all 0.25s;
 }
 
-.yellow:hover,
-.yellow:active,
-.yellow:focus {
+.yellow:hover {
   color: var(--yellow);
   text-shadow:0 0 15px var(--yellow);
 }
@@ -148,9 +146,7 @@ span {
   transition: all 0.25s;
 }
 
-.gray:hover,
-.gray:active,
-.gray:focus {
+.gray:hover {
   color: var(--light-gray);
   text-shadow:0 0 20px var(--light-gray);
 }
