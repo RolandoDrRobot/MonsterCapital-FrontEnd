@@ -1,25 +1,82 @@
 import React from 'react';
-import RewardsIcon from '../../assets/img/rewards.png';
 import coinIcon from '../../assets/img/coin.png';
 import walletIcon from '../../assets/img/wallet.png';
 import { useWeb3React } from '@web3-react/core';
+import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
+import { getERC20Contract } from '../../config/tokens/contractStore';
+import BigNumber from 'bignumber.js';
+import { useAlert } from 'react-alert';
 import './main.css';
 
 function UnStake() {
   
-  const { account } = useWeb3React();
+  const alert = useAlert();
+  const [selectedToken, setSelectedToken] = React.useState(TokenListRinkeby[0]);
+  let [corasLocked, setCorasLocked] = React.useState<any>(0);
+  const { account, library, active } = useWeb3React();
+  const coraTokenContract = getERC20Contract(selectedToken.address, library);
+  const decimals = 100000000;
+
+  const fmt = {
+    prefix: '',
+    decimalSeparator: '.',
+    groupSeparator: ',',
+    groupSize: 3,
+    secondaryGroupSize: 0,
+    fractionGroupSeparator: ' ',
+    fractionGroupSize: 0,
+    suffix: ''
+  };
+  // Set the global formatting options
+  BigNumber.config({ FORMAT: fmt });
+
+  const unStakeCoras = function(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    const target = e.target as typeof e.target & {
+      amount: { value: number };
+    };
+
+    const decimals = 100000000;
+    const amount = target.amount.value * decimals;
+
+    coraTokenContract.methods.removeStake(amount)
+      .send({
+        from: account,
+      })
+      .on('error', (error:any) => {
+        alert.show('There was an error ' + error.message);
+      })
+      .on('transactionHash', (txHash:any) => {
+        alert.show('Transaction sent');
+      })
+      .on('receipt', () => {
+        alert.show('Transaction confirmed');
+        target.amount.value = 0.00;
+      });
+  };
+
+  (async function getRewardsInformation() {
+    if (active) {
+      const coraTokenContract = await getERC20Contract(selectedToken.address, library);
+      const [corasLocked] = await Promise.all([
+        coraTokenContract.methods.stakeOf(account).call(),
+      ]);
+      setCorasLocked((new BigNumber(corasLocked / decimals)).toFormat(3));
+    }
+  })();
+
   return (
     <>
-      <div className="unstake">
+      <form className="unstake" onSubmit={unStakeCoras}>
         <div className={ 'unstake-box section-tab row d-flex align-items-center ' + (account ? ' yellow-border' : '') }>
-          <div className="col-8 reward-information">
-            <p>
-              You can unlock
-              <span className="yellow m-0"> 300 Coras </span>
-              to your wallet
+          <div className="col-8 reward-information mb-4">
+            <p className="m-0">
+              You can unlock up to
+              <span className="yellow m-0"> {corasLocked} Coras </span>
             </p>
           </div>
-          <div className="col-4 m-0 mb-3 pl-0">
+          <div className="col-4 mb-4">
             <img className="unlock-pic" src={walletIcon} alt="" />
           </div>
           <div className="col-12">
@@ -28,11 +85,21 @@ function UnStake() {
                 <span className="">I want to unlock</span>
               </div>
               <div className="d-flex align-items-center">
-                <input placeholder="0.00" type="number" max="1" min="1000000000" />
+                <input 
+                  name="amount" 
+                  placeholder="0.00" 
+                  type="number" 
+                  min="1"
+                  max="1000000000"
+                  disabled={ account ? false : true}
+                  required />
                 <img className="pic" src={coinIcon} alt="" />
               </div>
             </div>
-            <button className={ 'secondary-button d-block mb-3 ' + (account ? '' : 'gray') }>
+            <button 
+              className={ 'secondary-button d-block mb-3 ' + (account ? '' : 'gray') }
+              disabled={ account ? false : true} 
+            >
               Unlock Coras
             </button>
             <p className={ 'subtitle ' + (account ? '' : 'gray') }>
@@ -40,7 +107,7 @@ function UnStake() {
             </p>
           </div> 
         </div>
-      </div>
+      </form>
     </>
   )
 }

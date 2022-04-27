@@ -26,7 +26,6 @@ function ManageRewards() {
     fractionGroupSize: 0,
     suffix: ''
   };
-
   // Set the global formatting options
   BigNumber.config({ FORMAT: fmt });
  
@@ -37,10 +36,8 @@ function ManageRewards() {
         coraTokenContract.methods.stakeOf(account).call(),
         coraTokenContract.methods.rewardOf(account).call(),
       ]);
-      let x = (new BigNumber(corasLocked / decimals)).toFormat(3);
-      let y = (new BigNumber(rewardsAvailable / decimals)).toFormat(3);
-      setCorasLocked(x);
-      setRewardsAvailable(y);
+      setCorasLocked((new BigNumber(corasLocked / decimals)).toFormat(3));
+      setRewardsAvailable((new BigNumber(rewardsAvailable / decimals)).toFormat(3));
     }
   })();
 
