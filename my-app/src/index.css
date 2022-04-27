@@ -81,7 +81,6 @@ span {
   display: block;
   height: 50px;
   padding: 12px;
-  margin-bottom: 12px;
   text-align: center;
   font-weight: bold;
   color: var(--main-bg-color);
@@ -107,7 +106,7 @@ span {
   display: block;
   height: 50px;
   padding: 12px;
-  margin: 0 auto 12px;
+  margin: 0 auto;
   text-align: center;
   font-weight: bold;
   color: var(--white);

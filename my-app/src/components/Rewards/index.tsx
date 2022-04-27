@@ -1,17 +1,20 @@
 import React from 'react';
-import RewardsIcon from '../../assets/img/rewards.png';
-import coinIcon from '../../assets/img/coin.png';
 import { useWeb3React } from '@web3-react/core';
+import Loading from '../../components/Loading/index';
 import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
 import { getERC20Contract } from '../../config/tokens/contractStore';
 import BigNumber from 'bignumber.js';
 import { useAlert } from 'react-alert';
+
+import RewardsIcon from '../../assets/img/rewards.png';
+import coinIcon from '../../assets/img/coin.png';
 import './main.css';
 
 function Rewards() {
 
   const alert = useAlert();
   const [selectedToken, setSelectedToken] = React.useState(TokenListRinkeby[0]);
+  let [isLoading, setIsLoading] = React.useState<boolean>(false);
   const { account, library, active } = useWeb3React();
   let [rewardsAvailable, setRewardsAvailable] = React.useState<any>(0);
   let coraTokenContract:any = {}
@@ -44,18 +47,21 @@ function Rewards() {
 
   const claimRewards = function() {
     if (active) {
+      setIsLoading(true);
       coraTokenContract.methods.withdrawReward()
       .send({
         from: account,
       })
       .on('error', (error:any) => {
         alert.show('There was an error ' + error.message);
+        setIsLoading(false);
       })
       .on('transactionHash', (txHash:any) => {
         alert.show('Transaction sent');
       })
       .on('receipt', () => {
         alert.show('Transaction confirmed');
+        setIsLoading(false);
       });
     }
   }
@@ -70,12 +76,16 @@ function Rewards() {
             Rewards available: 
             <span className="yellow m-0"> {rewardsAvailable}</span>
           </p>
-          <button 
-            className="main-button"
-            disabled={ account ? false : true}
-            onClick={claimRewards}
-          >Claim Rewards Now</button>
-          <p className={ 'subtitle mt-2 ' + (account ? '' : 'gray') }>
+          {
+            isLoading === true 
+            ? <Loading /> 
+            : <button 
+                className="main-button"
+                disabled={ account ? false : true}
+                onClick={claimRewards}
+              >Claim Rewards Now</button>
+          }
+          <p className={ 'subtitle mt-3 ' + (account ? '' : 'gray') }>
             Stake your Coras and earn APY%, Stake your.
           </p>
         </div>

@@ -1,21 +1,24 @@
 import React from 'react';
-import stakeIcon from '../../assets/img/stake.svg';
-import coinIcon from '../../assets/img/coin.png';
 import { useWeb3React } from '@web3-react/core';
+import Loading from '../../components/Loading/index';
 import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
 import { getERC20Contract } from '../../config/tokens/contractStore';
 import { useAlert } from 'react-alert';
+import stakeIcon from '../../assets/img/stake.svg';
+import coinIcon from '../../assets/img/coin.png';
 import './main.css';
 
 function StakeBox() {
 
   const alert = useAlert();
   const [selectedToken, setSelectedToken] = React.useState(TokenListRinkeby[0]);
+  let [isLoading, setIsLoading] = React.useState<boolean>(false);
   const { account, library } = useWeb3React();
   const coraTokenContract = getERC20Contract(selectedToken.address, library);
 
   const stakeCoras = function(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setIsLoading(true);
 
     const target = e.target as typeof e.target & {
       amount: { value: number };
@@ -30,13 +33,15 @@ function StakeBox() {
       })
       .on('error', (error:any) => {
         alert.show('There was an error ' + error.message);
+        setIsLoading(false);
       })
       .on('transactionHash', (txHash:any) => {
         alert.show('Transaction sent');
       })
       .on('receipt', () => {
         alert.show('Transaction confirmed');
-        target.amount.value = 0.00;
+        target.amount.value = 0;
+        setIsLoading(false);
       });
   };
 
@@ -68,11 +73,15 @@ function StakeBox() {
               </div>
             </div>
           </div>
-          <button 
-            className="main-button" 
-            disabled={ account ? false : true} 
-          >Stake Now</button>
-          <p className={ 'subtitle ' + (account ? '' : 'gray') }>
+          {
+            isLoading === true 
+            ? <Loading /> 
+            : <button 
+                className="main-button" 
+                disabled={ account ? false : true} 
+              >Stake Now</button>
+          }
+          <p className={ 'subtitle mt-3 ' + (account ? '' : 'gray') }>
             Stake your Coras and earn APY%
           </p>
         </div>

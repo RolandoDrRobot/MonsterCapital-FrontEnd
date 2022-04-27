@@ -8,6 +8,7 @@
   width: 25px;
   height: 25px;
   margin: 0 0 0 8px;
+  filter: drop-shadow(0 0 4px var(--yellow));
 }
 
 .new-contract .you-stake {

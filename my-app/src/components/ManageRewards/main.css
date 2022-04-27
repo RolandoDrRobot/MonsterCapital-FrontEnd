@@ -1,5 +1,5 @@
 .manage-rewards {
-  margin: 30px auto 0;
+  margin: 30px 0;
   padding: 30px 15px 15px;
 }
 
@@ -7,12 +7,13 @@
   width: 25px;
   height: 25px;
   margin: auto 5px auto 0;
+  filter: drop-shadow(0 0 4px var(--yellow));
 }
 
 .manage-rewards .reward-pic {
   width: 100%;
   margin: 0 auto;
-  animation: only-aura 5s ease 0s infinite normal none;
+  animation: aura 5s ease 0s infinite normal none;
 }
 
 .manage-rewards .reward-information {
