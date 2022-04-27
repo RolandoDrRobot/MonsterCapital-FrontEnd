@@ -2,7 +2,6 @@ import React from 'react';
 import metamaskIcon from '../../assets/img/metamask.png';
 import coinIcon from '../../assets/img/coin.png';
 import newsIcon from '../../assets/img/news.png';
-
 import logoutWalletIcon from '../../assets/img/logoutwallet.png';
 import Loading from '../../components/Loading/index';
 import { Link } from 'react-router-dom';

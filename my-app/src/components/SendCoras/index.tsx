@@ -44,7 +44,7 @@ function SendCoras(props:SendCorasProps) {
       })
       .on('receipt', () => {
         alert.show('Transaction confirmed');
-        target.amount.value = 0;
+        target.amount.value = 0.00;
         target.recipient.value = '';
       });
     }
