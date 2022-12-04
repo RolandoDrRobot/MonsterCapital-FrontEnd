@@ -9,35 +9,16 @@
 
 
 ## 🪙 What is this
-- This is the front end of the coin CORA, 
+- This is the front end of the coin CORA
 - [Here](https://github.com/RolandoDrRobot/CoraToken-BackEnd) is the backend of the project
 - [Here](https://github.com/RolandoDrRobot/CoraToken-Contracts) are the smart contracts for this project
-- It works as an API service and cover the following services for the app 👇
 
 ## ⚡️ Features
-- Create users
-- Login
-- Offer news (the news needs to be stored in the database already)
-
-## ⚡️ Screenshots
-Home
-<img src="Screenshots/Home.png" alt="Home" width="300"/>
-
-Stake
-<img src="Screenshots/Stake.png" alt="Stake" width="300"/>
-
-Rewards
-<img src="Screenshots/Rewards.png" alt="Rewards" width="300"/>
-
-Invest
-<img src="Screenshots/Invest.png" alt="Invest" width="300"/>
-
-New
-<img src="Screenshots/New.png" alt="New" width="300"/>
-
-Wallet
-<img src="Screenshots/Wallet.png" alt="Wallet" width="300"/>
-
+- Login (Using a web2 backend (node + firebase)
+- Mint NFTs
+- Stake CORAS
+- Send CORAS to other wallet
+- Receive CORAS
 
 ## ⚙️ How to install
 
@@ -46,3 +27,12 @@ Wallet
 
 
 ## 📗 Improvements Ideas
+- Update copys for all the windows
+
+## ⚡️ Screenshots
+<img src="Screenshots/Home.png" alt="Home" width="300"/>
+<img src="Screenshots/Stake.png" alt="Stake" width="300"/>
+<img src="Screenshots/Rewards.png" alt="Rewards" width="300"/>
+<img src="Screenshots/Invest.png" alt="Invest" width="300"/>
+<img src="Screenshots/New.png" alt="New" width="300"/>
+<img src="Screenshots/Wallet.png" alt="Wallet" width="300"/>
