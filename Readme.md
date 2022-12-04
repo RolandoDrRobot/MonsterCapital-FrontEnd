@@ -21,22 +21,22 @@
 
 ## ⚡️ Screenshots
 Home
-![Home](Screenshots/Home.png "Home")
+<img src="Screenshots/Home.png" alt="Home" width="300"/>
 
 Stake
-![Stake](Screenshots/Home.png "Stake")
+<img src="Screenshots/Stake.png" alt="Stake" width="300"/>
 
 Rewards
-![Rewards](Screenshots/Home.png "Rewards")
+<img src="Screenshots/Rewards.png" alt="Rewards" width="300"/>
 
 Invest
-![Invest](Screenshots/Home.png "Invest")
+<img src="Screenshots/Invest.png" alt="Invest" width="300"/>
 
 New
-![New](Screenshots/Home.png "New")
+<img src="Screenshots/New.png" alt="New" width="300"/>
 
 Wallet
-![Wallet](Screenshots/Home.png "Wallet")
+<img src="Screenshots/Wallet.png" alt="Wallet" width="300"/>
 
 
 ## ⚙️ How to install
