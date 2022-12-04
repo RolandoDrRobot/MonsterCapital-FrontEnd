@@ -1,11 +1,13 @@
 # 🪙⚡️ CoraToken-FrontEnd
+
+
 # 📗 Table of contents
 1. [What is this](#-what-is-this)
 2. [Features](#%EF%B8%8F-features)
-3. [Screenshots](#%EF%B8%8F-screenshots)
-4. [How to install](#%EF%B8%8F-how-to-install)
-5. [How to use](#%EF%B8%8F-how-to-use)
-6. [Improvements Ideas](#-improvements-ideas)
+3. [How to install](#%EF%B8%8F-how-to-install)
+4. [How to use](#%EF%B8%8F-how-to-use)
+5. [Improvements Ideas](#-improvements-ideas)
+6. [Screenshots](#%EF%B8%8F-screenshots)
 
 
 ## 🪙 What is this
@@ -27,6 +29,8 @@
 
 
 ## 📗 Improvements Ideas
+- Replace the testing network (Rinkeby will be deprecated soon)
+- Finish Invest functionality (Exchange USDC by CORAS)
 - Update copys for all the windows
 
 ## ⚡️ Screenshots
