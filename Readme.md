@@ -20,6 +20,23 @@
 - Offer news (the news needs to be stored in the database already)
 
 ## ⚡️ Screenshots
+Home
+![Home](/relative/path/to/img.jpg?raw=true "Home")
+
+Stake
+![Stake](/relative/path/to/img.jpg?raw=true "Stake")
+
+Rewards
+![Rewards](/relative/path/to/img.jpg?raw=true "Rewards")
+
+Invest
+![Invest](/relative/path/to/img.jpg?raw=true "Invest")
+
+New
+![New](/relative/path/to/img.jpg?raw=true "New")
+
+Wallet
+![Wallet](/relative/path/to/img.jpg?raw=true "Wallet")
 
 
 ## ⚙️ How to install
