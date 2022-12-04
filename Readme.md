@@ -21,22 +21,22 @@
 
 ## ⚡️ Screenshots
 Home
-![Home](/relative/path/to/img.jpg?raw=true "Home")
+![Home](Screenshots/Home.png "Home")
 
 Stake
-![Stake](/relative/path/to/img.jpg?raw=true "Stake")
+![Stake](Screenshots/Home.png "Stake")
 
 Rewards
-![Rewards](/relative/path/to/img.jpg?raw=true "Rewards")
+![Rewards](Screenshots/Home.png "Rewards")
 
 Invest
-![Invest](/relative/path/to/img.jpg?raw=true "Invest")
+![Invest](Screenshots/Home.png "Invest")
 
 New
-![New](/relative/path/to/img.jpg?raw=true "New")
+![New](Screenshots/Home.png "New")
 
 Wallet
-![Wallet](/relative/path/to/img.jpg?raw=true "Wallet")
+![Wallet](Screenshots/Home.png "Wallet")
 
 
 ## ⚙️ How to install
