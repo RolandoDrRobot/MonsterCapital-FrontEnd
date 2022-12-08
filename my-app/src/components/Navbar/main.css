@@ -1,13 +1,16 @@
-.navbar {
+.navbar-bottom {
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  max-width: 340px;
   padding: 20px;
   background-color: var(--light-green);
   border-radius: 3px;
   margin: auto;
+  display: flex;
 }
 
-.navbar a {
+.navbar-bottom a {
+  font-family: 'Oxanium', sans-serif;
   color: var(--light-gray);
   font-size: 12px;
   margin: 0 auto;
@@ -16,15 +19,16 @@
   text-align: center;
 }
 
-.navbar a:active,
-.navbar a:focus,
-.navbar a:hover {
+.navbar-bottom a:active,
+.navbar-bottom a:focus,
+.navbar-bottom a:hover {
   color: var(--white);
   filter: drop-shadow(0 5px 20px var(--white));
 }
 
-.navbar img {
+.navbar-bottom img {
   display: block;
   width: 35px;
   margin: 0 auto 5px;
+  border-radius: 50%;
 }

@@ -5,7 +5,7 @@ import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
 import { getERC20Contract } from '../../config/tokens/contractStore';
 import { useAlert } from 'react-alert';
 import stakeIcon from '../../assets/img/stake.svg';
-import coinIcon from '../../assets/img/coin.png';
+import coinIcon from '../../assets/img/orb.gif';
 import './main.css';
 
 function StakeBox() {

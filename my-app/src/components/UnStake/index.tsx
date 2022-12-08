@@ -6,7 +6,7 @@ import { getERC20Contract } from '../../config/tokens/contractStore';
 import BigNumber from 'bignumber.js';
 import { useAlert } from 'react-alert';
 
-import coinIcon from '../../assets/img/coin.png';
+import coinIcon from '../../assets/img/orb.gif';
 import walletIcon from '../../assets/img/wallet.png';
 import './main.css';
 
@@ -106,7 +106,7 @@ function UnStake() {
               isLoading === true 
               ? <Loading /> 
               : <button 
-                  className={ 'secondary-button d-block mb-3 ' + (account ? '' : 'gray') }
+                  className={ 'main-button d-block mb-3 ' + (account ? '' : 'gray') }
                   disabled={ account ? false : true} 
                 >Unlock Coras</button>
             }

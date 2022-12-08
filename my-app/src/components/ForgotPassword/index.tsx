@@ -6,11 +6,11 @@ function ForgotPassword() {
   return (
     <>
       <div className="forgot-password d-flex align-items-center">
-        <div className="container d-flex justify-content-center">
+        <div className="d-flex justify-content-center">
           <form className="reset-password-form" id="reset-password-form">
-            <input className="mb-3" placeholder="Email Address" type="email" />
-            <input className="mb-3" placeholder="What's your name?" type="text" />
-            <button className="main-button">Reset Password</button>
+            <input className="mb-4" placeholder="Email Address" type="email" />
+            <input className="mb-4" placeholder="What's your name?" type="text" />
+            <button className="main-button mb-4">Reset Password</button>
             <Link to="/" className="text-button gray text-center d-block">Go back</Link>
           </form>
         </div>

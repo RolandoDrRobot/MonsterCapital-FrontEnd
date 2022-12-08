@@ -5,7 +5,7 @@ import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
 import { getERC20Contract } from '../../config/tokens/contractStore';
 import BigNumber from 'bignumber.js';
 import rewardPic from '../../assets/img/rewards.png';
-import coinIcon from '../../assets/img/coin.png';
+import coinIcon from '../../assets/img/orb.gif';
 import './main.css';
 
 function ManageRewards() {
@@ -58,7 +58,7 @@ function ManageRewards() {
           <img className="reward-pic" src={rewardPic} alt="" />
         </div>
         <div className="col-12">
-          <Link to="/rewards" className={ 'secondary-button d-block mb-3 ' + (account ? '' : 'gray') }>
+          <Link to="/rewards" className={ 'main-button d-block mb-3 ' + (account ? '' : 'gray') }>
             Manage your Rewards Here!
           </Link>
         </div> 

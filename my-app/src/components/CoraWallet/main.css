@@ -25,17 +25,19 @@
   width: 75px;
   filter: drop-shadow(0 0 20px var(--black));
   animation: aura 6s ease 0s infinite normal none;
+  border-radius: 50%;
 }
 
 .cora-wallet .send,
 .cora-wallet .receive {
+  font-family: 'Oxanium', sans-serif;
   font-size: 18px;
   font-weight: bold;
   width: 43%;
   height: 55px;
   margin: auto;
   border-radius: 3px;
-  border: 3px solid var(--light-green);
+  border-bottom: 3px solid var(--light-green);
   color: var(--white);
   cursor: pointer;
   transition: 0.5s all;
@@ -79,6 +81,7 @@
   height: 30px;
   margin: 0 8px 0 0;
   filter: drop-shadow(0 0 4px var(--yellow));
+  border-radius: 50%;
 }
 
 .send-box-input {

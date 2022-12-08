@@ -5,7 +5,7 @@ import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
 import { getERC20Contract } from '../../config/tokens/contractStore';
 import { useAlert } from 'react-alert';
 
-import walletIcon from '../../assets/img/coin.png';
+import walletIcon from '../../assets/img/orb.gif';
 import closetIcon from '../../assets/img/close.png';
 import metamaskIcon from '../../assets/img/metamask.png';
 import sendIcon from '../../assets/img/send.png';

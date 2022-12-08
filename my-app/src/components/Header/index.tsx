@@ -1,8 +1,6 @@
 import React from 'react';
 import metamaskIcon from '../../assets/img/metamask.png';
-import coinIcon from '../../assets/img/coin.png';
-import newsIcon from '../../assets/img/news.png';
-import logoutWalletIcon from '../../assets/img/logoutwallet.png';
+import monster from '../../assets/img/developermonster-face.png';
 import Loading from '../../components/Loading/index';
 import { Link } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
@@ -47,29 +45,24 @@ function Header() {
 
   return (
     <>{(active)
-        ? <div className="header d-flex">
-            <div className="wallet-info d-flex justify-content-between">
-              <div className="wallet-logout d-flex justify-content-center align-items-center" onClick={disconnect}>
-                <span className="status connected"></span>
-                <img src={logoutWalletIcon} alt="" />
-              </div>
-              <div className="wallet-connection d-flex justify-content-center align-items-center">
-                <span className="status connected"></span>
-                <img src={metamaskIcon} alt="" />
-              </div>
-              <div className="wallet-balance d-flex align-items-center">
-                <span className="d-flex align-items-center">
-                  <img src={coinIcon} alt="" />
-                  <p>{balance}</p>
-                </span>
-              </div> 
+        ?
+          <nav className="navbar navbar-expand-lg">
+            <div className="logo d-flex align-items-center mb-2">
+              <a href="https://developermonster.com/"><img src={monster} height="70" alt="Logo" /></a>
+              <h2>Monster <span>Capital</span></h2>
             </div>
-            <div className="side-options d-flex align-items-center justify-content-end">
-            <Link to="/news" className="button">
-              <img src={newsIcon} alt="" />
-            </Link>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className="nav-item active"><a href="https://developermonster.com/">Home</a></li>
+                <li className="nav-item"><a href="#">News</a></li>
+                <li className="nav-item"><a href="#">Balance {balance}</a></li>
+                <li className="nav-item" onClick={disconnect}><a href="#">Logout</a></li>
+              </ul>
             </div>
-          </div>
+          </nav>
         : isLoading === true 
         ? <Loading /> 
         : <button className="connect-btn d-flex align-items-center justify-content-center m-0" onClick={connect}>

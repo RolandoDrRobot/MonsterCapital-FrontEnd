@@ -1,79 +1,39 @@
-.connect-btn {
-  font-weight: bold;
+.navbar {
+  padding: 15px 15px 0;
+  background-color: #1c1121;
+}
+
+.navbar .logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid #e4a101;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.navbar .logo h2 {
+  font-family: 'Oxanium', cursive;
+  font-weight: 800;
+  font-size: 24px;
+  margin-top: 7px;
+}
+
+.navbar .logo h2 span {
+  font-size: 24px;
+  color: #e4a101;
+}
+
+.navbar-nav li a {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 10px 5%;
+  text-align: left;
+  text-decoration: none;
+  text-transform: capitalize;
   width: 100%;
-  padding: 10px 0;
-  color: var(--white);
-  border: 3px solid var(--light-green);
-  border-radius: 3px;
-  transition: all 0.3s;
-}
-
-.connect-btn:hover {
-  color: var(--main-bg-color);
-  background-color: var(--yellow);
-}
-
-.connect-btn img {
-  width: 18px;
-  margin-right: 6px;
-}
-
-.header .wallet-info {
-  width: 85%;
-  font-size: 12px;
-  border: 3px solid var(--light-green);
-  border-radius: 3px;
-}
-
-.header .wallet-info p {
-  font-size: 15px;
-  font-weight: bold;
-  margin: 0 0 0 8px;
-}
-
-.header .wallet-info div {
-  padding: 12px 12px 10px;
-  border-radius: 3px;
-}
-
-.header .wallet-info .wallet-logout {
-  width: 20%;
-  border-radius: 15px 0 0 15px;
-  margin-left: -2px;
-  background-color: var(--light-green);
-  transition: all 0.5s;
-  cursor: pointer;
-}
-
-.header .wallet-info .wallet-logout:hover {
-  background-color: var(--yellow);
-}
-
-.header .wallet-info .wallet-connection {
-  width: 20%;
-  padding: 12px 0 10px 8px;
-  background-color: var(--main-bg-color);
-  border-radius: 20px 0 0 20px;
-}
-
-.header .wallet-info .wallet-balance {
-  width: 60%;
-  padding: 12px 3px 10px;
-  background-color: var(--main-bg-color);
-  border-radius: 0 20px 20px 0;
-}
-
-.header .wallet-info img {
-  width: 22px;
-  border-radius: 3px;
-}
-
-.header .side-options {
-  width: 15%;
-}
-
-.header .side-options img {
-  width: 40px;
-  height: 40px;
-  position: relative; 
+  font-size: 16px;
 }

@@ -63,14 +63,14 @@ function NftHall() {
 
           <Link to={`/nftmint/mysticAnimals`}>
             <button 
-              className={ 'secondary-button mb-3 ' + (account ? '' : 'gray') }
+              className={ 'main-button mb-3 ' + (account ? '' : 'gray') }
               disabled={ account ? false : true }
             >Mint Mystic Animal</button>
           </Link>
 
           <Link to={`/nftmint/tribeMasks`}>
             <button 
-              className={ 'secondary-button mb-3 ' + (account ? '' : 'gray') }
+              className={ 'main-button mb-3 ' + (account ? '' : 'gray') }
               disabled={ account ? false : true }
             >Mint Tribe Masks</button>
           </Link>

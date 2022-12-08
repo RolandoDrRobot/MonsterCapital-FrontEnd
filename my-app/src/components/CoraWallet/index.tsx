@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAlert } from 'react-alert';
-import walletIcon from '../../assets/img/coin.png';
+import walletIcon from '../../assets/img/orb.gif';
 import { useWeb3React } from '@web3-react/core';
 import { useTruncatedAddress } from '../../hooks/useTruncatedAddress';
 import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';

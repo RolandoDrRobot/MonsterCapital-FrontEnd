@@ -41,7 +41,7 @@ function MintRewards() {
           isLoading === true 
           ? <Loading /> 
           : <button 
-              className={ 'secondary-button ' + (account ? '' : 'gray') }
+              className={ 'main-button ' + (account ? '' : 'gray') }
               disabled={ account ? false : true }
               onClick={distributeRewards}
             >Distribute Rewards</button>

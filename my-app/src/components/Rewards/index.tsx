@@ -7,7 +7,7 @@ import BigNumber from 'bignumber.js';
 import { useAlert } from 'react-alert';
 
 import RewardsIcon from '../../assets/img/rewards.png';
-import coinIcon from '../../assets/img/coin.png';
+import coinIcon from '../../assets/img/orb.gif';
 import './main.css';
 
 function Rewards() {

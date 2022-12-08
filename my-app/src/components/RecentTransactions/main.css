@@ -1,3 +1,11 @@
+.transactions {
+  padding: 15px 0;
+}
+
+.transactions h4 {
+  font-family: 'Oxanium', sans-serif;
+}
+
 .transaction {
   font-size: 14px;
   padding: 10px 20px;

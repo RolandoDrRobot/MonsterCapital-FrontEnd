@@ -50,11 +50,11 @@ function NewUser() {
       <div className="new-user d-flex align-items-center">
         <div className="container d-flex justify-content-center">
           <form onSubmit={onSubmitForm}>
-            <input className="mb-3" placeholder="Email Address" name="email" type="email" />
-            <input className="mb-3" placeholder="New Password" name="password" type="password" />
-            <input className="mb-3" placeholder="What's your name?" name="name" type="text" />
-            <button type="submit" className="main-button">Create User</button>
-            <Link to="/" className="text-button gray text-center d-block mb-3">Go back</Link>
+            <input className="mb-4" placeholder="Email Address" name="email" type="email" />
+            <input className="mb-4" placeholder="New Password" name="password" type="password" />
+            <input className="mb-4" placeholder="What's your name?" name="name" type="text" />
+            <button type="submit" className="main-button mb-4">Create User</button>
+            <Link to="/" className="text-button gray text-center d-block mb-4">Go back</Link>
             <span className="alert-text">{createUserStatus}</span>
             { isLoading === true ? <Loading /> : <></> }
           </form>

@@ -1,6 +1,5 @@
 .nft-room {
   height: 100%;
-  width: 340px;
   overflow-y: scroll;
   position: relative;
 }
@@ -29,6 +28,7 @@
 .nft-hall .yellow:hover {
   color: var(--yellow);
   filter: drop-shadow(0 0 4px var(--yellow));
+  border-radius: 50%;
   text-shadow: 0 0 0 var(--yellow);
 }
 
