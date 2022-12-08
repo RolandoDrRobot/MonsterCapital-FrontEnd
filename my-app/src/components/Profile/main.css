@@ -2,7 +2,7 @@
   width: 296px;
   position: relative;
   padding: 30px;
-  border-radius: 25px;
+  border-radius: 3px;
   background-color: var(--light-green);
   filter: drop-shadow(0 0 20px var(--black));
 }

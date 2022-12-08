@@ -42,11 +42,11 @@ function Login() {
     <>
       <div className="login">
         <form onSubmit={onSubmitForm}>
-          <input className="mb-3" name="email" placeholder="Email Address" type="email" required />
-          <input className="mb-3" name="password" placeholder="Password" type="password" required />
+          <input className="mb-4" name="email" placeholder="Email Address" type="email" required />
+          <input className="mb-4" name="password" placeholder="Password" type="password" required />
           <button type="submit" className="main-button">Login</button>
-          <div className="d-flex justify-content-center mt-3">
-            <Link to="/newuser" className="text-button yellow">New user?</Link>
+          <div className="d-flex justify-content-center mt-4">
+            <Link to="/newuser" className="text-button yellow mx-2">New user?</Link>
             <Link to="/forgotpassword" className="text-button gray">Forgot password?</Link>
           </div>
           <span className="alert-text mt-2">{loginStatus}</span>

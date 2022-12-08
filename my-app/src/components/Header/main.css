@@ -4,7 +4,7 @@
   padding: 10px 0;
   color: var(--white);
   border: 3px solid var(--light-green);
-  border-radius: 20px;
+  border-radius: 3px;
   transition: all 0.3s;
 }
 
@@ -22,7 +22,7 @@
   width: 85%;
   font-size: 12px;
   border: 3px solid var(--light-green);
-  border-radius: 20px;
+  border-radius: 3px;
 }
 
 .header .wallet-info p {
@@ -33,7 +33,7 @@
 
 .header .wallet-info div {
   padding: 12px 12px 10px;
-  border-radius: 20px;
+  border-radius: 3px;
 }
 
 .header .wallet-info .wallet-logout {
@@ -65,7 +65,7 @@
 
 .header .wallet-info img {
   width: 22px;
-  border-radius: 20px;
+  border-radius: 3px;
 }
 
 .header .side-options {

@@ -20,7 +20,7 @@
   padding-right: 12px;
   height: 50px;
   border: var(--light-green);
-  border-radius: 20px;
+  border-radius: 3px;
 }
 
 .invest-box .exchange-icon div:first-of-type,
@@ -74,7 +74,7 @@
 .invest-box .gas-container {
   width: 50%;
   padding: 14px 20px;
-  border-radius: 20px;
+  border-radius: 3px;
   background-color: var(--light-green);
 }
 

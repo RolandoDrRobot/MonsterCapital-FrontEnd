@@ -1,6 +1,7 @@
 .transaction {
+  font-size: 14px;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 3px;
   margin-bottom: 12px;
   background-color: var(--light-green);
 }
