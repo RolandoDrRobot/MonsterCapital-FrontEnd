@@ -80,7 +80,6 @@
   width: 30px;
   height: 30px;
   margin: 0 8px 0 0;
-  filter: drop-shadow(0 0 4px var(--yellow));
   border-radius: 50%;
 }
 

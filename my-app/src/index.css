@@ -173,33 +173,30 @@ button {
 /* Section tabs */
 
 .section-tab {
-  text-align: center;
-  margin: 60px 0 30px;
-  padding: 80px 15px 15px;
+  margin: 30px 0;
+  padding: 40px 15px 10px;
   border-radius: 3px;
   background-color: var(--main-bg-color);
   filter: drop-shadow(0 0 20px var(--black));
   border: 3px solid var(--light-green);
 }
 
-.section-tab-pet {
-  position: absolute;
-  width: 34%;
-  z-index: 1;
-  right: 33%;
-  top: 1%;
-  filter: drop-shadow(0 0 20px var(--black));
-  animation: aura 7s ease 0s infinite normal none;
-}
-
 .section-tab .title {
-  padding: 0 8px;
-  text-align: center;
-  margin-bottom: 6px;
+  font-family: 'Oxanium', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  margin: 0;
+  padding-right: 5px;
 }
 
 .section-tab .subtitle {
   font-size: 12px;
-  text-align: center;
+  font-weight: 500;
+  line-height: 1.7;
+  margin-bottom: 48px;
   color: var(--light-gray);
+}
+
+.section-tab img {
+  border-radius: 50%;
 }

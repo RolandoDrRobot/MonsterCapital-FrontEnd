@@ -7,7 +7,6 @@
   width: 25px;
   height: 25px;
   margin: auto 5px auto 0;
-  filter: drop-shadow(0 0 4px var(--yellow));
   border-radius: 50%;
 }
 
