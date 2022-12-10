@@ -24,7 +24,6 @@
 .navbar-bottom a:focus,
 .navbar-bottom a:hover {
   color: var(--white);
-  filter: drop-shadow(0 5px 20px var(--white));
 }
 
 .navbar-bottom img {
@@ -32,4 +31,14 @@
   width: 35px;
   margin: 0 auto 5px;
   border-radius: 50%;
+  transition: all 0.25s;
 }
+
+.navbar-bottom img:active,
+.navbar-bottom img:focus,
+.navbar-bottom img:hover {
+  color: var(--white);
+  border: 2px solid #e4a101;
+}
+
+

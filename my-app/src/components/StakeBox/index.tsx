@@ -4,7 +4,7 @@ import Loading from '../../components/Loading/index';
 import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
 import { getERC20Contract } from '../../config/tokens/contractStore';
 import { useAlert } from 'react-alert';
-import stakeIcon from '../../assets/img/stake.svg';
+import stakeIcon from '../../assets/img/greenorb.gif';
 import coinIcon from '../../assets/img/orb.gif';
 import './main.css';
 
@@ -48,13 +48,26 @@ function StakeBox() {
   return (
     <>
       <form className="new-contract" onSubmit={stakeCoras}>
-        <img className="section-tab-pet" src={stakeIcon} alt="" />
         <div className={ 'new-contract-box section-tab' + (account ? ' yellow-border' : '') }>
-          <p className={ 'title mb-3 ' + (account ? '' : 'gray') }>
-            Stake your Coras and earn APY%.
-            You create contracts to earn APY% on your Coras.
-            Stake your Coras and earn APY%
-          </p>
+          <div className="product-tag">
+            <span>Stake your Coras</span>
+          </div>
+          <div className='d-flex align-items-center mb-2'>
+            <div className='col-9'>
+              <p className={ 'title ' + (account ? '' : 'gray') }>
+                You create contracts to earn APY% on your Coras
+              </p>
+            </div>
+            <div className='col-3 d-flex justify-content-end'>
+              <img className="section-tab-pet" src={stakeIcon} alt="" />
+            </div>
+          </div>
+          <div>
+            <p className={ 'subtitle ' + (account ? '' : 'gray') }>
+              Invest your Coras and earn APY%. You create contracts to earn APY% on your Coras.
+              You create contracts to earn APY% on your Coras.
+            </p>
+          </div>
           <div className="terms">
             <div className="d-flex justify-content-between you-stake">
               <div className="d-flex align-items-center">
@@ -81,7 +94,7 @@ function StakeBox() {
                 disabled={ account ? false : true} 
               >Stake Now</button>
           }
-          <p className={ 'subtitle mt-3 ' + (account ? '' : 'gray') }>
+          <p className={ 'subtitle mt-3 text-center ' + (account ? '' : 'gray') }>
             Stake your Coras and earn APY%
           </p>
         </div>

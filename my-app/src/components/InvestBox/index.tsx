@@ -18,7 +18,7 @@ function InvestBox() {
     <>
       <div className={ 'invest-box section-tab ' + (account ? ' yellow-border' : '') }>
         <div className="product-tag">
-          <span>Stake your Coras</span>
+          <span>Get your Coras</span>
         </div>
         <div className='d-flex align-items-center mb-2'>
           <div className='col-9'>

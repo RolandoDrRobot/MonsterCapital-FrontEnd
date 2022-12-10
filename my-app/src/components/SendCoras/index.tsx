@@ -67,7 +67,7 @@ function SendCoras(props:SendCorasProps) {
         <img src={closetIcon} className="close-window" onClick={() => setCloseSendCorasWindow(true)} alt="" />
         <div className="d-flex justify-content-center align-items-center mb-3">
           <img src={sendIcon} className="mr-2" alt="" />
-          <p className={ account ? '' : 'gray' }><strong>Send your Coras</strong></p>
+          <p className={ account ? 'headline' : 'gray headline' }><strong>Send your Coras</strong></p>
         </div>
         <div className="send-box-input">
           <div className="d-flex justify-content-between you-send">
@@ -102,7 +102,7 @@ function SendCoras(props:SendCorasProps) {
           isLoading === true 
           ? <Loading /> 
           : <button 
-              className={ account ? ' yellow-border' : '' }
+              className="main-button"
               disabled={ account ? false : true}
             >Send Coras</button>
         }

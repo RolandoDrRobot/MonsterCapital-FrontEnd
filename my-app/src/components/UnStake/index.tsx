@@ -110,7 +110,7 @@ function UnStake() {
                   disabled={ account ? false : true} 
                 >Unlock Coras</button>
             }
-            <p className={ 'subtitle mt-3 ' + (account ? '' : 'gray') }>
+            <p className={ 'subtitle text-center mt-3 ' + (account ? '' : 'gray') }>
               Stake your Coras and earn APY%, Stake your Coras and earn APY%, Stake your Coras.
             </p>
           </div> 

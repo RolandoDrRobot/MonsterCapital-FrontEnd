@@ -18,8 +18,10 @@
 body {
   color: var(--white);
   background-color: var(--main-bg-color);
-
   background-image: url('./assets/img/bg/breadcrumb_bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   padding-bottom: 100px;
   background-position: center;
   background-size: cover;
@@ -86,6 +88,7 @@ button {
   color: var(--white);
   border-radius: 3px;
   border: 0;
+  background-color: var(--light-green);
   border-bottom: 3px solid var(--yellow);
   cursor: pointer;
   transition: all 0.25s;
@@ -139,7 +142,7 @@ button {
 }
 
 .yellow-border {
-  border: 3px solid #190d21 !important;
+  animation: inneraura 3s infinite;
 }
 
 .gray {
@@ -173,12 +176,11 @@ button {
 /* Section tabs */
 
 .section-tab {
-  margin: 30px 0;
-  padding: 40px 15px 10px;
+  margin: 0px 0 30px;
+  padding: 40px 20px 10px;
   border-radius: 3px;
   background-color: var(--main-bg-color);
   filter: drop-shadow(0 0 20px var(--black));
-  border: 3px solid var(--light-green);
 }
 
 .section-tab .title {
@@ -193,10 +195,16 @@ button {
   font-size: 12px;
   font-weight: 500;
   line-height: 1.7;
-  margin-bottom: 48px;
+  margin-bottom: 28px;
   color: var(--light-gray);
 }
 
 .section-tab img {
   border-radius: 50%;
+}
+
+@keyframes inneraura {
+  0% { box-shadow: 0px 4px 5.58px 0.42px rgb(0 0 0 / 13%), inset 0px 1px 10px 0px rgb(228 161 1 / 17%); }
+  50% { box-shadow: 0px 4px 5.58px 0.42px rgb(0 0 0 / 13%), inset 0px 1px 16px 0px rgb(228 161 1 / 17%); }
+  100% { box-shadow: 0px 4px 5.58px 0.42px rgb(0 0 0 / 13%), inset 0px 1px 10px 0px rgb(228 161 1 / 17%); }
 }

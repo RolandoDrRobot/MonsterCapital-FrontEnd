@@ -34,6 +34,9 @@ function CoraWallet() {
       <div className={ 'cora-wallet mb-4' + (account ? ' yellow-border' : '') }>
         { !showSendWindow 
           ? <div>
+              <div className="product-tag mx-2">
+                <span>CORA Wallet</span>
+              </div>
               <div className='d-flex justify-content-center align-items-center mb-4'>
                 <div className="token-pic d-flex justify-content-center">
                   <img src={walletIcon} alt="" />
@@ -46,20 +49,21 @@ function CoraWallet() {
               </div>
               <div className="d-flex justify-content-center">
                 <button 
-                  className={ 'receive' + (account ? ' yellow-border' : '') }
+                  className="main-button mx-2"
                   onClick={ copyAddressToClipboard }
-                  disabled={ account ? false : true}
+                  disabled={ account ? false : true }
                   type="button"
                 >Receive
                 </button>
                 <button 
-                  className={ 'send' + (account ? ' yellow-border' : '') } 
-                  onClick={() => setShowSendWindow(true)}
-                  disabled={ account ? false : true}
+                  className="main-button mx-2" 
+                  onClick={() => setShowSendWindow(true) }
+                  disabled={ account ? false : true }
                   type="button"
                 >Send
                 </button>
               </div>
+              <p className="subtitle mt-3 ">Stake your Coras and earn APY%</p>
             </div> 
           : <SendCoras setShowSendWindow={setShowSendWindow} />
         }        

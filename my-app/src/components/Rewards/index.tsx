@@ -69,13 +69,13 @@ function Rewards() {
   return (
     <>
       <div className="rewards">
-        <img className="section-tab-pet" src={RewardsIcon} alt="" />
-        <div className={ 'rewards-box section-tab' + (account ? ' yellow-border' : '') }>
+        <div className={ 'rewards-box text-center section-tab' + (account ? ' yellow-border' : '') }>
+          <img className="vault mb-3" src={RewardsIcon} alt="" width="120" />
           <p>
             <img className="pic" src={coinIcon} alt="" />
             Rewards available: 
             <span className="yellow m-0"> {rewardsAvailable}</span>
-          </p>
+          </p> 
           {
             isLoading === true 
             ? <Loading /> 
