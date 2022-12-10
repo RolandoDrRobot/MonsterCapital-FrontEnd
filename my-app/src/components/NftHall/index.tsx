@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { useWeb3React } from '@web3-react/core';
-import nftIcon from '../../assets/img/nft.png';
+import nftIcon from '../../assets/img/purpleorb.gif';
 import { useMysticsAnimalsData } from '../../hooks/useMysticAnimalsData';
 import { useTribesMasksData } from '../../hooks/useTribeMasksData';
 import './main.css';
@@ -21,15 +21,22 @@ function NftHall() {
   return (
     <>
       { <>
-          <img src={nftIcon} className="section-tab-pet" alt="" />
           <div className={ 'nft-box section-tab ' + (account ? ' yellow-border' : '') }>
-            <p className={ 'title ' + (account ? '' : 'gray') }>
-              Stake your Coras and earn APY%.
-              You create contracts to earn APY% on your Coras.
-              Stake your Coras and earn APY%
-            </p>
+            <div className="product-tag">
+              <span>Digital Collectibles</span>
+            </div>
+            <div className="d-flex align-items-center mb-2">
+              <div className="col-9">
+                <p className={ 'title ' + (account ? '' : 'gray') }>
+                  You create contracts to earn APY% on your Coras.
+                </p>
+              </div>
+              <div className="col-3">
+                <img src={nftIcon} className="section-tab-pet" alt="" />
+              </div>
+            </div>
             <p className={ 'subtitle mb-4 ' + (account ? '' : 'gray') }>
-              Stake your Coras and earn APY%
+              Stake your Coras and earn APY%, Stake your Coras and earn APY%, Stake your Coras and earn APY%, Stake your Coras and earn APY%
             </p>
             <div className="collection row">
               { 

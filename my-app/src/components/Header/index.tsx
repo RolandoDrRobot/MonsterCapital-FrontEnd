@@ -56,9 +56,8 @@ function Header() {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
-                <li className="nav-item active"><a href="https://developermonster.com/">Home</a></li>
-                <li className="nav-item"><a href="#">News</a></li>
                 <li className="nav-item"><a href="#">Balance {balance}</a></li>
+                <li className="nav-item"><a href="#">Meeting Rooms</a></li>
                 <li className="nav-item" onClick={disconnect}><a href="#">Logout</a></li>
               </ul>
             </div>
