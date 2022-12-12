@@ -1,6 +1,7 @@
 import React from 'react';
 import metamaskIcon from '../../assets/img/metamask.png';
 import monster from '../../assets/img/developermonster-face.png';
+import coinIcon from '../../assets/img/orb.gif';
 import Loading from '../../components/Loading/index';
 import { Link } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
@@ -56,8 +57,12 @@ function Header() {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
-                <li className="nav-item"><a href="#">Balance {balance}</a></li>
-                <li className="nav-item"><a href="#">Meeting Rooms</a></li>
+                <li className="nav-item"><a href="#">Balance {balance} <img src={coinIcon}/></a></li>
+                <li className="nav-item">
+                  <Link to="/news" className="button">
+                    Meeting Rooms
+                  </Link>
+                </li>
                 <li className="nav-item" onClick={disconnect}><a href="#">Logout</a></li>
               </ul>
             </div>

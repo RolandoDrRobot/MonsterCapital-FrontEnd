@@ -175,6 +175,56 @@ button {
 
 /* Section tabs */
 
+.section-title {
+  font-family: 'Oxanium', sans-serif;
+}
+
+.section-title h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 0;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.section-title h2 span {
+  font-size: 36px;
+  color: #e4a101;
+}
+
+.section-title > span {
+  display: block;
+  font-family: 'Poppins', sans-serif !important;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 700;
+  color: #c8c8c8;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.title-style-two {
+  padding-bottom: 35px;
+  position: relative;
+  margin: 30px auto 40px;
+}
+
+.title-style-two::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: url('./assets/img/images/title_bar.png');
+  width: 270px;
+  height: 13px;
+  background-repeat: no-repeat;
+}
+
+.title-style-two.text-center::before {
+  right: 0;
+  margin: 0 auto;
+}
+
 .section-tab {
   margin: 0px 0 30px;
   padding: 40px 20px 10px;
@@ -189,6 +239,11 @@ button {
   font-size: 18px;
   margin: 0;
   padding-right: 5px;
+}
+
+.section-tab .title span {
+  font-size: 18px;
+  color: var(--yellow);
 }
 
 .section-tab .subtitle {

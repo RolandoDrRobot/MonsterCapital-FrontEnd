@@ -1,13 +1,17 @@
 import React from 'react';
-import NewsComponent from '../../components/News/index';
+import Meetings from '../../components/Meetings/index';
 import './main.css';
 
 
 function News() {
   return (
     <>
-      <div className="news d-flex align-items-center justify-content-center">
-        <NewsComponent />
+      <div className="news">
+        <div className="section-title title-style-two text-center mb-60">
+          <span>Meeting Rooms</span>
+          <h2>Let's us know <span className="d-block">what can we do</span></h2>
+        </div>
+        <Meetings />
       </div>
     </>
   )

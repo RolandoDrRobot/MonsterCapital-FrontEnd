@@ -8,6 +8,9 @@ function Wallet() {
     <>
       <div className="wallet">
         <div>
+          <div className="section-title title-style-two text-center mb-3">
+            <h2>Cora <span>Wallet</span></h2>
+          </div>
           <CoraWallet />
           <RecentTransactions />
         </div>

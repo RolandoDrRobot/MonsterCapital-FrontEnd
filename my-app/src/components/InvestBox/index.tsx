@@ -23,7 +23,7 @@ function InvestBox() {
         <div className='d-flex align-items-center mb-2'>
           <div className='col-9'>
             <p className={ 'title ' + (account ? '' : 'gray') }>
-              You create contracts to earn APY% on your Coras
+              You create contracts to <span>earn APY% on your Coras</span>
             </p>
           </div>
           <div className='col-3 d-flex justify-content-end'>
@@ -33,7 +33,6 @@ function InvestBox() {
         <div>
           <p className={ 'subtitle ' + (account ? '' : 'gray') }>
             Invest your Coras and earn APY%. You create contracts to earn APY% on your Coras.
-            You create contracts to earn APY% on your Coras.
           </p>
         </div>
         <div className="trade-box">  
@@ -103,7 +102,7 @@ function InvestBox() {
           </div> */}
 
           <p className={ 'subtitle mt-3 text-center ' + (account ? '' : 'gray') }>
-            Stake your Coras and earn APY%, Stake your Coras and earn APY%, Stake your Coras.
+            Stake your Coras and earn APY%.
           </p>
         </div>
       </div>
