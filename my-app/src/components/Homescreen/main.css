@@ -1,0 +1,31 @@
+.breadcrumb-content h2 {
+  font-family: 'Oxanium', cursive;
+  color: #fff;
+  margin-top: 0px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1;
+  text-align: right;
+}
+
+.breadcrumb-content h2 span {
+  font-size: 40px;
+  color: #f2a900;
+}
+
+.breadcrumb-content img {
+  border-radius: 50%;
+  border: 3px solid #f2a900;
+  margin-bottom: 15px;
+}
+
+.breadcrumb-content p {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+}
+
+.breadcrumb-content p span {
+  color: #f2a900;
+}

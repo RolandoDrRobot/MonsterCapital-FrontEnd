@@ -1,4 +1,9 @@
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
   padding: 15px 15px 0;
   background-color: #1c1121;
 }
@@ -44,8 +49,12 @@
 }
 
 .connect-btn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
   width: 100%;
-  padding: 15px 0;
+  height: 83px;
   color: var(--white);
   transition: all 0.25s;
   cursor: pointer;
