@@ -2,18 +2,16 @@
 import React from 'react';
 import Homescreen from '../../components/Homescreen/index';
 import Settings from '../../components/Settings/index';
-import { globalContext } from '../../hooks/appContext';
+import { useWeb3React } from '@web3-react/core';
 import './main.css';
 
 function Home() {
-  const { 
-    loginStatus
-  } = React.useContext(globalContext);
+  const { active } = useWeb3React();
 
   return (
     <>
-      <div className="home d-flex align-items-center justify-content-center">
-        {loginStatus === 'granted' ? <Settings /> : <Homescreen/> }
+      <div className="home">
+        {active ? <Settings /> : <Homescreen/> }
       </div>
     </>
   )
