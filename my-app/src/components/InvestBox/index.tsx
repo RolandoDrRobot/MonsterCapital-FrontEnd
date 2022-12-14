@@ -7,8 +7,6 @@ import gasFeeIcon from '../../assets/img/gasIcon.png';
 import { useWeb3React } from '@web3-react/core';
 import './main.css';
 
-// Here is the logic to apply
-
 
 function InvestBox() {
 
@@ -16,14 +14,14 @@ function InvestBox() {
 
   return (
     <>
-      <div className={ 'invest-box section-tab ' + (account ? ' yellow-border' : '') }>
+      <div className="invest-box section-tab yellow-border">
         <div className="product-tag">
-          <span>Get your Coras</span>
+          <span>Get your Orbs</span>
         </div>
         <div className='d-flex align-items-center mb-2'>
           <div className='col-9'>
             <p className={ 'title ' + (account ? '' : 'gray') }>
-              You create contracts to <span>earn APY% on your Coras</span>
+              The Orbs gives you all the perks <span> Enjoy our ecosystem</span>
             </p>
           </div>
           <div className='col-3 d-flex justify-content-end'>
@@ -32,7 +30,7 @@ function InvestBox() {
         </div>
         <div>
           <p className={ 'subtitle ' + (account ? '' : 'gray') }>
-            Invest your Coras and earn APY%. You create contracts to earn APY% on your Coras.
+            Access our Invesments Performace App, Exclusive networking in the metaverse, staking and more
           </p>
         </div>
         <div className="trade-box">  
@@ -69,7 +67,7 @@ function InvestBox() {
           <div className="d-flex you-receive">
             <div className="position-relative d-flex align-items-center justify-content-center">
               <img className="token-pic" src={coinIcon} alt="" />
-              <span className={ account ? '' : 'gray' }>Coras</span>
+              <span className={ account ? '' : 'gray' }>Orbs</span>
               <span className="title-input">You receive</span>
             </div>
             <div>
@@ -102,7 +100,7 @@ function InvestBox() {
           </div> */}
 
           <p className={ 'subtitle mt-3 text-center ' + (account ? '' : 'gray') }>
-            Stake your Coras and earn APY%.
+            Stake your Orbs and earn APY%
           </p>
         </div>
       </div>

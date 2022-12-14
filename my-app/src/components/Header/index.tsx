@@ -60,7 +60,7 @@ function Header() {
                 <li className="nav-item"><a href="#">Balance {balance} <img src={coinIcon}/></a></li>
                 <li className="nav-item">
                   <Link to="/news" className="button">
-                    Meeting Rooms
+                    Metaverse Rooms
                   </Link>
                 </li>
                 <li className="nav-item" onClick={disconnect}><a href="#">Logout</a></li>
@@ -71,7 +71,7 @@ function Header() {
         ? <Loading /> 
         : <button className="connect-btn d-flex align-items-center justify-content-center m-0" onClick={connect}>
             <img src={metamaskIcon} alt="" />
-            Connect your wallet
+            Connect your Metamask
           </button>
       }
       

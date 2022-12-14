@@ -9,7 +9,7 @@ function ClosedContracts() {
         <div className="contracts">
           <div className="contract d-flex justify-content-between align-items-center">
             <div className="">
-              <p className="">200 Coras</p>
+              <p className="">200 Orbs</p>
               <p className="">Open date: 12-04-2022</p>
               <p className="">Close date: 9-02-2023</p>
             </div>

@@ -69,7 +69,7 @@ function Rewards() {
   return (
     <>
       <div className="rewards">
-        <div className={ 'rewards-box text-center section-tab' + (account ? ' yellow-border' : '') }>
+        <div className="rewards-box text-center section-tab yellow-border">
           <img className="vault mb-3" src={RewardsIcon} alt="" width="120" />
           <p>
             <img className="pic" src={coinIcon} alt="" />
@@ -86,7 +86,7 @@ function Rewards() {
               >Claim Rewards Now</button>
           }
           <p className={ 'subtitle mt-3 ' + (account ? '' : 'gray') }>
-            Stake your Coras and earn APY%, Stake your.
+            Burn your green Orbs here and get your rewards
           </p>
         </div>
       </div>

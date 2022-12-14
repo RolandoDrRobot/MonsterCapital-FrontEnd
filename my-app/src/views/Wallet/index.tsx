@@ -16,7 +16,7 @@ function Wallet() {
           ? <>
               <div>
                 <div className="section-title title-style-two text-center mb-3">
-                  <h2>Cora <span>Wallet</span></h2>
+                  <h2>Orbs <span>Wallet</span></h2>
                 </div>
                 <CoraWallet />
                 <RecentTransactions />

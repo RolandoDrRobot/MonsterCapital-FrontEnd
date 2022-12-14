@@ -31,7 +31,7 @@ function CoraWallet() {
 
   return (
     <>
-      <div className={ 'cora-wallet mb-4' + (account ? ' yellow-border' : '') }>
+      <div className="cora-wallet mb-4 yellow-border">
         { !showSendWindow 
           ? <div>
               <div className='d-flex justify-content-center align-items-center mb-4'>
@@ -60,7 +60,7 @@ function CoraWallet() {
                 >Send
                 </button>
               </div>
-              <p className="subtitle mt-3 ">Stake your Coras and earn APY%</p>
+              <p className="subtitle mt-3 ">Receive and tranfer your Orbs</p>
             </div> 
           : <SendCoras setShowSendWindow={setShowSendWindow} />
         }        

@@ -8,8 +8,8 @@ function Settings() {
     <>
       <div className="settings d-flex justify-content-center">
         <div>
-          <Profile />
-          <Logout />
+          {/* <Profile />
+          <Logout /> */}
         </div>
       </div>
     </>

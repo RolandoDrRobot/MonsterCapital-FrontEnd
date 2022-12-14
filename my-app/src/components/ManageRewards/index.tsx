@@ -43,11 +43,11 @@ function ManageRewards() {
 
   return (
     <>
-      <div className={ 'manage-rewards section-tab row d-flex align-items-center ' + (account ? ' yellow-border' : '') }>
+      <div className="manage-rewards section-tab row d-flex align-items-center yellow-border">
         <div className="col-7 reward-information mb-3">
           <div className="d-flex align-items-center mb-2">
             <img className="pic" src={coinIcon} alt="" />
-            <p className="m-0">Coras locked: <span className="yellow m-0"> {corasLocked}</span></p>
+            <p className="m-0">Orbs locked: <span className="yellow m-0"> {corasLocked}</span></p>
           </div>
           <div className="d-flex align-items-center">
             <img className="pic" src={coinIcon} alt="" />

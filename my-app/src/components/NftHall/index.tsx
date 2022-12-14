@@ -21,14 +21,11 @@ function NftHall() {
   return (
     <>
       { <>
-          <div className={ 'nft-box section-tab ' + (account ? ' yellow-border' : '') }>
-            <div className="product-tag">
-              <span>Digital Collectibles</span>
-            </div>
+          <div className="nft-box section-tab yellow-border">
             <div className="d-flex align-items-center mb-2">
               <div className="col-9">
                 <p className={ 'title ' + (account ? '' : 'gray') }>
-                  You create contracts to <span>earn APY% on your Coras.</span>
+                  Here you can see your collectibles <span>Explore the collectibles market</span>
                 </p>
               </div>
               <div className="col-3 d-flex justify-content-end">
@@ -36,7 +33,7 @@ function NftHall() {
               </div>
             </div>
             <p className={ 'subtitle mb-4 ' + (account ? '' : 'gray') }>
-              Stake your Coras and earn APY%, Stake your Coras and earn APY%
+             Unlock Access to our metaverse rooms, Win special investors collectibles, Show them here in your wallet
             </p>
             <div className="collection row">
               { 

@@ -48,14 +48,15 @@ function StakeBox() {
   return (
     <>
       <form className="new-contract" onSubmit={stakeCoras}>
-        <div className={ 'new-contract-box section-tab' + (account ? ' yellow-border' : '') }>
+        <div className="new-contract-box section-tab yellow-border">
           <div className="product-tag">
-            <span>Stake your Coras</span>
+            <span>Stake your Orbs</span>
           </div>
           <div className='d-flex align-items-center mb-2'>
             <div className='col-9'>
               <p className={ 'title ' + (account ? '' : 'gray') }>
-                You create contracts to <span>earn APY% on your Coras</span>
+                Create 1 month contracts to block your orbs and get a green orb 
+                  <span> 100 Orbs gets you 3 green orbs</span>
               </p>
             </div>
             <div className='col-3 d-flex justify-content-end'>
@@ -64,7 +65,7 @@ function StakeBox() {
           </div>
           <div>
             <p className={ 'subtitle ' + (account ? '' : 'gray') }>
-              Invest your Coras and earn APY%. You create contracts to earn APY% on your Coras
+              Then, burn your green Orb to get 3 golden Orbs. Use your yield to buy collectibles and tickets and do not use your initial golden Orbs
             </p>
           </div>
           <div className="terms">
@@ -93,9 +94,6 @@ function StakeBox() {
                 disabled={ account ? false : true} 
               >Stake Now</button>
           }
-          <p className={ 'subtitle mt-3 text-center ' + (account ? '' : 'gray') }>
-            Stake your Coras and earn APY%
-          </p>
         </div>
       </form>
     </>

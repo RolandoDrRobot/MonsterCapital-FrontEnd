@@ -15,6 +15,10 @@ function Navbar() {
           <img src={homeIcon} alt="" />
           Home
         </Link>
+        <Link to="/nftroom" className="button">
+          <img src={nftIcon} alt="" />
+          NFTs
+        </Link>
         <Link to="/stake" className="button">
           <img src={stakeIcon} alt="" />
           Stake
@@ -22,10 +26,6 @@ function Navbar() {
         <Link to="/invest" className="button">
           <img src={investIcon} alt="" />
           Invest
-        </Link>
-        <Link to="/nftroom" className="button">
-          <img src={nftIcon} alt="" />
-          NFTs
         </Link>
         <Link to="/wallet" className="button">
           <img src={walletIcon} alt="" />

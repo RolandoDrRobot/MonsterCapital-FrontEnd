@@ -24,9 +24,9 @@ function NftCollection() {
           <div className={ 'nft-collection section-tab ' + (account ? '' : '') }>
             <h1 className="collection-title">{collectionName}</h1>
             <p className={ 'title mb-4 ' + (account ? '' : 'gray') }>
-              Stake your Coras and earn APY%.
-              You create contracts to earn APY% on your Coras.
-              Stake your Coras and earn APY%
+              Stake your Orbs and earn APY%.
+              You create contracts to earn APY% on your Orbs.
+              Stake your Orbs and earn APY%
             </p>
             <div className="collection row">
               {collection.map(({ name, image, tokenId }:nftMetaData) => (

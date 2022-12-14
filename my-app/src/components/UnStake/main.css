@@ -11,9 +11,8 @@
 }
 
 .unstake .unlock-pic {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
-  animation: only-aura 5s ease 0s infinite normal none;
 }
 
 .unstake .you-unstake {

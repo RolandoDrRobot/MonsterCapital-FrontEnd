@@ -67,7 +67,7 @@ function SendCoras(props:SendCorasProps) {
         <img src={closetIcon} className="close-window" onClick={() => setCloseSendCorasWindow(true)} alt="" />
         <div className="d-flex justify-content-center align-items-center mb-3">
           <img src={sendIcon} className="mr-2" alt="" />
-          <p className={ account ? 'headline' : 'gray headline' }><strong>Send your Coras</strong></p>
+          <p className={ account ? 'headline' : 'gray headline' }><strong>Send your Orbs</strong></p>
         </div>
         <div className="send-box-input">
           <div className="d-flex justify-content-between you-send">
@@ -104,10 +104,10 @@ function SendCoras(props:SendCorasProps) {
           : <button 
               className="main-button"
               disabled={ account ? false : true}
-            >Send Coras</button>
+            >Send Orbs</button>
         }
         <p className={ 'subtitle mt-3 ' + (account ? '' : 'gray') }>
-          Stake your Coras and earn APY%
+          Make sure you copied the metamask address properly. If the address is incorrect, your Orbs will be lost
         </p>
       </form>
     </>
