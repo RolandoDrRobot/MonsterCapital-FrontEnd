@@ -30,6 +30,8 @@ body {
 
 #content {
   width: 100%;
+  max-width: 425px;
+  margin: auto;
   padding: 83px 15px 20px;
 }
 

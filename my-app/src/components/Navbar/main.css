@@ -2,12 +2,16 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding: 20px;
+  padding: 20px 0;
   background-color: var(--light-green);
   border-radius: 3px;
   margin: auto;
   display: flex;
   border-top: 3px solid #3a3042;
+}
+
+.navbar-bottom .container {
+  max-width: 425px;
 }
 
 .navbar-bottom a {

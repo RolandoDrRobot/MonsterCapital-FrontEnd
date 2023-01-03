@@ -47,24 +47,26 @@ function Header() {
   return (
     <>{(active)
         ?
-          <nav className="navbar navbar-expand-lg">
-            <div className="logo d-flex align-items-center mb-2">
-              <a href="https://developermonster.com/"><img src={monster} height="70" alt="Logo" /></a>
-              <h2>Monster <span>Capital</span></h2>
-            </div>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav">
-                <li className="nav-item"><a href="#">Balance {balance} <img src={coinIcon}/></a></li>
-                <li className="nav-item">
-                  <Link to="/news" className="button">
-                    Metaverse Rooms
-                  </Link>
-                </li>
-                <li className="nav-item" onClick={disconnect}><a href="#">Logout</a></li>
-              </ul>
+          <nav className="navbar">
+            <div className='container'>
+              <div className="logo d-flex align-items-center mb-2">
+                <a href="https://developermonster.com/"><img src={monster} height="70" alt="Logo" /></a>
+                <h2>Monster <span>Capital</span></h2>
+              </div>
+              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
+              <div className="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav">
+                  <li className="nav-item"><a href="#">Balance {balance} <img src={coinIcon}/></a></li>
+                  <li className="nav-item">
+                    <Link to="/news" className="button">
+                      Metaverse Rooms
+                    </Link>
+                  </li>
+                  <li className="nav-item" onClick={disconnect}><a href="#">Logout</a></li>
+                </ul>
+              </div>
             </div>
           </nav>
         : isLoading === true 
