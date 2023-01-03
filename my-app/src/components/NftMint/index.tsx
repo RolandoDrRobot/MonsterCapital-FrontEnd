@@ -1,6 +1,7 @@
 import React from 'react';
 import { useWeb3React } from '@web3-react/core';
 import { useParams } from 'react-router-dom';
+import Homescreen from '../../components/Homescreen/index';
 import useMysticAnimals from '../../hooks/useMysticAnimals';
 import useTribeMasks from '../../hooks/useTribeMasks';
 import Loading from '../Loading/index';
@@ -53,28 +54,32 @@ function NftMint() {
   };
 
   return (
-    <>{
-      <div className="nft-room">
-        <div className="nft-hall">
-          <div className="section-title title-style-two text-center mb-3">
-            <h2>NFT <span>Mint</span></h2>
-          </div>
-          <div className="collection row">
-            <div className="minting d-flex justify-content-center">
-            {
-              isLoading === true 
-              ? <Loading /> 
-              : <button 
-                  type="submit"
-                  className="main-button"
-                  onClick={mint}
-                >Mint {collectionName}</button>
-            }
+    <>
+      {
+        active
+        ? 
+          <div className="nft-room">
+            <div className="nft-hall">
+              <div className="section-title title-style-two text-center mb-3">
+                <h2>NFT <span>Mint</span></h2>
+              </div>
+              <div className="collection row">
+                <div className="minting d-flex justify-content-center">
+                {
+                  isLoading === true 
+                  ? <Loading /> 
+                  : <button 
+                      type="submit"
+                      className="main-button"
+                      onClick={mint}
+                    >Mint {collectionName}</button>
+                }
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    }
+          : <Homescreen/> 
+      }
     </>
   );
 }
