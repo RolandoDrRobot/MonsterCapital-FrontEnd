@@ -1,13 +1,13 @@
 import React from 'react';
 import { useWeb3React } from '@web3-react/core';
 import Loading from '../../components/Loading/index';
-import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
+import TokenList from '../../config/tokens/token-list-mainnet.json';
 import { getERC20Contract } from '../../config/tokens/contractStore';
 import { useAlert } from 'react-alert';
 import './main.css';
 
 function MintRewards() {
-  let [selectedToken, setSelectedToken] = React.useState(TokenListRinkeby[0]);
+  let [selectedToken, setSelectedToken] = React.useState(TokenList[0]);
   let [isLoading, setIsLoading] = React.useState<boolean>(false);
   const { account, library, active } = useWeb3React();
   const alert = useAlert();

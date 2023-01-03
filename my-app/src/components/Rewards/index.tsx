@@ -1,7 +1,7 @@
 import React from 'react';
 import { useWeb3React } from '@web3-react/core';
 import Loading from '../../components/Loading/index';
-import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
+import TokenList from '../../config/tokens/token-list-mainnet.json';
 import { getERC20Contract } from '../../config/tokens/contractStore';
 import BigNumber from 'bignumber.js';
 import { useAlert } from 'react-alert';
@@ -13,7 +13,7 @@ import './main.css';
 function Rewards() {
 
   const alert = useAlert();
-  const [selectedToken, setSelectedToken] = React.useState(TokenListRinkeby[0]);
+  const [selectedToken, setSelectedToken] = React.useState(TokenList[0]);
   let [isLoading, setIsLoading] = React.useState<boolean>(false);
   const { account, library, active } = useWeb3React();
   let [rewardsAvailable, setRewardsAvailable] = React.useState<any>(0);
@@ -69,6 +69,9 @@ function Rewards() {
   return (
     <>
       <div className="rewards">
+        <div className="section-title title-style-two text-center mb-3">
+          <h2>Rewards <span>Here</span></h2>
+        </div>
         <div className="rewards-box text-center section-tab yellow-border">
           <img className="vault mb-3" src={RewardsIcon} alt="" width="120" />
           <p>
@@ -86,7 +89,7 @@ function Rewards() {
               >Claim Rewards Now</button>
           }
           <p className={ 'subtitle mt-3 ' + (account ? '' : 'gray') }>
-            Burn your green Orbs here and get your rewards
+            Remember to lock your orbs at least one month
           </p>
         </div>
       </div>

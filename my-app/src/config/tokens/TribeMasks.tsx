@@ -1,6 +1,6 @@
 const useTribeMasksABI =
 {
-  address: "0xa31e6e8C6BF47fEe411b467B1aF980D55742c68D",
+  address: "0x84E6B23a9f8eD4f200198D81B519251f14ef6A0d",
   "abi": [
     {
       "inputs": [

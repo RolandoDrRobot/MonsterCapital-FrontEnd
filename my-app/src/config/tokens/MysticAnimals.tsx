@@ -1,6 +1,6 @@
 const useMysticAnimalsABI = 
   {
-    address: "0xF435Bdf172fb807969f691caa013fe1bb33b1407",
+    address: "0x459890D2B3bA068DCc2Ee79Ec5020D158e29B980",
     "abi": [
       {
         "inputs": [

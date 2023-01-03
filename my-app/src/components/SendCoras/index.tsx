@@ -1,7 +1,7 @@
 import React from 'react';
 import { useWeb3React } from '@web3-react/core';
 import Loading from '../../components/Loading/index';
-import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
+import TokenList from '../../config/tokens/token-list-mainnet.json';
 import { getERC20Contract } from '../../config/tokens/contractStore';
 import { useAlert } from 'react-alert';
 
@@ -18,7 +18,7 @@ interface SendCorasProps {
 function SendCoras(props:SendCorasProps) {
 
   const alert = useAlert();
-  const [selectedToken, setSelectedToken] = React.useState(TokenListRinkeby[0]);
+  const [selectedToken, setSelectedToken] = React.useState(TokenList[0]);
   let [isLoading, setIsLoading] = React.useState<boolean>(false);
   const { account, library } = useWeb3React();
 
@@ -31,12 +31,12 @@ function SendCoras(props:SendCorasProps) {
       recipient: { value: string };
     };
     const decimals = 100000000;
-    const amount = target.amount.value * decimals;
+    const amount = target.amount.value;
     const recipient = target.recipient.value;
     const coraTokenContract = getERC20Contract(selectedToken.address, library);
 
     if(coraTokenContract) {
-      coraTokenContract.methods.transfer(recipient, amount)
+      coraTokenContract.methods.transfer(recipient, amount * decimals)
       .send({
         from: account,
       })
@@ -86,7 +86,7 @@ function SendCoras(props:SendCorasProps) {
               <img className="pic" src={walletIcon} alt="" />
             </div>
           </div>
-          <div className="d-flex justify-content-end align-items-center you-send-address">
+          <div className="d-flex justify-content-between align-items-center you-send-address">
             <div className="d-flex align-items-center">
               <input 
                 name="recipient" 

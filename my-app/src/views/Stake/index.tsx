@@ -17,7 +17,7 @@ function Stake() {
           ? <>
               <div className="section-title title-style-two text-center mb-60">
                 <span>Stake</span>
-                <h2>Block your Orbs <span className="d-block">Earn 3% each month</span></h2>
+                <h2>Block your Orbs <span className="d-block">Earn APY each month</span></h2>
               </div>
 
               <StakeBox />

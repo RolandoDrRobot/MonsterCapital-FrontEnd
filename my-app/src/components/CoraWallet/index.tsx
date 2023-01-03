@@ -3,7 +3,7 @@ import { useAlert } from 'react-alert';
 import walletIcon from '../../assets/img/orb.gif';
 import { useWeb3React } from '@web3-react/core';
 import { useTruncatedAddress } from '../../hooks/useTruncatedAddress';
-import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
+import TokenList from '../../config/tokens/token-list-mainnet.json';
 import useBalance from '../../hooks/useBalance';
 import SendCoras from '../SendCoras/index';
 import './main.css';
@@ -11,7 +11,7 @@ import './main.css';
 function CoraWallet() {
 
   const alert = useAlert();
-  const [selectedToken, setSelectedToken] = React.useState(TokenListRinkeby[0]);
+  const [selectedToken, setSelectedToken] = React.useState(TokenList[0]);
   let [showSendWindow, setShowSendWindow] = React.useState<boolean>(false);
   const { account } = useWeb3React();
 

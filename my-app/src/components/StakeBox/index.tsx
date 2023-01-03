@@ -1,7 +1,7 @@
 import React from 'react';
 import { useWeb3React } from '@web3-react/core';
 import Loading from '../../components/Loading/index';
-import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
+import TokenList from '../../config/tokens/token-list-mainnet.json';
 import { getERC20Contract } from '../../config/tokens/contractStore';
 import { useAlert } from 'react-alert';
 import stakeIcon from '../../assets/img/greenorb.gif';
@@ -11,7 +11,7 @@ import './main.css';
 function StakeBox() {
 
   const alert = useAlert();
-  const [selectedToken, setSelectedToken] = React.useState(TokenListRinkeby[0]);
+  const [selectedToken, setSelectedToken] = React.useState(TokenList[0]);
   let [isLoading, setIsLoading] = React.useState<boolean>(false);
   const { account, library } = useWeb3React();
   const coraTokenContract = getERC20Contract(selectedToken.address, library);
@@ -55,8 +55,8 @@ function StakeBox() {
           <div className='d-flex align-items-center mb-2'>
             <div className='col-9'>
               <p className={ 'title ' + (account ? '' : 'gray') }>
-                Create 1 month contracts to block your orbs and get a green orb 
-                  <span> 100 Orbs gets you 3 green orbs</span>
+                Block your orbs and earn APY% and green orbs 
+                  <span> You can unlock your orbs whenever you want</span>
               </p>
             </div>
             <div className='col-3 d-flex justify-content-end'>
@@ -65,7 +65,7 @@ function StakeBox() {
           </div>
           <div>
             <p className={ 'subtitle ' + (account ? '' : 'gray') }>
-              Then, burn your green Orb to get 3 golden Orbs. Use your yield to buy collectibles and tickets and do not use your initial golden Orbs
+              Use your yield to buy collectibles and tickets and do not use your initial golden Orbs.
             </p>
           </div>
           <div className="terms">

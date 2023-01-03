@@ -6,14 +6,14 @@ import Loading from '../../components/Loading/index';
 import { Link } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
 import { injected } from '../../config/connector';
-import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
+import TokenList from '../../config/tokens/token-list-mainnet.json';
 import useBalance from '../../hooks/useBalance';
 
 import './main.css';
 
 function Header() {
 
-  const [selectedToken, setSelectedToken] = React.useState(TokenListRinkeby[0]);
+  const [selectedToken, setSelectedToken] = React.useState(TokenList[0]);
   let [isLoading, setIsLoading] = React.useState<boolean>(false);
   const { active, activate, deactivate } = useWeb3React();
 

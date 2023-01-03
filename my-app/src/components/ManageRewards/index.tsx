@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
-import TokenListRinkeby from '../../config/tokens/token-list-rinkeby.json';
+import TokenList from '../../config/tokens/token-list-mainnet.json';
 import { getERC20Contract } from '../../config/tokens/contractStore';
 import BigNumber from 'bignumber.js';
 import rewardPic from '../../assets/img/rewards.png';
@@ -10,7 +10,7 @@ import './main.css';
 
 function ManageRewards() {
 
-  let [selectedToken, setSelectedToken] = React.useState(TokenListRinkeby[0]);
+  let [selectedToken, setSelectedToken] = React.useState(TokenList[0]);
   let [corasLocked, setCorasLocked] = React.useState<any>(0);
   let [rewardsAvailable, setRewardsAvailable] = React.useState<any>(0);
   const { account, library, active } = useWeb3React();

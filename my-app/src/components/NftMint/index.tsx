@@ -56,7 +56,9 @@ function NftMint() {
     <>{
       <div className="nft-room">
         <div className="nft-hall">
-          <h1 className="collection-title">NFT Mint</h1>
+          <div className="section-title title-style-two text-center mb-3">
+            <h2>NFT <span>Mint</span></h2>
+          </div>
           <div className="collection row">
             <div className="minting d-flex justify-content-center">
             {
