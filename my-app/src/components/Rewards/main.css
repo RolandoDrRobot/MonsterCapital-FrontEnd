@@ -1,10 +1,13 @@
+.rewards-box {
+  background-color: transparent;
+  padding-bottom: 0;
+  margin-bottom: 30px;
+  padding-top: 20px;
+}
+
 .rewards .pic {
   width: 25px;
   height: 25px;
   margin: -5px 5px 0 0;
   border-radius: 50%;
-}
-
-.rewards .vault {
-  animation: aura 5s ease 0s infinite normal none;
 }

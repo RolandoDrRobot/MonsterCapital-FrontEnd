@@ -7,7 +7,6 @@ import BigNumber from 'bignumber.js';
 import { useAlert } from 'react-alert';
 
 import coinIcon from '../../assets/img/orb.gif';
-import greenOrbIcon from '../../assets/img/greenorb.gif';
 import './main.css';
 
 function UnStake() {
@@ -75,15 +74,15 @@ function UnStake() {
   return (
     <>
       <form className="unstake" onSubmit={unStakeCoras}>
-        <div className="unstake-box section-tab row d-flex align-items-center yellow-border">
-          <div className="col-8 reward-information mb-4">
+        <div className="unstake-box section-tab row d-flex align-items-center">
+          <div className="col-8 reward-information mb-2">
             <p className="m-0">
               You can unlock up to
               <span className="yellow m-0"> {corasLocked} Orbs </span>
             </p>
           </div>
           <div className="col-4 mb-4 d-flex justify-content-end">
-            <img className="unlock-pic" src={greenOrbIcon} alt="" />
+            <img className="unlock-pic" src={coinIcon} alt="" />
           </div>
           <div className="col-12">
             <div className="d-flex justify-content-between you-unstake">
@@ -106,11 +105,11 @@ function UnStake() {
               isLoading === true 
               ? <Loading /> 
               : <button 
-                  className={ 'main-button d-block mb-3 ' + (account ? '' : 'gray') }
+                  className={ 'main-button d-block mb-3' }
                   disabled={ account ? false : true} 
                 >Unlock Orbs</button>
             }
-            <p className={ 'subtitle text-center mt-3 ' + (account ? '' : 'gray') }>
+            <p className={ 'subtitle text-center mt-3' }>
               Thank you for your trust 🤠
             </p>
           </div> 

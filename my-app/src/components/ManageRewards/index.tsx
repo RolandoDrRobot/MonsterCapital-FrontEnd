@@ -4,7 +4,8 @@ import { useWeb3React } from '@web3-react/core';
 import TokenList from '../../config/tokens/token-list-mainnet.json';
 import { getERC20Contract } from '../../config/tokens/contractStore';
 import BigNumber from 'bignumber.js';
-import rewardPic from '../../assets/img/rewards.png';
+import rewardPic from '../../assets/img/vault.gif';
+import stakeIcon from '../../assets/img/greenorb.gif';
 import coinIcon from '../../assets/img/orb.gif';
 import './main.css';
 
@@ -43,14 +44,14 @@ function ManageRewards() {
 
   return (
     <>
-      <div className="manage-rewards section-tab row d-flex align-items-center yellow-border">
+      <div className="manage-rewards section-tab row d-flex align-items-center">
         <div className="col-7 reward-information mb-3">
           <div className="d-flex align-items-center mb-2">
             <img className="pic" src={coinIcon} alt="" />
             <p className="m-0">Orbs locked: <span className="yellow m-0"> {corasLocked}</span></p>
           </div>
           <div className="d-flex align-items-center">
-            <img className="pic" src={coinIcon} alt="" />
+            <img className="pic" src={stakeIcon} alt="" />
             <p className="m-0">Rewards: <span className="yellow m-0"> {rewardsAvailable}</span></p>
           </div>
         </div>
@@ -58,7 +59,7 @@ function ManageRewards() {
           <img className="reward-pic" src={rewardPic} alt="" />
         </div>
         <div className="col-12">
-          <Link to="/rewards" className={ 'main-button d-block mb-3 ' + (account ? '' : 'gray') }>
+          <Link to="/rewards" className={ 'main-button d-block mb-3'}>
             Manage your Rewards Here!
           </Link>
         </div> 

@@ -1,6 +1,7 @@
 .unstake-box {
-  margin: 30px auto 0;
-  padding: 30px 15px 15px;
+  margin: 0 auto;
+  padding: 0 15px 15px;
+  background-color: transparent;
 }
 
 .unstake .pic {
@@ -31,5 +32,5 @@
 
 .unstake .you-unstake input {
   width: 70px;
-  background-color: var(--main-bg-color);
+  background-color: transparent;
 }

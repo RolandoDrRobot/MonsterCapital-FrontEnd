@@ -5,9 +5,9 @@ import TokenList from '../../config/tokens/token-list-mainnet.json';
 import { getERC20Contract } from '../../config/tokens/contractStore';
 import BigNumber from 'bignumber.js';
 import { useAlert } from 'react-alert';
-
-import RewardsIcon from '../../assets/img/rewards.png';
+import RewardsIcon from '../../assets/img/vault.gif';
 import coinIcon from '../../assets/img/orb.gif';
+import stakeIcon from '../../assets/img/greenorb.gif';
 import './main.css';
 
 function Rewards() {
@@ -72,10 +72,10 @@ function Rewards() {
         <div className="section-title title-style-two text-center mb-3">
           <h2>Rewards <span>Here</span></h2>
         </div>
-        <div className="rewards-box text-center section-tab yellow-border">
-          <img className="vault mb-3" src={RewardsIcon} alt="" width="120" />
+        <div className="rewards-box text-center section-tab">
+          <img className="vault mb-3" src={RewardsIcon} alt="" width="140" />
           <p>
-            <img className="pic" src={coinIcon} alt="" />
+            <img className="pic" src={stakeIcon} alt="" />
             Rewards available: 
             <span className="yellow m-0"> {rewardsAvailable}</span>
           </p> 
@@ -88,7 +88,7 @@ function Rewards() {
                 onClick={claimRewards}
               >Claim Rewards Now</button>
           }
-          <p className={ 'subtitle mt-3 ' + (account ? '' : 'gray') }>
+          <p className={ 'subtitle mt-3 mb-0'}>
             Remember to lock your orbs at least one month
           </p>
         </div>

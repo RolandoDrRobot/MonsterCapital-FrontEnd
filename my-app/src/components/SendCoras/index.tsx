@@ -106,7 +106,7 @@ function SendCoras(props:SendCorasProps) {
               disabled={ account ? false : true}
             >Send Orbs</button>
         }
-        <p className={ 'subtitle mt-3 ' + (account ? '' : 'gray') }>
+        <p className={ 'subtitle mt-3 mb-0'}>
           Make sure you copied the metamask address properly. If the address is incorrect, your Orbs will be lost
         </p>
       </form>

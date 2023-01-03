@@ -9,11 +9,12 @@ import './main.css';
 function MintRewards() {
   let [selectedToken, setSelectedToken] = React.useState(TokenList[0]);
   let [isLoading, setIsLoading] = React.useState<boolean>(false);
+  let [coraTokenOwner, setCoraTokenOwner] = React.useState<string>('');
   const { account, library, active } = useWeb3React();
+  const coraTokenContract =  getERC20Contract(selectedToken.address, library);
   const alert = useAlert();
  
   function distributeRewards() {
-    const coraTokenContract =  getERC20Contract(selectedToken.address, library);
     if (active) {
       setIsLoading(true);
       coraTokenContract.methods.distributeRewards()
@@ -34,20 +35,33 @@ function MintRewards() {
     }  
   };
 
+  (async function getCoraTokenOwner() {
+    const [owner] = await Promise.all([
+      coraTokenContract.methods.owner().call(),
+    ]);
+    setCoraTokenOwner(owner)
+  })();
+
+
   return (
-    <>
-      <div className="mb-2">
+    account !== coraTokenOwner ? <></>
+    : <div className="my-5 text-center section-tab">
+        <div className="section-title title-style-two text-center mb-60">
+          <span>Owner Area</span>
+          <h2>Distribute rewards to <span>all exixting holders</span></h2>
+        </div>
+        <div className="product-tag">
+          <span>This action cannot be reverted</span>
+        </div>
         {
           isLoading === true 
           ? <Loading /> 
           : <button 
-              className={ 'main-button ' + (account ? '' : 'gray') }
-              disabled={ account ? false : true }
+              className={ 'main-button' }
               onClick={distributeRewards}
             >Distribute Rewards</button>
         }
       </div>
-    </>
   )
 }
 

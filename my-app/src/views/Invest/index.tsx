@@ -15,7 +15,7 @@ function Invest() {
           ? <>
               <div className="section-title title-style-two text-center mb-60">
                 <span>Invest</span>
-                <h2>The Monster Orbs <span>Monster Capital Private Token</span></h2>
+                <h2>The Monster Orbs <span>Private Token</span></h2>
               </div>
               <InvestBox />
             </>

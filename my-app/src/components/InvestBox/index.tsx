@@ -99,7 +99,7 @@ function InvestBox() {
             </div>
           </div> */}
 
-          <p className={ 'subtitle mt-3 text-center ' + (account ? '' : 'gray') }>
+          <p className={ 'subtitle mt-3 mb-0 text-center' }>
             Stake your Orbs and earn APY%
           </p>
         </div>

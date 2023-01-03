@@ -40,7 +40,7 @@ function CoraWallet() {
                 </div>
                 <div className="token-balance">
                   <p className={ account ? '' : 'gray' }>{balance}</p>
-                  <p className={ account ? '' : 'gray' }>Coras</p>
+                  <p className={ account ? '' : 'gray' }>Orbs</p>
                   <p className="cora-wallet-address">{truncatedAddress ? truncatedAddress : 'Connect wallet'}</p>
                 </div>
               </div>
