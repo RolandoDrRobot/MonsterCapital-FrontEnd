@@ -5,12 +5,12 @@
 }
 
 .collection-title {
+  font-family: 'Oxanium', sans-serif;
   text-align: center;
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 800;
   color: var(--yellow);
   padding: 0 0 10px;
-  animation: only-aura 7s ease 0s infinite normal none;
 }
 
 .collection-description {
@@ -50,9 +50,10 @@
 }
 
 .nft-card p {
-  color: var(--light-gray);
+  font-family: 'Oxanium', sans-serif;
+  color: var(--white);
   font-weight: bold;
-  font-size: 13px;
+  font-size: 10px;
 }
 
 @keyframes aura {

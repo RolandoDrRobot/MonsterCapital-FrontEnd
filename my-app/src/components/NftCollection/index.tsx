@@ -21,13 +21,11 @@ function NftCollection() {
     <>
       {
         <div className='nft-room'>
-          <div className={ 'nft-collection section-tab ' + (account ? '' : '') }>
-            <h1 className="collection-title">{collectionName}</h1>
-            <p className={ 'title mb-4 ' + (account ? '' : 'gray') }>
-              Stake your Orbs and earn APY%.
-              You create contracts to earn APY% on your Orbs.
-              Stake your Orbs and earn APY%
-            </p>
+          <div className={ 'nft-collection' }>
+            <div className="section-title title-style-two text-center mb-60">
+              <span>Collectibles</span>
+              <h2>Collection <span>{collectionName}</span></h2>
+            </div>
             <div className="collection row">
               {collection.map(({ name, image, tokenId }:nftMetaData) => (
                 <Link key={tokenId} to={`/nftroom/${collectionName}/${tokenId}`} className="col-4 yellow">

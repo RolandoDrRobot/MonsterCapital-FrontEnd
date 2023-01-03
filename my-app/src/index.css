@@ -135,6 +135,7 @@ button {
 }
 
 .yellow {
+  font-family: 'Oxanium', sans-serif;
   color: var(--yellow);
   transition: all 0.25s;
 }

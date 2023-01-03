@@ -21,10 +21,10 @@ function NftHall() {
   return (
     <>
       { <>
-          <div className="nft-box section-tab yellow-border">
-            <div className="d-flex align-items-center mb-2">
+          <div className="nft-box section-tab yellow-border pb-2">
+            <div className="d-flex align-items-center mb-4">
               <div className="col-9">
-                <p className={ 'title ' + (account ? '' : 'gray') }>
+                <p className={ 'title' }>
                   Here you can see your collectibles <span>Explore the collectibles market</span>
                 </p>
               </div>
@@ -32,9 +32,6 @@ function NftHall() {
                 <img src={nftIcon} className="section-tab-pet" alt="" />
               </div>
             </div>
-            <p className={ 'subtitle mb-4 ' + (account ? '' : 'gray') }>
-             Unlock Access to our metaverse rooms, Win special investors collectibles, Show them here in your wallet
-            </p>
             <div className="collection row">
               { 
                 animals.map(({ name, image, tokenId, owner }:nftMetaData) => {
@@ -67,14 +64,14 @@ function NftHall() {
 
           <Link to={`/nftmint/mysticAnimals`}>
             <button 
-              className={ 'main-button mb-3 ' + (account ? '' : 'gray') }
+              className={ 'main-button mb-3' }
               disabled={ account ? false : true }
             >Mint Mystic Animal</button>
           </Link>
 
           <Link to={`/nftmint/tribeMasks`}>
             <button 
-              className={ 'main-button mb-3 ' + (account ? '' : 'gray') }
+              className={ 'main-button mb-3' }
               disabled={ account ? false : true }
             >Mint Tribe Masks</button>
           </Link>

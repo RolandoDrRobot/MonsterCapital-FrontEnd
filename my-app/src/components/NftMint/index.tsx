@@ -36,7 +36,6 @@ function NftMint() {
       collection.methods.mint()
       .send({
         from: account,
-        value: library.utils.toWei('0.001', 'ether')
       })
       .on('error', (error:any) => {
         alert.show('There was an error ' + error.message);

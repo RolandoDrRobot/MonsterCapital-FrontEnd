@@ -60,15 +60,18 @@ function NftDetails() {
       {!active ? <div></div> :
         <div className='nft-details'>
           <div className='nft'>
+            <div className="section-title title-style-two text-center mb-60">
+              <span>{collectionName}</span>
+              <h2>
+                <Link to={`/nftcollection/${collectionName}`}><span>{nft.name}</span></Link> 
+              </h2>
+            </div>
             <div className="text-center">
               <img src={nft.image} className="nft-image" alt=""/>
             </div>
-            <Link to={`/nftcollection/${collectionName}`}>
-              <h1 className="nft-name yellow">{nft.name}</h1>
-            </Link>
             <p>Owner: 
               <Link to={`/nftowner/${nft.owner}`}>
-                <span className="yellow m-0"> {useTruncatedAddress(nft.owner)}</span>
+                <span className="yellow m-0">{useTruncatedAddress(nft.owner)}</span>
               </Link>
             </p>
             <p className="">{nft.description}</p>

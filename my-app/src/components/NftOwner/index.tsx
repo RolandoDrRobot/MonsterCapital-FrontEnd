@@ -23,8 +23,11 @@ function NftOwner() {
     <>
       {
       <div className='nft-room'>
-        <div className={ 'nft-owner section-tab ' + (account ? '' : '') }>
-          <h1 className="collection-title mb-4">{truncatedAddress}</h1>
+        <div className={ 'nft-owner' }>
+          <div className="section-title title-style-two text-center mb-60">
+            <span>Collectibles</span>
+            <h2>Holder <span className='d-block'>{truncatedAddress}</span></h2>
+          </div>
           <div className="collection row">
             { 
               animals.map(({ name, image, tokenId, owner }:nftMetaData) => {

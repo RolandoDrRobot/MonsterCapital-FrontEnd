@@ -77,11 +77,12 @@
 }
 
 .navbar-toggler img {
+  margin-top: -20px;
   transition: all 300ms linear;
 }
 
 .navbar-toggler.collapsed img {
-  transform: rotate(60deg);
+  transform: rotate(70deg);
 }
 
 /* Bootstrap Overrides */
