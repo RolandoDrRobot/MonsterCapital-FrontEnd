@@ -1,4 +1,4 @@
-# 🪙⚡️ CoraToken-FrontEnd
+# 🪙⚡️ MonsterCapital-FrontEnd
 
 
 # 📗 Table of contents
@@ -11,16 +11,16 @@
 
 
 ## 🪙 What is this
-- This is the front end of the coin CORA
-- [Here](https://github.com/RolandoDrRobot/CoraToken-BackEnd) is the backend of the project
+- This is the front end of the coin Orb
 - [Here](https://github.com/RolandoDrRobot/CoraToken-Contracts) are the smart contracts for this project
 
+
 ## ⚡️ Features
-- Login (Using a web2 backend (node + firebase)
 - Mint NFTs
-- Stake CORAS
-- Send CORAS to other wallet
-- Receive CORAS
+- Stake ORBS
+- Send ORBS to other wallet
+- Receive ORBS
+
 
 ## ⚙️ How to install
 
@@ -30,13 +30,21 @@
 
 ## 📗 Improvements Ideas
 - Replace the testing network (Rinkeby will be deprecated soon)
-- Finish Invest functionality (Exchange USDC by CORAS)
+- Finish Invest functionality (Exchange USDC by ORBS)
 - Update copys for all the windows
 
+
 ## ⚡️ Screenshots
-<img src="Screenshots/Home.png" alt="Home" width="300"/>
-<img src="Screenshots/Stake.png" alt="Stake" width="300"/>
-<img src="Screenshots/Rewards.png" alt="Rewards" width="300"/>
-<img src="Screenshots/Invest.png" alt="Invest" width="300"/>
-<img src="Screenshots/New.png" alt="New" width="300"/>
-<img src="Screenshots/Wallet.png" alt="Wallet" width="300"/>
+<img src="Screenshots/Cover.png" alt="Home" width="300"/>
+<img src="Screenshots/Header.png" alt="Stake" width="300"/>
+<img src="Screenshots/NFTWallet.png" alt="Rewards" width="300"/>
+<img src="Screenshots/NFTDetail.png" alt="Invest" width="300"/>
+<img src="Screenshots/NFTDetail2.png" alt="New" width="300"/>
+<img src="Screenshots/collection.png" alt="Wallet" width="300"/>
+<img src="Screenshots/NFTHolder.png" alt="Wallet" width="300"/>
+<img src="Screenshots/Stake.png" alt="Home" width="300"/>
+<img src="Screenshots/Distribute.png" alt="Stake" width="300"/>
+<img src="Screenshots/Invest.png" alt="Rewards" width="300"/>
+<img src="Screenshots/Wallet.png" alt="Rewards" width="300"/>
+<img src="Screenshots/SendCoras.png" alt="Invest" width="300"/>
+<img src="Screenshots/Metarooms.png" alt="New" width="300"/>
