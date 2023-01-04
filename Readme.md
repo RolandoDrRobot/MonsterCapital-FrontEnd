@@ -35,16 +35,16 @@
 
 
 ## ⚡️ Screenshots
-<img src="Screenshots/Cover.png" alt="Home" width="300"/>
-<img src="Screenshots/Header.png" alt="Stake" width="300"/>
-<img src="Screenshots/NFTWallet.png" alt="Rewards" width="300"/>
-<img src="Screenshots/NFTDetail.png" alt="Invest" width="300"/>
-<img src="Screenshots/NFTDetail2.png" alt="New" width="300"/>
-<img src="Screenshots/collection.png" alt="Wallet" width="300"/>
-<img src="Screenshots/NFTHolder.png" alt="Wallet" width="300"/>
-<img src="Screenshots/Stake.png" alt="Home" width="300"/>
-<img src="Screenshots/Distribute.png" alt="Stake" width="300"/>
-<img src="Screenshots/Invest.png" alt="Rewards" width="300"/>
-<img src="Screenshots/Wallet.png" alt="Rewards" width="300"/>
-<img src="Screenshots/SendCoras.png" alt="Invest" width="300"/>
-<img src="Screenshots/Metarooms.png" alt="New" width="300"/>
+<img src="Screenshots/Cover.png" alt="Home" width="500"/>
+<img src="Screenshots/Header.png" alt="Stake" width="500"/>
+<img src="Screenshots/NFTWallet.png" alt="Rewards" width="500"/>
+<img src="Screenshots/NFTDetail.png" alt="Invest" width="500"/>
+<img src="Screenshots/NFTDetail2.png" alt="New" width="500"/>
+<img src="Screenshots/collection.png" alt="Wallet" width="500"/>
+<img src="Screenshots/NFTHolder.png" alt="Wallet" width="500"/>
+<img src="Screenshots/Stake.png" alt="Home" width="500"/>
+<img src="Screenshots/Distribute.png" alt="Stake" width="500"/>
+<img src="Screenshots/Invest.png" alt="Rewards" width="500"/>
+<img src="Screenshots/Wallet.png" alt="Rewards" width="500"/>
+<img src="Screenshots/SendCoras.png" alt="Invest" width="500"/>
+<img src="Screenshots/Metarooms.png" alt="New" width="500"/>
