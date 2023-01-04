@@ -1,7 +1,7 @@
 # 🪙⚡️ MonsterCapital-FrontEnd
 
 
-# 📗 Table of contents
+# 🔮 Table of contents
 1. [What is this](#-what-is-this)
 2. [Features](#%EF%B8%8F-features)
 3. [How to install](#%EF%B8%8F-how-to-install)
@@ -28,7 +28,7 @@
 ## ⚙️ How to use
 
 
-## 📗 Improvements Ideas
+## 🔮 Improvements Ideas
 - Replace the testing network (Rinkeby will be deprecated soon)
 - Finish Invest functionality (Exchange USDC by ORBS)
 - Update copys for all the windows
