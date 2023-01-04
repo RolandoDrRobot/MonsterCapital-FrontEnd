@@ -1,7 +1,7 @@
 # 🪙⚡️ MonsterCapital-FrontEnd
 
 
-# 🔮 Table of contents
+## 🔮 Table of contents
 1. [What is this](#-what-is-this)
 2. [Features](#%EF%B8%8F-features)
 3. [How to install](#%EF%B8%8F-how-to-install)
@@ -10,31 +10,31 @@
 6. [Screenshots](#%EF%B8%8F-screenshots)
 
 
-## 🪙 What is this
+### 🪙 What is this
 - This is the front end of the coin Orb
 - [Here](https://github.com/RolandoDrRobot/CoraToken-Contracts) are the smart contracts for this project
 
 
-## ⚡️ Features
+### ⚡️ Features
 - Mint NFTs
 - Stake ORBS
 - Send ORBS to other wallet
 - Receive ORBS
 
 
-## ⚙️ How to install
+### ⚙️ How to install
 
 
-## ⚙️ How to use
+### ⚙️ How to use
 
 
-## 🔮 Improvements Ideas
+### 🔮 Improvements Ideas
 - Replace the testing network (Rinkeby will be deprecated soon)
 - Finish Invest functionality (Exchange USDC by ORBS)
 - Update copys for all the windows
 
 
-## ⚡️ Screenshots
+### ⚡️ Screenshots
 <img src="Screenshots/Cover.png" alt="Home" width="500"/>
 <img src="Screenshots/Header.png" alt="Stake" width="500"/>
 <img src="Screenshots/NFTWallet.png" alt="Rewards" width="500"/>
