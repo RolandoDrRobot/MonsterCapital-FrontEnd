@@ -48,7 +48,7 @@ function MintRewards() {
     : <div className="my-5 text-center section-tab">
         <div className="section-title title-style-two text-center mb-60">
           <span>Owner Area</span>
-          <h2>Distribute rewards to <span>all exixting holders</span></h2>
+          <h2>Distribute rewards to <span>all existing holders</span></h2>
         </div>
         <div className="product-tag">
           <span>This action cannot be reverted</span>
