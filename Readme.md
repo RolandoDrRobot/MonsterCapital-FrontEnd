@@ -12,7 +12,7 @@
 
 ### 🪙 What is this
 - This is Monster Capital APP: Our private investors app
-- This app is meant to be used for closed investors list, they can get access to our ecosystem using this app
+- This app is intended for a private list of investors, they can get access to our ecosystem by using this app
 - The contracts are deployed in Mumbai (Polygon tesnet) We will be deploying on polygon soon
 - [Here](https://github.com/RolandoDrRobot/MonsterCapital-Contracts) are the smart contracts for this project
 
@@ -66,6 +66,7 @@
 - Enable Invest section - Swap USDC for Orbs (so we can sell the orbs to our private investors)
 
 ### 🐝 Tech debt
+- Replace "Cora" by "Orb" in the names of the files
 - Back button for Rewards page
 - Repair amount to send bug
 - Refactor how we mint NFTs
