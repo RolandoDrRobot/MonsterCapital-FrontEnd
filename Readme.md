@@ -61,7 +61,6 @@
 - Use videos for metaverse rooms, instead of pics
 - Make the rooms appear only for specific NFT holders
 - Create Identity NFT (NFT with dynamic content)
-- Create BTC bags NFT for Identified investors
 - Enable Recent transactions for Orbs wallet
 - Enable Invest section - Swap USDC for Orbs (so we can sell the orbs to our private investors)
 
