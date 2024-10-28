@@ -33,7 +33,7 @@ function InvestBox() {
             Access our Invesments Performace App, Exclusive networking in the metaverse, staking and more
           </p>
         </div>
-        <div className="trade-box">  
+        {/* <div className="trade-box">  
           <div className="d-flex you-pay">
             <div className="position-relative d-flex align-items-center justify-content-center">
               <img className="token-pic" src={usdcIcon} alt="" />
@@ -81,12 +81,8 @@ function InvestBox() {
               />
             </div>
           </div>
-          <button 
-            className="main-button" 
-            disabled={ account ? false : true }
-          >Invest Now</button>
 
-          {/* <div className="mt-4 d-flex justify-content-between align-items-center">
+          <div className="mt-4 d-flex justify-content-between align-items-center">
             <div>
               <span className="transaction-cost-title">transaction cost</span>
               <span className={ account ? 'cost' : 'cost gray' }>
@@ -97,12 +93,16 @@ function InvestBox() {
               <img className="gas-pic" src={gasFeeIcon} alt="" />
               <span className={ account ? '' : 'gray' }>0.005</span>
             </div>
-          </div> */}
+          </div>
 
           <p className={ 'subtitle mt-3 mb-0 text-center' }>
             Stake your Orbs and earn APY%
           </p>
-        </div>
+        </div> */}
+        <button 
+          className="main-button" 
+          disabled={ account ? false : true }
+        >Invest Now</button>
       </div>
     </>
   )
